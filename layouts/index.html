@@ -1,0 +1,73 @@
+<html>
+{{ partial "header.html" . }}
+<body>
+
+  <div id="layout" class="pure-g">
+
+    {{ partial "sidebar.html" . }}
+    
+    <div class="content pure-u-1 pure-u-md-13-24">
+
+      <div class="posts">
+        <h1 class="content-subhead">Recent Posts</h1>
+        {{ range .Site.Pages }}
+
+          <section class="post">
+
+            <header class="post-header">
+              <h1 class="post-title">
+                <a ref="{{ .RelPermalink }}">{{ .Title }}</a>
+              </h1>
+
+              <span class="post-date">
+                {{ .Date.Format "Jan 2, 2006" }} &middot; 
+                {{ .ReadingTime }} minute read
+
+                {{ if .Site.DisqusShortname }} 
+                  &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>
+                {{ end }}
+
+                <!-- Include post categories if provided in the metadata. -->
+                <!-- The default color will be used unless it is explicitly set -->
+                <!-- in the morphism.css file. -->
+                {{ if isset .Params "categories" }}
+                  <br/>
+                  {{ range .Params.categories }}
+                    <a 
+                      class="post-category post-category-{{ . }}"
+                      href="{{ "/categories/" | absURL }}{{ . | urlize }}">
+                        {{ . }}
+                    </a>
+                  {{ end }}
+                {{ end }}
+              </span>
+            </header>
+          
+            <!-- If the user specifies to not summarize posts, include entire -->
+            <!-- post.  Otherwise check to see if the post has description -->
+            <!-- metadata and use that for a summary, unless this doesn't exist -->
+            <!-- in which case we default to Hugo's summarize function. -->
+            <div class="post-description">
+              <!-- TODO Deal with whether user wants to summary posts or not. -->
+              <p>
+                {{ .Summary }}
+              </p>
+            </div>
+
+            {{ if .Truncated }}
+              <a href="{{ .RelPermalink  }}">Read On &rarr;</a>
+            {{ end  }}
+
+          </section>
+
+        {{ end  }}
+      <!-- End of posts div -->
+      </div>
+
+      {{ partial "footer.html" . }}
+    <!-- End of content div -->
+    </div>
+  <!-- End of layout div -->
+  </div>
+</body>
+</html>
