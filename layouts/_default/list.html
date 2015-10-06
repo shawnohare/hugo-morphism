@@ -9,16 +9,6 @@
 
       <h1 class="list-title">{{ .Title  }}</h1>
 
-      <!-- {{ template "_internal/pagination.html" }} -->
-      <!-- {{ $paginator := .Paginate ( (.Data.Pages.GroupByDate "2006") ) }} -->
-
-      <!-- <ul> -->
-      <!--   <li>PageNumber: {{ $paginator.PageNumber }}</li> -->
-      <!--   <li>URL: {{ $paginator.URL}}</li> -->
-      <!--   <li>Pages: {{ $paginator.Pages }}</li> -->
-      <!--   <li>TotalPages: {{ $paginator.TotalPages }}</li> -->
-      <!-- </ul> -->
-
       {{ range .Data.Pages.GroupByDate "2006" }}
         <details open>
           <summary>{{ .Key }}</summary>
