@@ -1,5 +1,23 @@
-/* Much of the content here is derived from the Pure.css blog layout. */
+* Much of the content here is derived from the Pure.css blog layout. */
 /* Visit http://purecss.io/layouts/ to learn more. */
+
+/* Solarized color reference */
+  /* color: #002b36; /1* base03 darkest bg    *1/ */
+  /* color: #073642; /1* base02 dark bg       *1/ */
+  /* color: #586e75; /1* base01 darkest gray  *1/ */
+  /* color: #657b83; /1* base00 dark gray     *1/ */
+  /* color: #839496; /1* base0  lightest gray *1/ */
+  /* color: #93a1a1; /1* base1  light gray    *1/ */
+  /* color: #eee8d5; /1* base2  light bg      *1/ */
+  /* color: #fdf6e3; /1* base3  lightest bg   *1/ */
+  /* color: #b58900; /1* yellow               *1/ */
+  /* color: #cb4b16; /1* orange               *1/ */ 
+  /* color: #dc322f; /1* red                  *1/ */
+  /* color: #d33682; /1* magenta              *1/ */
+  /* color: #6c71c4; /1* violet               *1/ */
+  /* color: #268bd2; /1* blue                 *1/ */
+  /* color: #2aa198; /1* cyan                 *1/ */
+  /* color: #859900; /1* green                *1/ */
 
 * {
     -webkit-box-sizing: border-box;
@@ -8,21 +26,19 @@
 
 }
 
+
  /* Foundational and global aspects of the page */
 
 /* When setting the primary font stack, apply it to the Pure grid units along */
 /* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
-html, button, input, select, textarea, p, nav, section, article,
+html, button, input, select, textarea, p, nav, section, article, 
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
     font-size: 18px;
     font-family:  "Open Sans", Helvetica, Arial, sans-serif;
+    /* color: rgb(75, 75, 75); */
 }
-
-/* html, p, nav, section, article { */
-/*   font-family: "PT Sans", Helvetica, Arial, sans-serif; */
-/* } */
 
 @media (min-width: 48em) {
 
@@ -43,15 +59,59 @@ html, button, input, select, textarea, p, nav, section, article,
   }
 }
 
+ul {
+  list-style-type: none;
+  /* padding: 0px; */
+  margin: 0.5em;
+}
+
+/* Basic link styling with colors. */
+/* a { */
+/*   text-decoration: none; */
+/*   color: SteelBlue; */
+/* } */
+/* a:hover, */
+/* a:focus { */
+/*   text-decoration: underline; */
+/* } */
+/* a:visited { */
+/*   color: Maroon; */
+/* } */
+
+/* Colorless link styling */
 a {
-    text-decoration: none;
-    /* color: rgb(61, 146, 201); */
-    color: LightSteelBlue;
+  text-decoration: underline;
+  color: inherit;
 }
-a:hover,
-a:focus {
-    text-decoration: underline;
-}
+
+/* a { */
+/*     /1* text-decoration: underline; *1/ */
+/*     text-decoration: none; */
+/*     /1* color: inherit; *1/ */
+/*     /1* border-bottom: 1px solid; *1/ */
+/*     /1* font-weight: bold; *1/ */
+/*     /1* color: rgb(61, 146, 201); *1/ */
+/*     /1* color: #268bd2; *1/ */
+/*     /1* border-bottom: 4px solid red; *1/ */
+/*     /1* color: #006EB8; *1/ */ 
+/*     /1* color: #0074D9; *1/ */
+/*     color: SteelBlue; */
+/* } */
+/* a:hover, */
+/* a:focus { */
+/*     text-decoration: underline; */
+/*     /1* border-bottom-width: 1px; *1/ */
+/*     /1* border-bottom-style: solid; *1/ */
+/*     /1* color: #268bd2; *1/ */
+/*     /1* border-bottom: 1px dotted; *1/ */
+/*     /1* color: inherit; *1/ */
+/* } */
+
+/* a:visited { */
+/*     /1* color: #d33682; /2* magenta *2/ *1/ */
+/*     /1* color: inherit; *1/ */
+/*     color: Maroon; */
+/* } */
 
 h3 {
     font-weight: 100;
@@ -70,11 +130,12 @@ h3 {
 .header {
     text-align: center;
     top: auto;
-    margin: 3em auto;
+    margin: 1em auto;
 }
 
 .sidebar {
-    background: rgb(61, 79, 93);
+    /* background: rgb(61, 79, 93); */
+    background: #002b36; /* solarized base03 */
     color: #fff;
 }
 
@@ -83,12 +144,12 @@ h3 {
     margin: 0;
 }
 .brand-title {
-    /* font-size: 5vw; */
     text-transform: uppercase;
 }
 .brand-tagline {
     font-weight: 300;
-    color: rgb(176, 202, 219);
+    /* color: rgb(176, 202, 219); /1* purecss blog layout *1/ */
+    color: #586e75; /* base01  */
 }
 
 .nav-list {
@@ -116,6 +177,7 @@ h3 {
     text-decoration: none;
 }
 
+
 .content-subhead {
     text-transform: uppercase;
     color: #aaa;
@@ -135,14 +197,32 @@ h3 {
 }
 
 .post-title {
-    font-size: 2em;
-    /* color: #222; */
+    font-weight: 500;
     color: rgb(61, 79, 93);
     margin-bottom: 0.2em;
 }
 
 .post-title a {
+  text-decoration: none;
   color: rgb(61, 79, 93);
+}
+
+
+ /* For styling list pages. */
+
+.list-title h1 {
+  font-weight: bold;
+  font-size: 3em;
+  color: rgb(61, 79, 93);
+  margin-bottom: 0.3em;
+}
+
+.list-date {
+  display: inline;
+  font-size: 0.75em;
+  color: #9a9a9a;
+  /* padding-right: 2em; */
+  /* margin-right: 2em; */
 }
 
 
@@ -170,38 +250,102 @@ h3 {
     margin: 0;
 }
 
-.post-category {
-    margin: 0 0.1em;
-    padding: 0.3em 1em;
-    color: #fff;
-    /* background: LightSteelBlue; */
-    background: rgb(61, 79, 93);
-    font-size: 80%;
+/* Category and tag appearance */
+.category {
+  display: inline;
+  /* background: transparent; */
+  background: #002b36; /* solarized base03  */
+  /* border: 2px solid #002b36; */
+  color: #ffffff;
+  color: #839496; /* base0  lightest gray */
+  /* color: #268bd2; /1* blue *1/ */
+  /* border: 2px solid #002b36; */
+  /* border: 2px solid rgb(176, 202, 219); */
+  /* margin-top: 0.5em; */
+  /* padding: 0.3em 1em; */
+  font-size: 85%;
 }
-    .post-category-design {
-        background: #5aba59;
-    }
-    .post-category-pure {
-        background: #4d85d1;
-    }
-    .post-category-yui {
-        background: #8156a7;
-    }
-    .post-category-js {
-        background: #df2d4f;
-    }
-    .post-category-test{
-        background: cadetBlue;
-    }
 
-.post-images {
-    margin: 1em 0;
+.category .test {
+    background: CadetBlue;  
+  }
+
+.category a,
+.category a:visited {
+  /* background: transparent; */
+  background: #002b36; /* solarized base03  */
+  /* border: 2px solid #002b36; */
+  color: #ffffff;
+  color: #839496; /* base0  lightest gray */
+  /* color: #268bd2; /1* blue *1/ */
+  /* border: 2px solid #002b36; */
+  /* border: 2px solid rgb(176, 202, 219); */
+  /* margin-top: 0.5em; */
+  /* padding: 0.3em 1em; */
+  font-size: 85%;
 }
-.post-image-meta {
-    margin-top: -3.5em;
-    margin-left: 1em;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
+
+.category a:focus,
+.category a:hover {
+  /* background: transparent; */
+  /* background: #073642; /1* base02 *1/ */
+  /* background: #eee8d5; /1* base2  light bg      *1/ */
+  background: #002b36; /* solarized base03  */
+  /* border: 2px solid #eee8d5; */
+  color: #ffffff;
+  /* color: #839496; /1* base0  lightest gray *1/ */
+  text-decoration: none;
+  border-bottom: none;
+  /* border: 2px solid rgb(61, 146, 201); */
+}
+
+
+/* Purecss categories / tags */
+/* .post-category { */
+/*     margin: 0 0.1em; */
+/*     padding: 0.3em 1em; */
+/*     color: #fff; */
+/*     /1* background: LightSteelBlue; *1/ */
+/*     background: rgb(61, 79, 93); */
+/*     /1* background: #002b36; /2* solarized base03 *2/ *1/ */
+/*     font-size: 80%; */
+/* } */
+/* .post-category a, */
+/* .post-cateogry a:active, */
+/* .post-category a:visited { */
+/*       color: #ffffff; */
+/* } */
+/* .post-category-design { */
+/*         background: #5aba59; */
+/* } */
+/* .post-category-pure { */
+/*         background: #4d85d1; */
+/* } */
+/* .post-category-yui { */
+/*         background: #8156a7; */
+/* } */
+/* .post-category-js { */
+/*         background: #df2d4f; */
+/* } */
+/* .post-category-test{ */
+/*         background: cadetBlue; */
+/* } */
+
+
+
+/* ToC */
+#toc {
+	float: right;
+	padding: 0 1rem 1rem 1rem;
+	border-left: 1px solid #eee;
+	font-size: 0.9rem;
+}
+nav#TableOfContents li {
+	padding-bottom: 0.25rem;
+}
+.toc-label {
+	font-size: 0.8rem;
+	color: #aeaeae;
 }
 
 /* Footer */ 
@@ -232,3 +376,44 @@ ul.footer-menu {
 	margin-right: 0.5rem;
 	font-size: 0.8rem;
 }
+
+/* Post Archive. */  
+/* We utilize the html5 summary tags in order to create a post archive */
+/* with built-in folding. */
+details {
+  border-radius: 3px;
+  /* background: #ffffff; */
+}
+
+details summary {
+  font-size: 1.25em;
+  font-weight: 300;
+  vertical-align: top;
+  /* background: #002b36; /1* solarized base03 *1/ */
+  /* color: #93a1a1; */
+  /* border-bottom: 1px dotted; */
+  /* border-radius: 3px; */
+  padding: 5px 10px;
+  outline: none;
+}
+
+details[open] summary {
+    /* background: #69c773; */
+    /* color: #333; */
+}
+
+/* code { */
+/*   color: blue; */
+/*   background: green; */
+/* } */
+
+/* Mathjax support */
+code.has-jax {
+  font: inherit;
+  font-size: 100%;
+  background: inherit;
+  border: inherit;
+  /* color: #515151; */
+}
+
+/* code.has-jax{} */
