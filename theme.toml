@@ -1,0 +1,12 @@
+name = "Morphism"
+license = "MIT"
+licenselink = "https://github.com/shawnohare/hugo-morphism/blob/master/LICENSE.md"
+description = "A simple Pure-based blog theme geared towards mathematics and data."
+homepage = "http://github.com/shawnohare/hugo-morphism"
+tags = ["", ""]
+features = ["", ""]
+min_version = 0.14
+
+[author]
+  name = "Shawn O'Hare"
+  homepage = "http://shawnohare.com"
