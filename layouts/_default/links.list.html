@@ -1,0 +1,13 @@
+{{ .Title  }}
+<!-- {{ template "_internal/pagination.html" }} -->
+Hello this is a list of content.
+
+{{ .Site.Sections }}
+
+<ul>
+  {{ range $value := .Site.Pages.GroupByDate "January 2006" }}
+    {{ $url := (index $value.Pages 0).Node.Date.Format "2006/01" | urlize }}
+    <li><a href="/{{ $url }}">{{ .Key }}</a></li>
+  {{ end }}
+</ul>
+

@@ -1,8 +1,20 @@
 <nav class="nav">
     <ul class="nav-list">
+
         <li class="nav-item">
-          <a class="pure-button" href="{{ .Site.BaseURL }}">Home</a>
+          <a class="pure-button" href="{{ .Site.BaseURL }}">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
         </li>
+
+        <li class="nav-item">
+          <a class="pure-button" href="{{ .Site.BaseURL }}/post">
+            <i class="fa fa-pencil"></i>
+            Blog 
+          </a>
+        </li>
+
         <li class="nav-item">
           <a class="pure-button" href="{{ .Site.BaseURL  }}">About</a>
         </li>

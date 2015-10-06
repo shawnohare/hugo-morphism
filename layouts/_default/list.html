@@ -1,0 +1,42 @@
+
+
+{{ partial "header.html" . }}
+
+<body>
+  {{ partial "sidebar.html" . }}
+  <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
+    <section class="post">
+
+      <h1 class="list-title">{{ .Title  }}</h1>
+
+      <!-- {{ template "_internal/pagination.html" }} -->
+      <!-- {{ $paginator := .Paginate ( (.Data.Pages.GroupByDate "2006") ) }} -->
+
+      <!-- <ul> -->
+      <!--   <li>PageNumber: {{ $paginator.PageNumber }}</li> -->
+      <!--   <li>URL: {{ $paginator.URL}}</li> -->
+      <!--   <li>Pages: {{ $paginator.Pages }}</li> -->
+      <!--   <li>TotalPages: {{ $paginator.TotalPages }}</li> -->
+      <!-- </ul> -->
+
+      {{ range .Data.Pages.GroupByDate "2006" }}
+        <details open>
+          <summary>{{ .Key }}</summary>
+          {{ range .Pages }}
+            <ul>
+              <li>
+                <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                <a href="{{ .RelPermalink }}">{{.Title}}</a>
+              </li>
+            </ul>
+          {{ end }}
+        </details>
+      {{ end }}
+
+          </section>
+
+          {{ partial "footer.html" . }}
+        </div>
+
+</body>
+</html>
