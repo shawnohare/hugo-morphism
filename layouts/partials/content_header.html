@@ -1,73 +1,19 @@
-<!-- <header class="header"> -->
+<h1 class="post-title">
+  <a href="{{ .RelPermalink }}">
+    {{ .Title }}
+    {{ if .Draft }} :: Draft {{end}}
+  </a>
+</h1>
 
-  <h1 class="post-title">
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
-      {{ if .Draft }} :: Draft {{end}}
-    </a>
-  </h1>
-
-  {{ if not .Params.nodate }}
-    <span class="post-date">
-        {{ .Date.Format "Jan 2, 2006" }} &middot;
-        {{ .ReadingTime }} minute read
-        {{ if .Params.categories }}
-          &middot; in
-          {{ range .Params.categories }}
-            <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-          {{ end }}
+{{ if not .Params.nodate }}
+  <span class="post-subheader">
+      {{ .Date.Format "Jan 2, 2006" }} &middot;
+      {{ .ReadingTime }} minute read
+      {{ if .Params.categories }}
+        &middot; in
+        {{ range .Params.categories }}
+          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
         {{ end }}
-    </span>
-  {{end }}
-
-  <!-- {{ if .Params.categories }} -->
-  <!--   <1!-- <span class="category"> --1> -->
-  <!--     {{ range .Params.categories }} -->
-  <!--       <a --> 
-  <!--         class="category {{ . | urlize }}" -->
-  <!--         href="{{ "/categories/" | absURL }}{{ . | urlize }}" -->
-  <!--        > -->
-  <!--           | {{ . }} --> 
-  <!--       </a> -->
-  <!--     {{ end }} -->
-  <!--   <1!-- </span> --1> -->
-  <!-- {{ end }} -->
-
-  <!-- Simple tags -->
-  <!-- {{ if .Params.categories }} -->
-  <!--   {{ range .Params.categories }} -->
-  <!--     <a href="{{ "/categories/" | absURL }}{{ . | urlize }}"> -->
-  <!--       | {{ . }} --> 
-  <!--     </a> -->
-  <!--   {{ end }} -->
-  <!-- {{ end }} -->
-
-  <!-- {{ if .Params.tags}} -->
-  <!--   Tags: --> 
-  <!-- {{ end }} -->
-
-  <!-- An attempt with pure-button -->
-  <!-- <nav class="nav"> -->
-  <!-- <ul class="category-list"> -->
-  <!--   {{ range .Params.categories }} -->
-  <!--     <li class="category-item"> -->
-  <!--       <a --> 
-  <!--          class="pure-button" -->
-  <!--          href="{{ "/categories/" | absURL }}{{ . | urlize }}"> -->
-  <!--           {{ . }} -->
-  <!--       </a> -->
-  <!--     </li> -->
-  <!--   {{ end }} -->
-
-  <!-- </ul> -->
-  <!-- </nav> -->
-
-  <!-- {{ range .Params.categories }} -->
-  <!--   <a --> 
-  <!--      class="post-category" --> 
-  <!--      href="{{ "/categories/" | absURL }}{{ . | urlize }}"> -->
-  <!--       {{ . }} -->
-  <!--   </a> -->
-  <!-- {{ end }} -->
-
-<!-- </header> -->
+      {{ end }}
+  </span>
+{{end }}
