@@ -1,5 +1,7 @@
 <!-- Load MathJax, if necessary. -->
-{{ partial "math.html" . }}
+{{ if eq .Params.math true }}
+  {{ partial "math.html" . }}
+{{ end }}
 
 <!-- Main CSS file based on Pure blog layout -->
 <link rel="stylesheet" href="{{ "/css/morphism.css" | absURL }}">
