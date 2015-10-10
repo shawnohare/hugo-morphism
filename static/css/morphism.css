@@ -1,4 +1,4 @@
-* Much of the content here is derived from the Pure.css blog layout. */
+/* Much of the content here is derived from the Pure.css blog layout. */
 /* Visit http://purecss.io/layouts/ to learn more. */
 
 /* Solarized color reference */
@@ -84,35 +84,6 @@ a {
   color: inherit;
 }
 
-/* a { */
-/*     /1* text-decoration: underline; *1/ */
-/*     text-decoration: none; */
-/*     /1* color: inherit; *1/ */
-/*     /1* border-bottom: 1px solid; *1/ */
-/*     /1* font-weight: bold; *1/ */
-/*     /1* color: rgb(61, 146, 201); *1/ */
-/*     /1* color: #268bd2; *1/ */
-/*     /1* border-bottom: 4px solid red; *1/ */
-/*     /1* color: #006EB8; *1/ */ 
-/*     /1* color: #0074D9; *1/ */
-/*     color: SteelBlue; */
-/* } */
-/* a:hover, */
-/* a:focus { */
-/*     text-decoration: underline; */
-/*     /1* border-bottom-width: 1px; *1/ */
-/*     /1* border-bottom-style: solid; *1/ */
-/*     /1* color: #268bd2; *1/ */
-/*     /1* border-bottom: 1px dotted; *1/ */
-/*     /1* color: inherit; *1/ */
-/* } */
-
-/* a:visited { */
-/*     /1* color: #d33682; /2* magenta *2/ *1/ */
-/*     /1* color: inherit; *1/ */
-/*     color: Maroon; */
-/* } */
-
 h3 {
     font-weight: 100;
 }
@@ -134,7 +105,6 @@ h3 {
 }
 
 .sidebar {
-    /* background: rgb(61, 79, 93); */
     background: #002b36; /* solarized base03 */
     color: #fff;
 }
@@ -177,7 +147,6 @@ h3 {
     text-decoration: none;
 }
 
-
 .content-subhead {
     text-transform: uppercase;
     color: #aaa;
@@ -209,7 +178,6 @@ h3 {
 
 
  /* For styling list pages. */
-
 .list-title h1 {
   font-weight: bold;
   font-size: 3em;
@@ -227,7 +195,7 @@ h3 {
 
 
 /* Meta data line below post title */
-.post-date {
+.post-subheader {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
@@ -239,6 +207,7 @@ h3 {
     float: right;
     margin-left: 1em;
 }
+
 .post-description {
     font-family: Georgia, "Cambria", serif;
     color: #444;
@@ -249,89 +218,6 @@ h3 {
     font-size: 90%;
     margin: 0;
 }
-
-/* Category and tag appearance */
-.category {
-  display: inline;
-  /* background: transparent; */
-  background: #002b36; /* solarized base03  */
-  /* border: 2px solid #002b36; */
-  color: #ffffff;
-  color: #839496; /* base0  lightest gray */
-  /* color: #268bd2; /1* blue *1/ */
-  /* border: 2px solid #002b36; */
-  /* border: 2px solid rgb(176, 202, 219); */
-  /* margin-top: 0.5em; */
-  /* padding: 0.3em 1em; */
-  font-size: 85%;
-}
-
-.category .test {
-    background: CadetBlue;  
-  }
-
-.category a,
-.category a:visited {
-  /* background: transparent; */
-  background: #002b36; /* solarized base03  */
-  /* border: 2px solid #002b36; */
-  color: #ffffff;
-  color: #839496; /* base0  lightest gray */
-  /* color: #268bd2; /1* blue *1/ */
-  /* border: 2px solid #002b36; */
-  /* border: 2px solid rgb(176, 202, 219); */
-  /* margin-top: 0.5em; */
-  /* padding: 0.3em 1em; */
-  font-size: 85%;
-}
-
-.category a:focus,
-.category a:hover {
-  /* background: transparent; */
-  /* background: #073642; /1* base02 *1/ */
-  /* background: #eee8d5; /1* base2  light bg      *1/ */
-  background: #002b36; /* solarized base03  */
-  /* border: 2px solid #eee8d5; */
-  color: #ffffff;
-  /* color: #839496; /1* base0  lightest gray *1/ */
-  text-decoration: none;
-  border-bottom: none;
-  /* border: 2px solid rgb(61, 146, 201); */
-}
-
-
-/* Purecss categories / tags */
-/* .post-category { */
-/*     margin: 0 0.1em; */
-/*     padding: 0.3em 1em; */
-/*     color: #fff; */
-/*     /1* background: LightSteelBlue; *1/ */
-/*     background: rgb(61, 79, 93); */
-/*     /1* background: #002b36; /2* solarized base03 *2/ *1/ */
-/*     font-size: 80%; */
-/* } */
-/* .post-category a, */
-/* .post-cateogry a:active, */
-/* .post-category a:visited { */
-/*       color: #ffffff; */
-/* } */
-/* .post-category-design { */
-/*         background: #5aba59; */
-/* } */
-/* .post-category-pure { */
-/*         background: #4d85d1; */
-/* } */
-/* .post-category-yui { */
-/*         background: #8156a7; */
-/* } */
-/* .post-category-js { */
-/*         background: #df2d4f; */
-/* } */
-/* .post-category-test{ */
-/*         background: cadetBlue; */
-/* } */
-
-
 
 /* ToC */
 #toc {
@@ -402,11 +288,6 @@ details[open] summary {
     /* color: #333; */
 }
 
-/* code { */
-/*   color: blue; */
-/*   background: green; */
-/* } */
-
 /* Mathjax support */
 code.has-jax {
   font: inherit;
@@ -416,4 +297,3 @@ code.has-jax {
   /* color: #515151; */
 }
 
-/* code.has-jax{} */
