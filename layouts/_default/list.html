@@ -16,7 +16,7 @@
             <ul>
               <li>
                 <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
-                <a href="{{ .RelPermalink }}">{{.Title}}</a>
+                <span class="post-list"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
               </li>
             </ul>
           {{ end }}

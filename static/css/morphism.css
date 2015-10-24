@@ -35,8 +35,8 @@
 html, button, input, select, textarea, p, nav, section, article, 
 .pure-g [class *= "pure-u"] {
     /* Set your content font stack here: */
-    font-size: 18px;
-    font-family:  "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; 
     /* color: rgb(75, 75, 75); */
 }
 
@@ -176,6 +176,10 @@ h3 {
   color: rgb(61, 79, 93);
 }
 
+.post-list a {
+  text-decoration: none;
+}
+
 
  /* For styling list pages. */
 .list-title h1 {
@@ -209,7 +213,7 @@ h3 {
 }
 
 .post-description {
-    font-family: Georgia, "Cambria", serif;
+    /* font-family: Georgia, "Cambria", serif; */
     color: #444;
     line-height: 1.8em;
 }
