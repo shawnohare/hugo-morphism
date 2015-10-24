@@ -5,15 +5,19 @@
   </a>
 </h1>
 
-{{ if not .Params.nodate }}
-  <span class="post-subheader">
-      {{ .Date.Format "Jan 2, 2006" }} &middot;
-      {{ .ReadingTime }} minute read
-      {{ if .Params.categories }}
-        &middot; in
-        {{ range .Params.categories }}
-          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-      {{ end }}
-  </span>
-{{end }}
+<span class="post-subheader">
+  {{ if .Params.author }}
+    By {{ .Params.author }} 
+  {{ end }}
+  {{ if .Params.categories }}
+    in
+    {{ range .Params.categories }}
+      <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+    {{ end }}
+  {{ end }}
+  <br>
+  {{ if not .Params.nodate }}
+    {{ .Date.Format "Jan 2, 2006" }} &middot;
+  {{end }}
+  {{ .ReadingTime }} minute read
+</span>
