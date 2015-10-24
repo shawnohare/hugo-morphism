@@ -4,12 +4,13 @@
   {{ partial "sidebar.html" . }}
   <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
     <section class="post">
-      {{ partial "content_header.html" . }}
+      {{ partial "content.header.html" . }}
       {{ .Content }}
     </section>
 
     {{ partial "footer.html" . }}
   </div>
 
+  {{ partial "body.includes.html" . }}
 </body>
 </html>

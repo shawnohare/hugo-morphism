@@ -1,7 +1,7 @@
 {{ partial "doctype.html" . }}
 <head>
-  <title>{{ .Title  }}</title>
+<title>{{ .Site.Title }} - {{ .Title  }}</title>
   {{ partial "meta.html" . }}
-  {{ partial "header_includes.html" . }}
+  {{ partial "header.includes.html" . }}
 </head>
 

@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+{{ partial "math.html" . }}
 <body>
 
   <div id="layout" class="pure-g">
@@ -13,7 +14,7 @@
 
           <section class="post">
 
-            {{ partial "content_header.html" . }}
+            {{ partial "content.header.html" . }}
           
             <!-- If the user specifies to not summarize posts, include entire -->
             <!-- post.  Otherwise check to see if the post has description -->
@@ -39,5 +40,7 @@
       {{ partial "footer.html" . }}
     </div>
   </div>
+  
+  {{ partial "body.includes.html" . }}
 </body>
 </html>
