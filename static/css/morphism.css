@@ -52,11 +52,11 @@ html, button, input, select, textarea, p, nav, section, article,
     text-align: right;
   }
 
-  .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
+  /* .brand{ */
+  /*   position: fixed; */
+  /*   top: 0; */
+  /*   bottom: 0; */
+  /* } */
 }
 
 ul {
@@ -101,12 +101,14 @@ h3 {
 .header {
     text-align: center;
     top: auto;
-    margin: 1em auto;
+    margin: auto;
 }
 
-.sidebar {
+/* Brand details, such as a sidebar or top display. */
+.brand{
     background: #002b36; /* solarized base03 */
     color: #fff;
+    padding: 1em;
 }
 
 .brand-title,
