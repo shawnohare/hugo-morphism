@@ -1,14 +1,9 @@
 <nav class="nav">
     <ul class="nav-list">
-
-        {{ range .Site.Data.nav  }}
+        {{ range .Site.Menus.nav  }}
           <li class="nav-item"> 
-            <a class="pure-button" href="{{ .Site.BaseURL }}{{ .URL }}">
-              {{ with .FontAwesomeIcon }}<i class="fa fa-{{ . }}"></i>{{ end }}
-              {{ .Name }}
-            </a>
+            <a class="pure-button" href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a>
           </li>  
         {{ end }}
-
     </ul>
 </nav>
