@@ -1,24 +1,6 @@
 /* Much of the content here is derived from the Pure.css blog layout. */
 /* Visit http://purecss.io/layouts/ to learn more. */
 
-/* Solarized color reference */
-  /* color: #002b36; /1* base03 darkest bg    *1/ */
-  /* color: #073642; /1* base02 dark bg       *1/ */
-  /* color: #586e75; /1* base01 darkest gray  *1/ */
-  /* color: #657b83; /1* base00 dark gray     *1/ */
-  /* color: #839496; /1* base0  lightest gray *1/ */
-  /* color: #93a1a1; /1* base1  light gray    *1/ */
-  /* color: #eee8d5; /1* base2  light bg      *1/ */
-  /* color: #fdf6e3; /1* base3  lightest bg   *1/ */
-  /* color: #b58900; /1* yellow               *1/ */
-  /* color: #cb4b16; /1* orange               *1/ */ 
-  /* color: #dc322f; /1* red                  *1/ */
-  /* color: #d33682; /1* magenta              *1/ */
-  /* color: #6c71c4; /1* violet               *1/ */
-  /* color: #268bd2; /1* blue                 *1/ */
-  /* color: #2aa198; /1* cyan                 *1/ */
-  /* color: #859900; /1* green                *1/ */
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -34,7 +16,6 @@
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
 html, button, input, select, textarea, p, nav, section, article, 
 .pure-g [class *= "pure-u"] {
-    /* Set your content font stack here: */
   font-size: 18px;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; 
     /* color: rgb(75, 75, 75); */
@@ -52,11 +33,6 @@ html, button, input, select, textarea, p, nav, section, article,
     text-align: right;
   }
 
-  /* .brand{ */
-  /*   position: fixed; */
-  /*   top: 0; */
-  /*   bottom: 0; */
-  /* } */
 }
 
 ul {
@@ -64,19 +40,6 @@ ul {
   /* padding: 0px; */
   margin: 0.5em;
 }
-
-/* Basic link styling with colors. */
-/* a { */
-/*   text-decoration: none; */
-/*   color: SteelBlue; */
-/* } */
-/* a:hover, */
-/* a:focus { */
-/*   text-decoration: underline; */
-/* } */
-/* a:visited { */
-/*   color: Maroon; */
-/* } */
 
 /* Colorless link styling */
 a {
@@ -116,11 +79,10 @@ h3 {
     margin: 0;
 }
 .brand-title {
-    text-transform: uppercase;
+    font-weight: 400;
 }
 .brand-tagline {
     font-weight: 300;
-    /* color: rgb(176, 202, 219); /1* purecss blog layout *1/ */
     color: #586e75; /* base01  */
 }
 
@@ -169,9 +131,11 @@ h3 {
 
 .post-title {
     font-weight: 500;
+    font-size: 3em;
     color: rgb(61, 79, 93);
     margin-bottom: 0.2em;
 }
+
 
 .post-title a {
   text-decoration: none;
@@ -215,7 +179,6 @@ h3 {
 }
 
 .post-description {
-    /* font-family: Georgia, "Cambria", serif; */
     color: #444;
     line-height: 1.8em;
 }
@@ -281,10 +244,6 @@ details summary {
   font-size: 1.25em;
   font-weight: 300;
   vertical-align: top;
-  /* background: #002b36; /1* solarized base03 *1/ */
-  /* color: #93a1a1; */
-  /* border-bottom: 1px dotted; */
-  /* border-radius: 3px; */
   padding: 5px 10px;
   outline: none;
 }
