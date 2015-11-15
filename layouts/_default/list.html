@@ -10,11 +10,22 @@
       {{ range .Data.Pages.GroupByDate "2006" }}
         <details open>
           <summary>{{ .Key }}</summary>
-          {{ range .Pages }}
+
+          {{ range .Pages.GroupByDate "January" }}
             <ul>
               <li>
-                <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
-                <span class="post-list"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
+                <details open>
+                  <summary>{{ .Key }}</summary>
+                    {{ range .Pages }}
+                      <ul>
+                        <li>
+                          <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                          <span class="post-list"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
+                        </li>
+                      </ul>
+                    {{ end }}
+
+                </details>
               </li>
             </ul>
           {{ end }}
