@@ -7,17 +7,22 @@
 
 <span class="post-subheader">
   {{ if .Params.author }}
-    By {{ .Params.author }} 
+    By {{ .Params.author }}
   {{ end }}
+
   {{ if .Params.categories }}
     in
     {{ range .Params.categories }}
       <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
     {{ end }}
   {{ end }}
+
   <br>
-  {{ if not .Params.nodate }}
+  {{ if not .Params.hidedDate }}
     {{ .Date.Format "Jan 2, 2006" }} &middot;
   {{end }}
-  {{ .ReadingTime }} minute read
+
+  {{ if not .Params.hideReadTime }}
+    {{ .ReadingTime }} minute read
+  {{ end }}
 </span>
