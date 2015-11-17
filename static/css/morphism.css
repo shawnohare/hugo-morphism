@@ -90,13 +90,13 @@ p {
 
 .brand-title {
     margin: 0;
-    color: rgba(230, 235, 240, .95);
+    color: rgba(240, 245, 250, .95);
     font-weight: 400;
 }
 .brand-tagline {
     margin: 0;
     font-weight: 200;
-    color: rgba(125, 130, 135, 0.93);
+    color: rgba(145, 150, 155, 0.95);
 }
 
 .nav-list {
@@ -120,7 +120,7 @@ p {
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 2px solid rgb(61, 146, 201);
+    border: 2px solid grey;
     text-decoration: none;
 }
 
