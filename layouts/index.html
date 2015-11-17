@@ -10,36 +10,19 @@
       <div class="posts">
         <h1 class="content-subheader">Recent Posts</h1>
         {{ range first 5 .Site.Pages }}
-
           <section class="post">
-
             {{ partial "content.header.html" . }}
-          
-            <!-- If the user specifies to not summarize posts, include entire -->
-            <!-- post.  Otherwise check to see if the post has description -->
-            <!-- metadata and use that for a summary, unless this doesn't exist -->
-            <!-- in which case we default to Hugo's summarize function. -->
-            <div class="post-description">
-              <!-- TODO Deal with whether user wants to summary posts or not. -->
-              <p>
-                {{ .Summary }}
-              </p>
-            </div>
-
+            <p>{{ .Summary }}</p>
             {{ if .Truncated }}
               <a href="{{ .RelPermalink  }}">Read On &rarr;</a>
             {{ end  }}
-
           </section>
-
         {{ end  }}
-      <!-- End of posts div -->
       </div>
 
       {{ partial "footer.html" . }}
     </div>
   </div>
-  
   {{ partial "body.includes.html" . }}
 </body>
 </html>
