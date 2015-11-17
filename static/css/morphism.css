@@ -50,6 +50,10 @@ a {
   color: inherit;
 }
 
+title {
+    font-size: 4em;
+}
+
 h3 {
     font-weight: 100;
 }
@@ -81,22 +85,25 @@ p {
 /* Brand details, such as a sidebar or top display. */
 /* ------------------------------------------------------------------------ */
 .brand{
-    background: #002b36; /* solarized base03 */
-    background: hsl(220, 13%, 18%);
-    color: #fff;
+    /* background: #002b36; */
+    /*background: hsl(220, 13%, 18%);*/
+    /*color: #fff;*/
+    color: rgb(65, 70, 75);
     padding: 1em;
     border-bottom: 1px solid rgb(226, 226, 226);
+    border-bottom: none;
 }
 
 .brand-title {
     margin: 0;
     color: rgba(240, 245, 250, .95);
+    color: rgba(65, 70, 75, .95);
     font-weight: 400;
 }
 .brand-tagline {
     margin: 0;
     font-weight: 200;
-    color: rgba(145, 150, 155, 0.95);
+    color: rgba(100, 105, 110, 0.95);
 }
 
 .nav-list {
@@ -111,8 +118,7 @@ p {
 }
 .nav-item a {
     background: transparent;
-    border: 2px solid rgb(176, 202, 219);
-    color: #fff;
+    border: 2px solid rgb(65, 70, 75);
     margin-top: 1em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
@@ -120,7 +126,8 @@ p {
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    border: 2px solid grey;
+    background: inherit;
+    border: 2px solid lightgray;
     text-decoration: none;
 }
 
