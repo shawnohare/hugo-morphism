@@ -55,7 +55,7 @@ h3 {
 }
 
 p {
-    line-height: 1.3em;
+    line-height: 1.5em;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -296,7 +296,8 @@ pre code {
     padding: 0.5em 1em;
     overflow-x: auto;
     overflow-y: auto;
-    border: 1px solid;
+    border-width: 1px;
+    border-style: groove;
     border-radius: 4px;
 }
 
