@@ -1,13 +1,2 @@
-{{ if isset .Site.Params "highlightStyle" }}
-  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/{{ .Site.Params.highlightStyle }}.min.css"> -->
-{{ else }}
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github-gist.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/solarized_light.min.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/solarized_dark.min.css"> -->
-{{ end }}
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script> -->
-<!-- <script>hljs.initHighlightingOnLoad();</script> -->
-
 <link rel="stylesheet" href="{{ "/css/prism.css" | absURL }}">
 <script src="{{ "/js/prism.js" | absURL }}"></script>
