@@ -17,8 +17,8 @@
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
 html, button, input, select, textarea, p, nav, section, article,
 .pure-g [class *= "pure-u"] {
-  font-size: 18px;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: 18px;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     /* color: rgb(75, 75, 75); */
 }
 
@@ -45,7 +45,6 @@ li {
     margin-bottom: 0.5em;
 }
 
-/* Colorless link styling */
 a {
   text-decoration: underline;
   color: inherit;
@@ -55,11 +54,18 @@ h3 {
     font-weight: 100;
 }
 
-/* LAYOUT CSS */
+p {
+    line-height: 1.3em;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Layout */
+/* ------------------------------------------------------------------------ */
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
 }
+
 
 #layout {
   padding: 0;
@@ -76,20 +82,21 @@ h3 {
 /* ------------------------------------------------------------------------ */
 .brand{
     background: #002b36; /* solarized base03 */
+    background: hsl(220, 13%, 18%);
     color: #fff;
     padding: 1em;
+    border-bottom: 1px solid rgb(226, 226, 226);
 }
 
-.brand-title,
-.brand-tagline {
-    margin: 0;
-}
 .brand-title {
+    margin: 0;
+    color: rgba(230, 235, 240, .95);
     font-weight: 400;
 }
 .brand-tagline {
-    font-weight: 300;
-    color: #586e75; /* base01  */
+    margin: 0;
+    font-weight: 200;
+    color: rgba(125, 130, 135, 0.93);
 }
 
 .nav-list {
@@ -126,13 +133,14 @@ h3 {
 .content-title {
     font-weight: 500;
     font-size: 3em;
-    color: rgb(61, 79, 93);
+    color: rgb(65, 70, 75);
     margin-bottom: 0.2em;
+    line-height: normal;
 }
 
 .content-title a {
   text-decoration: none;
-  color: rgb(61, 79, 93);
+  color: inherit;
 }
 .content-subheader {
     text-transform: uppercase;
@@ -146,7 +154,6 @@ h3 {
 /* The main content, e.g., the content of a post or about page. */
 .content-body{
     color: #444;
-    /*line-height: 1.5em;*/
 }
 
 
@@ -175,7 +182,7 @@ h3 {
     margin-left: 1em;
 }
 
-.post-description {
+.post-summary {
     color: #444;
     line-height: 1.5em;
 }
@@ -272,26 +279,34 @@ details[open] summary {
     /* color: #333; */
 }
 
-/* ------------------------------------------------------------------------ */
-/* Mathjax support */
-/* ------------------------------------------------------------------------ */
-code.has-jax {
-  font: inherit;
-  font-size: 100%;
-  background: inherit;
-  border: inherit;
-}
-
-/*pre code {
-    color: inherit;
-    background: inherit;
-}*/
-
 code {
     padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
-    /*white-space: nowrap;*/
     border-radius: 4px;
+}
+
+
+pre code {
+    font-size: 90%;
+    color: inherit;
+    background-color: inherit;
+    display: block;
+    padding: 0.5em 1em;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Mathjax support */
+/* ------------------------------------------------------------------------ */
+code.has-jax {
+  font: inherit;
+  color: inherit;
+  font-size: 100%;
+  background: inherit;
+  border: inherit;
 }
