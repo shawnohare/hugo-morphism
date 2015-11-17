@@ -9,15 +9,16 @@
 }
 
 
+/* ------------------------------------------------------------------------ */
  /* Foundational and global aspects of the page */
-
+/* ------------------------------------------------------------------------ */
 /* When setting the primary font stack, apply it to the Pure grid units along */
 /* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
-html, button, input, select, textarea, p, nav, section, article, 
+html, button, input, select, textarea, p, nav, section, article,
 .pure-g [class *= "pure-u"] {
   font-size: 18px;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; 
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     /* color: rgb(75, 75, 75); */
 }
 
@@ -37,8 +38,11 @@ html, button, input, select, textarea, p, nav, section, article,
 
 ul {
   list-style-type: none;
-  /* padding: 0px; */
   margin: 0.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
 }
 
 /* Colorless link styling */
@@ -67,7 +71,9 @@ h3 {
     margin: auto;
 }
 
+/* ------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
+/* ------------------------------------------------------------------------ */
 .brand{
     background: #002b36; /* solarized base03 */
     color: #fff;
@@ -111,7 +117,24 @@ h3 {
     text-decoration: none;
 }
 
-.content-subhead {
+/* ------------------------------------------------------------------------ */
+/* Generic content, such as the index list pages */
+/* ------------------------------------------------------------------------ */
+.content {
+    padding: 2em 1em 0;
+}
+.content-title {
+    font-weight: 500;
+    font-size: 3em;
+    color: rgb(61, 79, 93);
+    margin-bottom: 0.2em;
+}
+
+.content-title a {
+  text-decoration: none;
+  color: rgb(61, 79, 93);
+}
+.content-subheader {
     text-transform: uppercase;
     color: #aaa;
     border-bottom: 1px solid #eee;
@@ -120,49 +143,23 @@ h3 {
     font-weight: 500;
     letter-spacing: 0.1em;
 }
-
-.content {
-    padding: 2em 1em 0;
+/* The main content, e.g., the content of a post or about page. */
+.content-body{
+    color: #444;
+    /*line-height: 1.5em;*/
 }
 
+
+/* ------------------------------------------------------------------------ */
+/* Posts */
+/* ------------------------------------------------------------------------ */
 .post {
     padding-bottom: 2em;
-}
-
-.post-title {
-    font-weight: 500;
-    font-size: 3em;
-    color: rgb(61, 79, 93);
-    margin-bottom: 0.2em;
-}
-
-
-.post-title a {
-  text-decoration: none;
-  color: rgb(61, 79, 93);
 }
 
 .post-list a {
   text-decoration: none;
 }
-
-
- /* For styling list pages. */
-.list-title h1 {
-  font-weight: bold;
-  font-size: 3em;
-  color: rgb(61, 79, 93);
-  margin-bottom: 0.3em;
-}
-
-.list-date {
-  display: inline;
-  font-size: 0.75em;
-  color: #9a9a9a;
-  /* padding-right: 2em; */
-  /* margin-right: 2em; */
-}
-
 
 /* Meta data line below post title */
 .post-subheader {
@@ -180,16 +177,36 @@ h3 {
 
 .post-description {
     color: #444;
-    line-height: 1.8em;
+    line-height: 1.5em;
 }
+
 .post-meta {
     color: #999;
     font-size: 90%;
     margin: 0;
 }
 
+/* ------------------------------------------------------------------------ */
+ /* Styling for listing pages. */
+/* ------------------------------------------------------------------------ */
+.list-title h1 {
+  font-weight: bold;
+  font-size: 3em;
+  color: rgb(61, 79, 93);
+  margin-bottom: 0.3em;
+}
+
+.list-date {
+  display: inline;
+  font-size: 0.75em;
+  color: #9a9a9a;
+  /* padding-right: 2em; */
+  /* margin-right: 2em; */
+}
+
+/* FIXME consider deleting */
 /* ToC */
-#toc {
+/*#toc {
 	float: right;
 	padding: 0 1rem 1rem 1rem;
 	border-left: 1px solid #eee;
@@ -201,9 +218,9 @@ nav#TableOfContents li {
 .toc-label {
 	font-size: 0.8rem;
 	color: #aeaeae;
-}
+}*/
 
-/* Footer */ 
+/* Footer */
 .footer {
     text-align: center;
     padding: 1em 0;
@@ -232,7 +249,9 @@ ul.footer-menu {
 	font-size: 0.8rem;
 }
 
-/* Post Archive. */  
+/* ------------------------------------------------------------------------ */
+/* Post Archive. */
+/* ------------------------------------------------------------------------ */
 /* We utilize the html5 summary tags in order to create a post archive */
 /* with built-in folding. */
 details {
@@ -253,12 +272,26 @@ details[open] summary {
     /* color: #333; */
 }
 
+/* ------------------------------------------------------------------------ */
 /* Mathjax support */
+/* ------------------------------------------------------------------------ */
 code.has-jax {
   font: inherit;
   font-size: 100%;
   background: inherit;
   border: inherit;
-  /* color: #515151; */
 }
 
+/*pre code {
+    color: inherit;
+    background: inherit;
+}*/
+
+code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    /*white-space: nowrap;*/
+    border-radius: 4px;
+}
