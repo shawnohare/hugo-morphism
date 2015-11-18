@@ -1,8 +1,8 @@
 <div class="footer">
 	<div class="pure-menu pure-menu-horizontal pure-menu-open">
 		<ul class="footer-menu">
-		{{ range .Site.Data.footer }}
-			<li><a href="{{.URL}}">{{ .Name }}</a></li>
+		{{ range .Site.Menus.footer }}
+      <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
 		{{ end }}
 		</ul>
 	</div>

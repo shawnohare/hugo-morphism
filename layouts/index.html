@@ -1,16 +1,14 @@
 {{ partial "header.html" . }}
-{{ partial "math.html" . }}
 <body>
 
-  {{ partial "brand.html" . }}
   <div id="layout" class="pure-g">
-    
-    <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
 
-      <div class="posts">
-        <h1 class="content-subheader">Recent Posts</h1>
+    <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
+  {{ partial "brand.html" . }}
+
+        <h1 class="content-title-mini">Recent Posts</h1>
         {{ range first 5 .Site.Pages }}
-          <section class="post">
+          <section class="post-summary">
             {{ partial "content.header.html" . }}
             <p>{{ .Summary }}</p>
             {{ if .Truncated }}
@@ -18,7 +16,6 @@
             {{ end  }}
           </section>
         {{ end  }}
-      </div>
 
       {{ partial "footer.html" . }}
     </div>

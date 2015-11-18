@@ -1,30 +1,32 @@
-<h1 class="content-title">
-  <a href="{{ .RelPermalink }}">
-    {{ .Title }}
-    {{ if .Draft }} :: Draft {{end}}
-  </a>
-</h1>
+<div class="content-header">
+  <h1>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+      {{ if .Draft }} :: Draft {{end}}
+    </a>
+  </h1>
 
-{{ if eq .Type "post" }}
-  <span class="post-subheader">
-    {{ if .Params.author }}
-      By {{ .Params.author }}
-    {{ end }}
-
-    {{ if .Params.categories }}
-      in
-      {{ range .Params.categories }}
-        <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+  {{ if eq .Type "post" }}
+    <span class="content-meta">
+      {{ if .Params.author }}
+        By {{ .Params.author }}
       {{ end }}
-    {{ end }}
 
-    <br>
-    {{ if not .Params.hidedDate }}
-      {{ .Date.Format "Jan 2, 2006" }} &middot;
-    {{end }}
+      {{ if .Params.categories }}
+        in
+        {{ range .Params.categories }}
+          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+        <br>
+      {{ end }}
 
-    {{ if not .Params.hideReadTime }}
-      {{ .ReadingTime }} min read 
-    {{ end }}
-  </span>
-{{ end }}
+      {{ if not .Params.hidedDate }}
+        {{ .Date.Format "Jan 2, 2006" }} &middot;
+      {{end }}
+
+      {{ if not .Params.hideReadTime }}
+        {{ .ReadingTime }} min read 
+      {{ end }}
+    </span>
+  {{ end }}
+</div>

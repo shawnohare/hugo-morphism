@@ -4,7 +4,7 @@
   {{ partial "brand.html" . }}
   <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
 
-      <h1 class="list-title">{{ .Title  }}</h1>
+      <h1 class="content-title-mini">{{ .Title  }}</h1>Hello
 
       {{ range .Data.Pages.GroupByDate "2006" }}
         <details open>
@@ -19,7 +19,7 @@
                       <ul>
                         <li>
                           <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
-                          <span class="post-list"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
+                          <a href="{{ .RelPermalink }}">{{.Title}}</a>
                         </li>
                       </ul>
                     {{ end }}
