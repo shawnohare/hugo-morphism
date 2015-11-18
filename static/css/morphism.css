@@ -110,26 +110,23 @@ p {
     color: rgba(100, 105, 110, 1);
 }
 
-.nav-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-.nav-item {
+.nav {
     display: inline-block;
     *display: inline;
     zoom: 1;
+    margin: 0;
+    padding: 0;
 }
-.nav-item a {
+.nav a {
     background: transparent;
     border: 2px solid rgb(65, 70, 75);
-    margin-top: 1em;
+    margin-top: 0.5em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 85%;
 }
-.nav-item a:hover,
-.nav-item a:focus {
+.nav a:hover,
+.nav a:focus {
     background: inherit;
     border: 2px solid lightgray;
     text-decoration: none;
