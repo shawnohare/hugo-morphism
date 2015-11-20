@@ -1,20 +1,14 @@
 <h1 class="content-title-mini">{{ .Type  }}</h1>
 <div class="content-header">
-  <h1>
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
-      {{ if .Draft }} :: Draft {{end}}
-    </a>
-  </h1>
 
-  {{ if eq .Type "post" }}
+  {{ if or (eq .Type "post") (.Params.meta)  }}
     <span class="content-meta">
       {{ if .Params.author }}
-        By {{ .Params.author }}
+        By {{ .Params.author }} <br>
       {{ end }}
 
       {{ if .Params.categories }}
-        in
+        Under 
         {{ range .Params.categories }}
           <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
         {{ end }}
@@ -30,4 +24,11 @@
       {{ end }}
     </span>
   {{ end }}
+
+  <h1>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+      {{ if .Draft }} :: Draft {{end}}
+    </a>
+  </h1>
 </div>
