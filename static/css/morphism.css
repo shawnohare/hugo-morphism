@@ -1,6 +1,3 @@
-/* Much of the content here is derived from the Pure.css blog layout. */
-/* Visit http://purecss.io/layouts/ to learn more. */
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -15,11 +12,12 @@
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
 html, button, input, select, textarea, p, nav, section, article,
 .pure-g [class *= "pure-u"] {
-    font-size: 18px;
-    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-}
+    font-size: 20px;
+    font-family: -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;}
 
-@media (min-width: 48em) {
+
+/*FIXME probably delete*/
+/*@media (min-width: 48em) {
 
     .content {
         padding: 2em 3em 0;
@@ -31,6 +29,11 @@ html, button, input, select, textarea, p, nav, section, article,
         text-align: right;
     }
 
+}*/
+
+.content {
+    padding: 1em;
+    margin-bottom: 1em;
 }
 
 ul {
@@ -91,20 +94,18 @@ p {
 /* Brand details, such as a sidebar or top display. */
 /* ------------------------------------------------------------------------ */
 .brand{
-    /* background: #002b36; */
-    /*background: hsl(220, 13%, 18%);*/
-    /*color: #fff;*/
-    color: rgba(65, 70, 75);
     margin-top: 0.5em;
 }
 
-.brand-title {
+/* Main brand title */
+.brand h1 {
     margin: 0;
     font-weight: 400;
     color: rgba(65, 70, 75, 1);
 }
 
-.brand-tagline {
+/* Brand subtitles */
+.brand h2 {
     margin: 0;
     font-weight: 200;
     color: rgba(100, 105, 110, 1);
@@ -119,60 +120,43 @@ p {
 }
 .nav a {
     background: transparent;
-    border: 2px solid rgb(65, 70, 75);
+    /*border: 2px solid rgb(65, 70, 75);*/
     margin-top: 0.5em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    font-size: 85%;
+    font-size: 90%;
 }
 .nav a:hover,
 .nav a:focus {
     background: inherit;
-    border: 2px solid lightgray;
-    text-decoration: none;
+    border-color: lightgray;
+    color: lightgray;
 }
 
 /* ------------------------------------------------------------------------ */
 /* Generic content, such as the index list pages */
 /* ------------------------------------------------------------------------ */
-.container {
-    padding: 3em;
-}
 
-
-
-/* Post & general page content. */
-.content {
-    padding: 1em;
-    margin-bottom: 1em;
-}
 
 .content-header {
-    margin-bottom: 0.25em;
-    margin-top: 0.4em;
+    /*margin-bottom: 0.25em;
+    margin-top: 0.25em;*/
     line-height: normal;
 }
 
 .content-header h1 {
     color: rgba(65, 70, 75, 1);
-    font-weight: 500;
+    font-weight: normal;
     font-size: 3em;
 }
 
-/*.content-title {
-    font-weight: 500;
-    font-size: 3em;
-    color: rgba(65, 70, 75, 1);
-    margin-bottom: 0.25em;
-    margin-top: 0.4em;
-    margin-left: 10%;
-    margin-right: 10%;
-    line-height: normal;
-}*/
-
-.content-header a {
+.content-header h1 a {
   text-decoration: none;
   color: inherit;
+}
+.content-header a:hover,
+.content-header a:focus {
+    color: lightgray;
 }
 
 .content-title-mini {
@@ -180,7 +164,8 @@ p {
     color: rgba(170, 170, 170, 1);
     border-bottom: 1px solid #eee;
     padding: 0.3em 0;
-    font-size: 100%;
+    margin-top: 2em;
+    font-size: 90%;
     font-weight: normal;
     letter-spacing: 0.1em;
 }
@@ -193,9 +178,18 @@ p {
   font-size: 95%;
 }
 
+/* ------------------------------------------------------------------------ */
+/* Playground  TODO factor into main css */
+/* ------------------------------------------------------------------------ */
+
+.content-column {
+    max-width: 40em;
+    margin: 0 auto;
+}
+
 
 /* ------------------------------------------------------------------------ */
-/* Posts */
+/* Posts  FIXME can probably delete */
 /* ------------------------------------------------------------------------ */
 .post-summary {
     padding-bottom: 2em;
@@ -286,6 +280,10 @@ details[open] summary {
     /* color: #333; */
 }
 
+/* ------------------------------------------------------------------------ */
+/* Code */
+/* ------------------------------------------------------------------------ */
+/* Inline code snippets */
 code {
     padding: 2px 4px;
     font-size: 90%;
@@ -294,7 +292,7 @@ code {
     border-radius: 4px;
 }
 
-
+/* Block code snippets */
 pre code {
     font-size: 90%;
     color: inherit;

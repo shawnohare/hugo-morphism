@@ -1,13 +1,14 @@
 {{ partial "header.html" . }}
 
 <body>
+
+<div id="layout" class="pure-g">
+  <div class="content content-column pure-u-1 pure-u-md-4-5">
   {{ partial "brand.html" . }}
-  <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
 
       <h1 class="content-title-mini">{{ .Title  }}</h1> 
         {{ $data := .Data }}
         <div class="pure-g">
-
           <div class="pure-u-1 pure-u-sm-1-2">
             <h2 class="list-title">By Frequency</h2>
             <table class="pure-table pure-table-horizontal pure-table-striped">
@@ -54,6 +55,6 @@
         </div>
   {{ partial "footer.html" . }}
   </div>
-
+</div>
 </body>
 </html>

@@ -1,12 +1,12 @@
 {{ partial "header.html" . }}
+{{ partial "math.html" . }}
 <body>
 
   <div id="layout" class="pure-g">
 
-    <div class="content pure-u-1 pure-u-sm-3-4 pure-u-md-15-24 pure-u-lg-13-24">
-  {{ partial "brand.html" . }}
+    <div class="content content-column pure-u-1 pure-u-md-4-5">
+      {{ partial "brand.html" . }}
 
-        <h1 class="content-title-mini">Recent Posts</h1>
         {{ range first 5 .Site.Pages }}
           <section class="post-summary">
             {{ partial "content.header.html" . }}
