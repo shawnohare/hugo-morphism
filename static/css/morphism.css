@@ -12,8 +12,9 @@
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
 html, button, input, select, textarea, p, nav, section, article,
 .pure-g [class *= "pure-u"] {
-    font-size: 20px;
+    font-size: 19px;
     font-family: -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;}
+    /*color: #f9f2f4;*/
 
 
 .content {
@@ -63,11 +64,11 @@ blockquote{
     position: relative;
 
     /*Font*/
-    font-size: 0.9em;
+    font-size: 0.5em;
     font-style: italic;
 
     /*Borders - (Optional)*/
-    border-left: 10px solid #eee;
+    border-left: 7px solid #eee;
     border-radius: 7px;
 
     /*-moz-box-shadow: 2px 2px 15px #ccc;
@@ -316,8 +317,6 @@ code {
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
-    /*color: black;
-    background-color: #f5f7f8;*/
     border-radius: 4px;
 }
 
