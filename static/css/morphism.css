@@ -16,21 +16,6 @@ html, button, input, select, textarea, p, nav, section, article,
     font-family: -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;}
 
 
-/*FIXME probably delete*/
-/*@media (min-width: 48em) {
-
-    .content {
-        padding: 2em 3em 0;
-        margin-left: 25%;
-    }
-
-    .header {
-        margin: 80% 2em 0;
-        text-align: right;
-    }
-
-}*/
-
 .content {
     padding: 1em;
     margin-bottom: 1em;
@@ -70,6 +55,38 @@ h3,h4,h5,h6 {
 p {
     line-height: 1.6em;
 }
+
+blockquote{
+    display:block;
+    padding: 0em 1em 0em 1em;
+    margin: 0em 0em 1.2em;
+    position: relative;
+
+    /*Font*/
+    font-size: 0.9em;
+    font-style: italic;
+
+    /*Borders - (Optional)*/
+    border-left: 10px solid #eee;
+    border-radius: 7px;
+
+    /*-moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;*/
+}
+
+/*blockquote::before{
+  content: "\201C";
+
+  font-family: Georgia, serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #eee;
+
+  position: absolute;
+  left: 10px;
+  top:5px;
+}*/
 
 /* ------------------------------------------------------------------------ */
 /* Layout */
@@ -127,6 +144,7 @@ p {
     font-size: 90%;
 }
 .nav a:hover,
+.nav a:active,
 .nav a:focus {
     background: inherit;
     border-color: lightgray;
@@ -145,6 +163,7 @@ p {
 }
 
 .content-header h1 {
+    margin-top: 0.1em;
     color: rgba(65, 70, 75, 1);
     font-weight: normal;
     font-size: 3em;
@@ -165,17 +184,21 @@ p {
     border-bottom: 1px solid #eee;
     padding: 0.3em 0;
     margin-top: 2em;
-    font-size: 90%;
+    font-size: 80%;
     font-weight: normal;
     letter-spacing: 0.1em;
 }
 
-/* Meta data line below post title */
+/* Content meta-data such as author, publication date, etc. */
 .content-meta {
-  display: block;
-  margin-top: -.5rem;
-  color: rgba(155, 155, 155, 1);
-  font-size: 95%;
+    display: block;
+    color: rgba(155, 155, 155, 1);
+    font-size: 90%;
+    margin-top: 1em;
+}
+
+.content-meta a {
+    text-decoration: underline;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -183,7 +206,7 @@ p {
 /* ------------------------------------------------------------------------ */
 
 .content-column {
-    max-width: 40em;
+    max-width: 38em;
     margin: 0 auto;
 }
 
@@ -212,21 +235,25 @@ p {
   /* margin-right: 2em; */
 }
 
-/* FIXME consider deleting */
 /* ToC */
-/*#toc {
-	float: right;
+.toc {
+	/*float: right;*/
 	padding: 0 1rem 1rem 1rem;
 	border-left: 1px solid #eee;
-	font-size: 0.9rem;
+	font-size: 0.9em;
 }
-nav#TableOfContents li {
-	padding-bottom: 0.25rem;
+
+.toc h1  {
+    font-weight: lighter;
 }
-.toc-label {
-	font-size: 0.8rem;
-	color: #aeaeae;
-}*/
+
+.toc ul {
+}
+
+.toc li {
+    font-size: 0.9em;
+    /*margin: 0.5em;*/
+}
 
 /* Footer */
 .footer {
@@ -289,21 +316,22 @@ code {
     font-size: 90%;
     color: #c7254e;
     background-color: #f9f2f4;
+    /*color: black;
+    background-color: #f5f7f8;*/
     border-radius: 4px;
 }
 
 /* Block code snippets */
 pre code {
-    font-size: 90%;
+    font-size: 80%;
     color: inherit;
     background-color: inherit;
     display: block;
     padding: 0.5em 1em;
     overflow-x: auto;
     overflow-y: auto;
-    border-width: 1px;
-    border-style: groove;
-    border-radius: 4px;
+    border-left: 8px double #eee;
+    border-radius: 7px;
 }
 
 /* ------------------------------------------------------------------------ */
