@@ -68,7 +68,7 @@ blockquote{
     font-style: italic;
 
     /*Borders - (Optional)*/
-    border-left: 7px solid #eee;
+    border-left: 7px double #eee;
     border-radius: 7px;
 
     /*-moz-box-shadow: 2px 2px 15px #ccc;
@@ -82,11 +82,15 @@ blockquote::before{
     font-family: Georgia, serif;
     font-size: 3em;
     font-weight: bold;
-    color: #eee;
+    color: #ddd;
 
     position: absolute;
     left: 10px;
     top:5px;
+}
+
+blockquote p {
+    font-size: 95%;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -345,7 +349,7 @@ pre code {
     padding: 0.5em 1em;
     overflow-x: auto;
     overflow-y: auto;
-    border-left: 8px double #eee;
+    border-left: 7px double #eee;
     border-radius: 7px;
 }
 
