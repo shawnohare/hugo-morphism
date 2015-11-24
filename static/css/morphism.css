@@ -10,7 +10,7 @@
 /* When setting the primary font stack, apply it to the Pure grid units along */
 /* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
-html, button, input, select, textarea, p, nav, section, article,
+html, button, input, select, textarea, p, nav, section, article
 .pure-g [class *= "pure-u"] {
     font-size: 19px;
     font-family: -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;}
@@ -55,16 +55,16 @@ h3,h4,h5,h6 {
 
 p {
     line-height: 1.6em;
+    /*font-weight: 300;*/
 }
 
 blockquote{
     display:block;
-    padding: 0em 1em 0em 1em;
+    padding: 2em 1em 0em 1em;
     margin: 0em 0em 1.2em;
     position: relative;
 
     /*Font*/
-    font-size: 0.5em;
     font-style: italic;
 
     /*Borders - (Optional)*/
@@ -76,18 +76,18 @@ blockquote{
     box-shadow: 2px 2px 15px #ccc;*/
 }
 
-/*blockquote::before{
-  content: "\201C";
+blockquote::before{
+    content: "\201C";
 
-  font-family: Georgia, serif;
-  font-size: 3em;
-  font-weight: bold;
-  color: #eee;
+    font-family: Georgia, serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: #eee;
 
-  position: absolute;
-  left: 10px;
-  top:5px;
-}*/
+    position: absolute;
+    left: 10px;
+    top:5px;
+}
 
 /* ------------------------------------------------------------------------ */
 /* Layout */
@@ -228,6 +228,16 @@ blockquote{
 /* ------------------------------------------------------------------------ */
  /* Styling for listing pages. */
 /* ------------------------------------------------------------------------ */
+.list-page {
+
+}
+.list-page ul {
+    margin: -0.25em;
+}
+.list-page li {
+    margin: 0;
+    font-size: 95%;
+}
 .list-date {
   display: inline;
   font-size: 0.75em;
@@ -264,6 +274,11 @@ blockquote{
     border-top: 1px solid #eee;
     color: #aaa;
 }
+.footer p {
+    font-size: 85%;
+    margin: 0em;
+    font-weight: lighter;
+}
 .footer a {
     color: rgba(65, 70, 75, 1);
 }
@@ -291,16 +306,17 @@ ul.footer-menu {
 /* We utilize the html5 summary tags in order to create a post archive */
 /* with built-in folding. */
 details {
-  border-radius: 3px;
-  /* background: #ffffff; */
+    border-radius: 3px;
+    /* background: #ffffff; */
 }
 
 details summary {
-  font-size: 1.25em;
-  font-weight: 300;
-  vertical-align: top;
-  padding: 5px 10px;
-  outline: none;
+    font-size: 100%;
+    font-weight: 300;
+    vertical-align: top;
+    padding: .3em .5em;
+    outline: none;
+    color: rgba(65, 70, 75, 1);
 }
 
 details[open] summary {
