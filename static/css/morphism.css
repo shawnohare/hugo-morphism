@@ -133,13 +133,14 @@ blockquote::before{
     display: inline-block;
     *display: inline;
     zoom: 1;
-    margin: 0;
+    margin-top: 0.4em;
     padding: 0;
 }
 .nav a {
     background: transparent;
     /*border: 2px solid rgb(65, 70, 75);*/
-    margin-top: 0.5em;
+    color: rgba(65, 70, 75, 1);
+    padding: 0.5em;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     font-size: 90%;
@@ -148,7 +149,6 @@ blockquote::before{
 .nav a:active,
 .nav a:focus {
     background: inherit;
-    border-color: lightgray;
     color: lightgray;
 }
 
