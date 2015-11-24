@@ -23,7 +23,14 @@ Gists can be embedded using
 just include `{{< gist gist_sha1_hash >}}` in your Markdown to embed
 a Gist.
 
-## Page parameters
+## Site Parameters
+
+The site specific parameters that this theme recognizes are:
+
+- `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
+- `copyright` string: Custom copyright notice.
+
+## Page Parameters
 
 - `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
   true, `hideDate` takes greater precedence.
