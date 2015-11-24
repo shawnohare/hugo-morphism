@@ -1,7 +1,7 @@
 +++
 math = false 
-meta = false 
-toc = false 
+meta = true
+toc = true
 author = "AUTHOR NAME"
 
 +++
