@@ -7,6 +7,13 @@
 		</ul>
 	</div>
 
+  {{ if .Site.Params.showPoweredBy}}
+    <p>
+      Powered by <a href="https://gohugo.io">Hugo</a> and the 
+      <a href="https://github.com/shawnohare/hugo-morphism">Morphism theme</a>.
+    </p>
+  {{ end }}
+
 	<p>
     {{ with .Site.Params.copyright }}
       {{ . | safeHTML }}

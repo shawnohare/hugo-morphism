@@ -12,6 +12,7 @@
           <summary>{{ .Key }}</summary>
 
           {{ range .Pages.GroupByDate "January" }}
+            <div class="list-page">
             <ul>
               <li>
                 <details open>
@@ -28,6 +29,7 @@
                 </details>
               </li>
             </ul>
+            </div>
           {{ end }}
         </details>
       {{ end }}
