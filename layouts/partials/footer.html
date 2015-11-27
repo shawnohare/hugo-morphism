@@ -9,11 +9,12 @@
 
   {{ if .Site.Params.showPoweredBy}}
     <p>
-      Powered by <a href="https://gohugo.io">Hugo</a> and the 
+      Powered by <a href="https://gohugo.io">Hugo</a> and the
       <a href="https://github.com/shawnohare/hugo-morphism">Morphism theme</a>.
     </p>
   {{ end }}
 
+	<div class="copyright">
 	<p>
     {{ with .Site.Params.copyright }}
       {{ . | safeHTML }}
@@ -23,4 +24,5 @@
     All rights reserved.
     {{end}}
   </p>
+</div>
 </div>
