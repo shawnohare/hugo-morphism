@@ -4,23 +4,27 @@
   {{ if or (eq .Type "post") (.Params.meta)  }}
     <span class="content-meta">
       {{ if .Params.author }}
-        By {{ .Params.author }} <br>
+         <i class="fa fa-user"> </i><span class="author">
+           {{ .Params.author }}</span> <br>
       {{ end }}
 
-      {{ if .Params.categories }}
-        Under
-        {{ range .Params.categories }}
-          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-        {{ end }}
-        <br>
-      {{ end }}
 
       {{ if not .Params.hidedate }}
-        {{ .Date.Format "Jan 2, 2006" }} &middot;
+        <i class="fa fa-calendar"> </i>
+        {{ .Date.Format "Jan 2, 2006" }}
       {{end }}
 
       {{ if not .Params.hidereadtime }}
+        <i class="fa fa-clock-o"></i>
         {{ .ReadingTime }} min read
+      {{ end }}
+
+      {{ if .Params.categories }}
+        <br>
+        <i class="fa fa-tags"> </i>
+        {{ range .Params.categories }}
+          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
       {{ end }}
     </span>
   {{ end }}

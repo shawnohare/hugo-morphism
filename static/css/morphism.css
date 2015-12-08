@@ -207,6 +207,11 @@ blockquote p {
     text-decoration: underline;
 }
 
+.content-meta .author {
+    /*color: rgb(90, 20, 55)*/
+    color: rgba(65, 70, 75, 1);
+}
+
 /* ------------------------------------------------------------------------ */
 /* Playground  TODO factor into main css */
 /* ------------------------------------------------------------------------ */
