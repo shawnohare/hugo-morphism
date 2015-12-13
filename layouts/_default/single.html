@@ -6,10 +6,10 @@
     {{ partial "brand.html" . }}
     {{ partial "content.header.html" . }}
     {{ if .Params.toc  }}
-    <div class="toc">
-      <h1>Contents</h1>
-      {{ .TableOfContents }}
-    </div>
+      <div class="toc">
+        <h1>Contents</h1>
+        {{ .TableOfContents }}
+      </div>
     {{ end  }}
     {{ .Content }}
 
