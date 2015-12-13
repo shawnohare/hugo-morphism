@@ -1,5 +1,4 @@
 # Morphism Hugo Theme
-**This theme is currently a work in progress and we do not recommend its use.**
 
 Morphism is a minimalist blog theme for the 
 [static site generator Hugo](https://gohugo.io) that supports mathematical
@@ -15,18 +14,13 @@ Pure.css powers the layout and MathJax the mathematical typesetting.
 Morphism began as an attempt to heavily customize the excellent 
 [Redlounge theme](https://github.com/tmaiaroto/hugo-redlounge).
 
-## Gists
-
-Gists can be embedded using 
-[Hugo shortcodes](https://gohugo.io/extras/shortcodes/).  In particular,
-just include `{{< gist gist_sha1_hash >}}` in your Markdown to embed
-a Gist.
-
 ## Site Parameters
 
 The site specific parameters that this theme recognizes are:
 
+- `subtitle` string: This is displayed under the main title. 
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
+- `copyrightHolder` string: Inserts the value in the default copyright notice.
 - `copyright` string: Custom copyright notice.
 
 ## Page Parameters
