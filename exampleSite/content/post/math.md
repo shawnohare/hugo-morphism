@@ -1,6 +1,6 @@
 +++
 author = "Hiro Protagonist"
-date = "2015-09-24T17:23:10-07:00"
+date = "2015-12-09T17:23:10-07:00"
 title = "Post with Mathematics"
 math = true
 categories = ["mathjax", "latex"]
