@@ -14,8 +14,6 @@ html, button, input, select, textarea, p, nav, section, article
 .pure-g [class *= "pure-u"] {
     font-size: 19px;
     font-family: -apple-system, "San Francisco", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;}
-    /*color: #f9f2f4;*/
-
 
 .content {
     padding: 1em;
@@ -261,11 +259,11 @@ blockquote p {
 	/*float: right;*/
 	padding: 0 1rem 1rem 1rem;
 	border-left: 1px solid #eee;
-	font-size: 0.9em;
 }
 
 .toc h1  {
     font-weight: lighter;
+    font-size: 1em;
 }
 
 .toc ul {
@@ -273,7 +271,7 @@ blockquote p {
 
 .toc li {
     font-size: 0.9em;
-    /*margin: 0.5em;*/
+    margin: 0.3em;
 }
 
 /* Footer */
@@ -287,7 +285,8 @@ blockquote p {
 .footer p {
     font-size: 85%;
     margin: 0em;
-    font-weight: lighter;
+    /* light font looked odd on chrome */
+    /*font-weight: lighter;*/
 }
 .footer a {
     color: rgba(65, 70, 75, 1);
@@ -317,7 +316,6 @@ ul.footer-menu {
 /* with built-in folding. */
 details {
     border-radius: 3px;
-    /* background: #ffffff; */
 }
 
 details summary {
@@ -330,8 +328,6 @@ details summary {
 }
 
 details[open] summary {
-    /* background: #69c773; */
-    /* color: #333; */
 }
 
 .copyright {
@@ -345,10 +341,12 @@ details[open] summary {
 /* ------------------------------------------------------------------------ */
 /* Inline code snippets */
 code {
-    padding: 2px 4px;
+    padding: 0.1em 0.175em 0.1em 0.175em;
     font-size: 90%;
-    color: #c7254e;
-    background-color: #f9f2f4;
+    /*color: #c7254e;*/
+    /*color: rgba(185, 37, 78, 1);*/
+    /*background-color: rgba(247, 247, 247, 1);*/
+    background-color: rgba(0, 0, 0, 0.04);
     border-radius: 4px;
 }
 
@@ -356,13 +354,14 @@ code {
 pre code {
     font-size: 80%;
     color: inherit;
-    background-color: inherit;
+    /*background-color: inherit;*/
+    background-color: rgba(247, 247, 247, 1);
     display: block;
-    padding: 0.5em 1em;
+    padding: 0.4em 0.4em;
     overflow-x: auto;
     overflow-y: auto;
-    border-left: 7px double #eee;
-    border-radius: 7px;
+    /*border-left: 7px double #eee;*/
+    border-radius: 4px;
 }
 
 /* ------------------------------------------------------------------------ */
