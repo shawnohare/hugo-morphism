@@ -50,19 +50,19 @@ title = "Hugo Morphism Theme Example"
 # Morphism theme footer menu 
 # -----------------------------------------------------------------------
 [[menu.footer]]
-  name = ""
+  name = "Github"
   pre = "<i class='fa fa-github fa-2x'></i> "
   weight = -100 
   identifier = "github"
   url = "https://github.com"
 [[menu.footer]]
-  name = ""
+  name = "Twitter"
   pre = "<i class='fa fa-twitter fa-2x'></i> "
   weight = -99 
   identifier = "twitter"
   url = "https://twitter.com"
 [[menu.footer]]
-  name = ""
+  name = "Mail"
   pre = "<i class='fa fa-envelope fa-2x'></i> "
   weight = -98 
   identifier = "mail"
