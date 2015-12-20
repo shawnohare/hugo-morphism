@@ -370,6 +370,29 @@ code.has-jax {
     font-size: 100%;
     background: inherit;
     border: inherit;
+    max-width: 10em;
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+code.has-jax {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+/* Display math */
+div.math {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    max-width: 10em;
     overflow-x: scroll;
     overflow-y: auto;
 }
