@@ -210,10 +210,7 @@ blockquote p {
     color: rgba(65, 70, 75, 1);
 }
 
-/* ------------------------------------------------------------------------ */
-/* Playground  TODO factor into main css */
-/* ------------------------------------------------------------------------ */
-
+/* Content envelope that limits the max width. */
 .content-column {
     max-width: 38em;
     margin: 0 auto;
@@ -368,9 +365,11 @@ pre code {
 /* Mathjax support */
 /* ------------------------------------------------------------------------ */
 code.has-jax {
-  font: inherit;
-  color: inherit;
-  font-size: 100%;
-  background: inherit;
-  border: inherit;
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    overflow-x: auto;
+    overflow-y: auto;
 }
