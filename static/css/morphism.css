@@ -355,10 +355,12 @@ pre code {
     background-color: rgba(247, 247, 247, 1);
     display: block;
     padding: 0.4em 0.4em;
-    overflow-x: auto;
-    overflow-y: auto;
     /*border-left: 7px double #eee;*/
     border-radius: 4px;
+
+    max-width: 38em;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -370,19 +372,6 @@ code.has-jax {
     font-size: 100%;
     background: inherit;
     border: inherit;
-    max-width: 10em;
-    overflow-x: scroll;
-    overflow-y: auto;
-}
-
-code.has-jax {
-    font: inherit;
-    color: inherit;
-    font-size: 100%;
-    background: inherit;
-    border: inherit;
-    overflow-x: scroll;
-    overflow-y: auto;
 }
 
 /* Display math */
@@ -392,7 +381,7 @@ div.math {
     font-size: 100%;
     background: inherit;
     border: inherit;
-    max-width: 10em;
-    overflow-x: scroll;
+    max-width: 38em;
+    overflow-x: auto;
     overflow-y: auto;
 }
