@@ -1,6 +1,11 @@
 <h1 class="content-title-mini">{{ .Type  }}</h1>
 <div class="content-header">
-
+<h1>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+      {{ if .Draft }} :: Draft {{end}}
+    </a>
+  </h1>
   {{ if or (eq .Type "post") (.Params.meta)  }}
     <span class="content-meta">
       {{ if .Params.author }}
@@ -29,10 +34,5 @@
     </span>
   {{ end }}
 
-  <h1>
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
-      {{ if .Draft }} :: Draft {{end}}
-    </a>
-  </h1>
+
 </div>
