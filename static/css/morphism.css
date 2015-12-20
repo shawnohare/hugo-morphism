@@ -370,6 +370,6 @@ code.has-jax {
     font-size: 100%;
     background: inherit;
     border: inherit;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: auto;
 }
