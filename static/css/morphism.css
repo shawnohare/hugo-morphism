@@ -370,7 +370,7 @@ pre code {
 }
 
 /* ------------------------------------------------------------------------ */
-/* Mathjax support */
+/* FIXME can possibly delete.  Math styling */
 /* ------------------------------------------------------------------------ */
 code.has-jax {
     font: inherit;
@@ -385,6 +385,28 @@ div.math {
     font: inherit;
     color: inherit;
     font-size: 90%;
+    background: inherit;
+    border: inherit;
+    max-width: 38em;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+/*  MathJax styling
+/* ------------------------------------------------------------------------ */
+.MathJax {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+}
+
+.MathJax_Display {
+    font: inherit;
+    color: inherit;
+    font-size: 100%;
     background: inherit;
     border: inherit;
     max-width: 38em;
