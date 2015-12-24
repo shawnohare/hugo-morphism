@@ -66,25 +66,32 @@ blockquote{
     font-style: italic;
 
     /*Borders - (Optional)*/
-    border-left: 7px double #eee;
-    border-radius: 7px;
+    /*border-left: 7px double #eee;*/
+    /*border-radius: 7px;*/
+	/*border-left: 1px solid #eee;*/
 
     /*-moz-box-shadow: 2px 2px 15px #ccc;
     -webkit-box-shadow: 2px 2px 15px #ccc;
     box-shadow: 2px 2px 15px #ccc;*/
 }
 
-blockquote::before{
-    content: "\201C";
-
+blockquote::before, blockquote::after{
     font-family: Georgia, serif;
     font-size: 3em;
     font-weight: bold;
     color: #ddd;
-
     position: absolute;
-    left: 10px;
-    top:5px;
+}
+blockquote::before {
+    content: "\201C";
+    left: 0em;
+    top: 0em;
+}
+
+blockquote::after{
+    content: "\201D";
+    right: 0em;
+    bottom: -1em;
 }
 
 blockquote p {
@@ -352,11 +359,9 @@ code {
 pre code {
     font-size: 80%;
     color: inherit;
-    /*background-color: inherit;*/
     background-color: rgba(247, 247, 247, 1);
     display: block;
     padding: 0.4em 0.4em;
-    /*border-left: 7px double #eee;*/
     border-radius: 4px;
 
     max-width: 38em;
