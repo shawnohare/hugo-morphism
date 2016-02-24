@@ -1,25 +1,20 @@
 {{ partial "header.html" . }}
-{{ partial "math.html" . }}
 <body>
-
-  <div id="layout" class="pure-g">
-
-    <div class="content content-column pure-u-1 pure-u-md-4-5">
-      {{ partial "brand.html" . }}
-
-        {{ range first 5 .Site.Pages }}
-          <section class="post-summary">
-            {{ partial "content.header.html" . }}
-            <p>{{ .Summary }}</p>
-            {{ if .Truncated }}
-              <a href="{{ .RelPermalink  }}">Read On &rarr;</a>
-            {{ end  }}
-          </section>
-        {{ end  }}
-
-      {{ partial "footer.html" . }}
-    </div>
+<div id="layout" class="pure-g">
+<article class="pure-u-1">
+{{ partial "brand.html" . }}
+{{ range first 5 .Site.Pages }}
+  {{ partial "content.header.html" . }}
+<section class="post-summary">{{ .Summary }}
+  {{ if .Truncated }}
+  <div class="read-more">
+    <a href="{{ .RelPermalink  }}">Read More &rarr;</a>
   </div>
-  {{ partial "body.includes.html" . }}
+  {{ end  }}
+</section>
+{{ end  }}
+{{ partial "footer.html" . }}
+</div>
+</div>
 </body>
 </html>
