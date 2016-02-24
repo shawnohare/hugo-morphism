@@ -25,14 +25,14 @@
     <li>
       <i class="fa fa-calendar"></i>
       &nbsp;{{ .Date.Format "Jan 2, 2006" }}
-    <li>
+    </li>
   {{end }}
 
   {{ if not .Params.hidereadtime }}
     <li>
       <i class="fa fa-clock-o"></i>
       &nbsp;{{ .ReadingTime }} min read
-    <li>
+    </li>
   {{ end }}
 
   {{ if .Params.categories }}
