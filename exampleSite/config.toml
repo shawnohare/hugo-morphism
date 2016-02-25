@@ -23,25 +23,25 @@ title = "Hugo Morphism Theme Example"
 # -----------------------------------------------------------------------
 [[menu.nav]]
   name = "Home"
-  pre = "<i class='fa fa-home fa-lg'></i> "
+  pre = ""
   weight = -110 
   identifier = "home"
   url = "/"
 [[menu.nav]]
   name = "Posts"
-  pre = "<i class='fa fa-book fa-lg'></i> "
+  pre = ""
   weight = -100 
   identifier = "posts"
   url = "/post"
 [[menu.nav]]
   name = "Categories"
-  pre = "<i class='fa fa-tags fa-lg'></i> "
+  pre = ""
   weight = -90 
   identifier = "categories"
   url = "/categories"
 [[menu.nav]]
   name = "Me"
-  pre = "<i class='fa fa-user fa-lg'></i> "
+  pre = ""
   weight = -80
   identifier = "me"
   url = "/page/about/"
@@ -51,19 +51,19 @@ title = "Hugo Morphism Theme Example"
 # -----------------------------------------------------------------------
 [[menu.footer]]
   name = "Github"
-  pre = "<i class='fa fa-github fa-2x'></i> "
+  pre = ""
   weight = -100 
   identifier = "github"
   url = "https://github.com"
 [[menu.footer]]
   name = "Twitter"
-  pre = "<i class='fa fa-twitter fa-2x'></i> "
+  pre = ""
   weight = -99 
   identifier = "twitter"
   url = "https://twitter.com"
 [[menu.footer]]
   name = "Mail"
-  pre = "<i class='fa fa-envelope fa-2x'></i> "
+  pre = ""
   weight = -98 
   identifier = "mail"
-  url = "mailto:"
+  url = "mailto:someone@somewhere.com"

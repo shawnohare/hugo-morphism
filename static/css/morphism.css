@@ -20,8 +20,8 @@ html {
 }
 
 body {
-    /*text-rendering: optimizeLegibility;*/
-    /*font-weight: lighter;*/
+    /* text-rendering: optimizeLegibility; */
+    font-weight: lighter;
     font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco","Roboto", "Fira Sans", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;
 }
 
@@ -41,6 +41,7 @@ header.brand h1 {
     margin: 0;
     /* margin-bottom: 1rem; */
     font-weight: 400;
+    font-weight: 900;
     font-size: 3.5rem;
     color: rgba(65, 70, 75, 1);
 }
@@ -54,7 +55,7 @@ header.brand h2 {
 }
 
 header.brand nav.site {
-    font-size: 80%;
+    font-size: 90%;
 }
 
 header.brand nav.site ul {
@@ -138,9 +139,9 @@ li {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: lighter;
-}
+/* h1, h2, h3, h4, h5, h6 { */
+/*     font-weight: lighter; */
+/* } */
 
 
 /* ------------------------------------------------------------------------ */
@@ -150,11 +151,24 @@ h1, h2, h3, h4, h5, h6 {
 /* ------------------------------------------------------------------------ */
 /* Content Title styling.  
 /* ------------------------------------------------------------------------ */
+h1.content-type {
+    text-transform: uppercase;
+    color: rgba(170, 170, 170, 1);
+    border-bottom: 1px solid #eee;
+    padding: 0.4em 0;
+    margin-top: 1em;
+    font-size: 80%;
+    font-weight: normal;
+    letter-spacing: 0.1em;
+}
 
 h1.content-title {
     /*max-width: 50rem;*/
-    font-size: 2rem;
-    font-weight: normal;
+    font-size: 3rem;
+    font-weight: 500;
+    /* margin-top: 1rem; */
+    /* margin-bottom: 0; */
+    margin: 0 auto;
 }
 
 h1.content-title a:link,
@@ -168,45 +182,19 @@ h1.content-title a:focus {
     color: darkgray;
 }
 
-h1.content-type {
-    text-transform: uppercase;
-    color: rgba(170, 170, 170, 1);
-    border-bottom: 1px solid #eee;
-    padding: 0.4em 0;
-    margin-top: 1em;
-    font-size: 80%;
-    font-weight: normal;
-    letter-spacing: 0.1em;
-}
 
 /*/* Content meta-data such as author, publication date, etc. */*/
 
-.content-meta {
-    display: block;
-    /*color: rgba(155, 155, 155, 1);*/
-    color: rgba(100, 105, 110, 1);
-    font-size: 90%;
-    /* margin-bottom: 1rem; */
+section.content-meta {
 }
 
-.content-meta .author {
-    /*color: rgb(90, 20, 55)*/
+section.content-meta p {
+    line-height: normal;
     color: rgba(65, 70, 75, 1);
+    /* font-weight: 100; */
 }
 
-.content-meta ul {
-  padding: 0;
-	list-style: none;
-	display: block;
-	margin: 0;
-  margin-top: -1rem;
-
-}
-
-.content-meta li {
-	display: inline-block;
-  line-height: normal;
-	margin-right: 0.5rem;
+section.content-meta .author {
 }
 
 .post-avatar {
@@ -223,22 +211,22 @@ blockquote {
 /* ------------------------------------------------------------------------ */
 /* Listing pages */
 /* ------------------------------------------------------------------------ */
-/*.list-page ul {*/
-/*    list-style-type: none;*/
-/*    margin: -0.25em;*/
-/*    width: 87.5%;*/
-/*    max-width: 45rem;*/
-/*}*/
-/*.list-page li {*/
-/*    margin: 0;*/
-/*    /*font-size: 95%;*/*/
-/*}*/
-/*.list-date {*/
-/*  display: inline;*/
-/*  font-size: 0.75em;*/
-/*  /* padding-right: 2em; */*/
-/*  /* margin-right: 2em; */*/
-/*}*/
+.list-page ul {
+    list-style-type: none;
+    margin: -0.25em;
+    /* width: 87.5%; */
+    /* max-width: 45rem; */
+}
+.list-page li {
+    margin: 0;
+    /*font-size: 95%;*/
+}
+.list-date {
+  display: inline;
+  font-size: 0.75em;
+  /* padding-right: 2em; */
+  /* margin-right: 2em; */
+}
 
 /* ------------------------------------------------------------------------ */
 /* Table of Contents */
@@ -276,8 +264,8 @@ footer.page-footer{
     padding-top: 1em;
     margin-top: 3em;
     color: #aaa;
-    width: 95%;
-    max-width: 45rem;
+    /* width: 95%; */
+    /* max-width: 45rem; */
     text-align: center;
     line-height: 1.4em;
 }
@@ -310,7 +298,6 @@ footer.page-footer ul.page-footer-menu {
 footer.page-footer ul.page-footer-menu li {
 	display: inline-block;
 	margin-right: 0.5rem;
-	font-size: 55%;
 }
 
 .copyright {
@@ -351,7 +338,7 @@ details[open] summary {
 code {
     line-height: normal;
     padding: 0.1em 0.175em 0.1em 0.175em;
-    font-size: 90%;
+    /* font-size: 90%; */
     /*color: #c7254e;*/
     /*color: rgba(185, 37, 78, 1);*/
     /*background-color: rgba(247, 247, 247, 1);*/
@@ -362,7 +349,7 @@ code {
 /* Block code snippets */
 pre code {
     line-height: normal;
-    font-size: 80%;
+    /* font-size: 80%; */
     color: inherit;
     background-color: rgba(247, 247, 247, 1);
     display: block;
@@ -379,7 +366,7 @@ pre code {
 .MathJax {
     font: inherit;
     color: inherit;
-    font-size: 90%;
+    /* font-size: 90%; */
     background: inherit;
     border: inherit;
 }
@@ -387,7 +374,7 @@ pre code {
 .MathJax_Display {
     font: inherit;
     color: inherit;
-    font-size: 90%;
+    /* font-size: 90%; */
     background: inherit;
     border: inherit;
     padding-bottom: 1rem;
