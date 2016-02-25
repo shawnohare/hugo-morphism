@@ -1,28 +1,89 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+/* FIXME: probably delete */
+/* *{ */
+/*     -webkit-box-sizing: border-box; */
+/*     -moz-box-sizing: border-box; */
+/*     box-sizing: border-box; */
+/* } */
+
+
+#layout {
+    position: relative;
+    /* width: 100%; */
+    padding: 2%;
+    margin: 0 auto;
+    max-width: 768px;
     box-sizing: border-box;
 }
 
-/* When setting the primary font stack, apply it to the Pure grid units along */
-/* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
-/* specific font stacks to ensure the greatest OS/browser compatibility. */
-html, button, input, select, textarea, p, nav, section, article, header, footer, .pure-g [class *= "pure-u"] {
-    text-rendering: optimizeLegibility;
-    font-weight: lighter;
-    font-size: 18px;
-    font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco","Roboto", "Fira Sans", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;
+html {
+    font-size: 100%;
 }
 
 body {
+    /*text-rendering: optimizeLegibility;*/
+    /*font-weight: lighter;*/
+    font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco","Roboto", "Fira Sans", "Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Open Sans","Helvetica Neue", "Lucida Grand", sans-serif;
 }
 
-#layout {
-    padding: 1.6%;
-    margin: 0 auto;
-    max-width: 45em;
-    margin-bottom: 1rem;
+/*------------------------------------------------------------------------ */
+/* Brand details, such as a sidebar or top display. */
+/* ------------------------------------------------------------------------ */
+
+header.brand{
+   *margin-top: 1rem;
+    margin-bottom: 3rem;
+    /*display: block;*/
+    text-align: center;
 }
+
+/* Main brand title */
+header.brand h1 {
+    margin: 0;
+    /* margin-bottom: 1rem; */
+    font-weight: 400;
+    font-size: 3.5rem;
+    color: rgba(65, 70, 75, 1);
+}
+
+header.brand h2 {
+    margin: 0;
+    /* padding-top: 0rem; */
+    /*font-style: normal;*/
+    font-weight: 200;
+    color: #64696e;
+}
+
+header.brand nav.site {
+    font-size: 80%;
+}
+
+header.brand nav.site ul {
+    list-style: none;
+    /*margin-top: 0.75rem;*/
+    padding: 0;
+}
+
+ header.brand nav.site li { 
+ 	display: inline-block; 
+ 	margin-right: 1rem; 
+ } 
+
+ header.brand nav.site li a { 
+     text-decoration: none; 
+     background: transparent; 
+     color: rgba(65, 70, 75, 1); 
+     letter-spacing: 0.05em; 
+     text-transform: uppercase; 
+     text-transform: lowercase; 
+ } 
+
+ header.brand nav.site li a:hover, 
+ header.brand nav.site li a:active, 
+ header.brand nav.site li a:focus { 
+     background: inherit; 
+     color: darkgray; 
+ } 
+
 
 /* We prefer to use colored links. */
 a:link {
@@ -33,14 +94,16 @@ a:link {
   background: inherit;
   text-shadow: none;
 }
-a:link::selection {
-  text-shadow: none;
-  background: inherit;
-}
-a:link::-moz-selection {
-  text-shadow: none;
-  background: inherit;
-}
+
+/* a:link::selection { */
+/*   text-shadow: none; */
+/*   background: inherit; */
+/* } */
+/* a:link::-moz-selection { */
+/*   text-shadow: none; */
+/*   background: inherit; */
+/* } */
+
 a:visited {
   color: #821515;
 }
@@ -48,13 +111,14 @@ a:hover {
   color: #FF5000;
 }
 
-article {
+p {
+    line-height: 1.5rem;
 }
 
-/*section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}*/
+section {
+    /* margin-top: 2rem; */
+    /* margin-bottom: 2rem; */
+}
 
 section.post-summary {
     margin-bottom: 3.5rem;
@@ -73,87 +137,26 @@ li {
     line-height: 1.6em;
 }
 
-/* FIXME: use old code styling from morphism */
-code {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    font-size: 1.125rem;
-}
-
-pre code {
-    width: 52.5%;
-    font-size: 1.2rem;
-    padding-left: 2.5%;
-    display: block;
-    overflow-x: scroll;
-}
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: lighter;
 }
 
-/*------------------------------------------------------------------------ */
-/* Brand details, such as a sidebar or top display. */
-/* ------------------------------------------------------------------------ */
-header.brand{
-    /*margin-top: 0.5em;
-    margin-bottom: 2rem;*/
-    /*display: block;*/
-    text-align: center;
-}
-
-/* Main brand title */
-header.brand h1 {
-    margin: 0;
-    font-weight: 400;
-    color: rgba(65, 70, 75, 1);
-}
-
-header.brand h2 {
-    margin: 0;
-    padding-top: 0rem;
-    /*font-style: normal;*/
-    font-weight: 200;
-    color: #64696e;
-}
-
-header.brand nav.menu {
-}
-
-header.brand nav.menu ul {
-    list-style: none;
-    margin-top: 0.75rem;
-    padding: 0;
-}
-
-header.brand nav.menu li {
-	display: inline-block;
-	margin-right: 1rem;
-}
-
-header.brand nav.menu li a {
-    text-decoration: none;
-    background: transparent;
-    color: rgba(65, 70, 75, 1);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-}
-
-header.brand nav.menu li a:hover,
-header.brand nav.menu li a:active,
-header.brand nav.menu li a:focus {
-    background: inherit;
-    color: darkgray;
-}
 
 /* ------------------------------------------------------------------------ */
 /* Generic content, such as the index list pages */
 /* ------------------------------------------------------------------------ */
 
-/* Content Title styling.  This is mostly to avoid underlying links. */
+/* ------------------------------------------------------------------------ */
+/* Content Title styling.  
+/* ------------------------------------------------------------------------ */
+
 h1.content-title {
     /*max-width: 50rem;*/
+    font-size: 2rem;
     font-weight: normal;
 }
+
 h1.content-title a:link,
 h1.content-title a:visited {
     background: transparent;
@@ -176,7 +179,8 @@ h1.content-type {
     letter-spacing: 0.1em;
 }
 
-/* Content meta-data such as author, publication date, etc. */
+/*/* Content meta-data such as author, publication date, etc. */*/
+
 .content-meta {
     display: block;
     /*color: rgba(155, 155, 155, 1);*/
@@ -194,17 +198,16 @@ h1.content-type {
   padding: 0;
 	list-style: none;
 	display: block;
-	/*text-align:center;*/
 	margin: 0;
-  margin-top: -0.5rem;
+  margin-top: -1rem;
 
 }
 
 .content-meta li {
 	display: inline-block;
+  line-height: normal;
 	margin-right: 0.5rem;
 }
-
 
 .post-avatar {
     border-radius: 50px;
@@ -218,26 +221,28 @@ blockquote {
 }
 
 /* ------------------------------------------------------------------------ */
- /* Styling for listing pages. */
+/* Listing pages */
 /* ------------------------------------------------------------------------ */
-.list-page ul {
-    list-style-type: none;
-    margin: -0.25em;
-    width: 87.5%;
-    max-width: 45rem;
-}
-.list-page li {
-    margin: 0;
-    /*font-size: 95%;*/
-}
-.list-date {
-  display: inline;
-  font-size: 0.75em;
-  /* padding-right: 2em; */
-  /* margin-right: 2em; */
-}
+/*.list-page ul {*/
+/*    list-style-type: none;*/
+/*    margin: -0.25em;*/
+/*    width: 87.5%;*/
+/*    max-width: 45rem;*/
+/*}*/
+/*.list-page li {*/
+/*    margin: 0;*/
+/*    /*font-size: 95%;*/*/
+/*}*/
+/*.list-date {*/
+/*  display: inline;*/
+/*  font-size: 0.75em;*/
+/*  /* padding-right: 2em; */*/
+/*  /* margin-right: 2em; */*/
+/*}*/
 
+/* ------------------------------------------------------------------------ */
 /* Table of Contents */
+/* ------------------------------------------------------------------------ */
 .toc summary {
 
     font-size: 1.5rem;
@@ -265,9 +270,6 @@ blockquote {
     margin: 1rem;
 }
 
-table {
-    font-size: 1.4rem;
-}
 
 /* Footer, but with a different name to avoid conflicts with tufte.css */
 footer.page-footer{
@@ -341,6 +343,35 @@ details[open] summary {
 }
 
 
+/* ------------------------------------------------------------------------ */
+/* Code */
+/* ------------------------------------------------------------------------ */
+
+/* Inline code snippets */
+code {
+    line-height: normal;
+    padding: 0.1em 0.175em 0.1em 0.175em;
+    font-size: 90%;
+    /*color: #c7254e;*/
+    /*color: rgba(185, 37, 78, 1);*/
+    /*background-color: rgba(247, 247, 247, 1);*/
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+
+/* Block code snippets */
+pre code {
+    line-height: normal;
+    font-size: 80%;
+    color: inherit;
+    background-color: rgba(247, 247, 247, 1);
+    display: block;
+    padding: 0.4em 0.4em;
+    border-radius: 4px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
 
 /* ------------------------------------------------------------------------ */
 /*  MathJax styling
@@ -348,7 +379,7 @@ details[open] summary {
 .MathJax {
     font: inherit;
     color: inherit;
-    font-size: 100%;
+    font-size: 90%;
     background: inherit;
     border: inherit;
 }
@@ -356,10 +387,117 @@ details[open] summary {
 .MathJax_Display {
     font: inherit;
     color: inherit;
-    font-size: 100%;
+    font-size: 90%;
     background: inherit;
     border: inherit;
     padding-bottom: 1rem;
     overflow-x: auto;
     overflow-y: auto;
 }
+
+
+/* ------------------------------------------------------------------------ */
+/* Tables.  Mostly based on the Skeleton css project. */
+/* ------------------------------------------------------------------------ */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+.terms-table {
+    overflow-x: auto;
+    margin: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Buttons.  Mostly based on the Skeleton project.
+––––––––––––––––––––––––––––––––––––––––––––––––––------------------------- */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0; }
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+
+button,
+.button {
+  margin-bottom: 0.5rem;
+}
+/* /1* Spacing */
+/* –––––––––––––––––––––––––––––––––––––––––––––––––– *1/ */
+/* button, */
+/* .button { */
+/*   margin-bottom: 1rem; } */
+/* input, */
+/* textarea, */
+/* select, */
+/* fieldset { */
+/*   margin-bottom: 1.5rem; } */
+/* pre, */
+/* blockquote, */
+/* dl, */
+/* figure, */
+/* table, */
+/* p, */
+/* ul, */
+/* ol, */
+/* form { */
+/*   margin-bottom: 2.5rem; } */

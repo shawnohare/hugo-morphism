@@ -2,7 +2,7 @@
 {{ if .IsNode }}
   <h1 class="content-type">{{ .Title }}</h1>
 {{ else }}
-  <h1 class="content-type">{{ .Type }}</h1>
+  <!-- <h1 class="content-type">{{ .Type }}</h1> -->
   <h1 class="content-title"><a href="{{ .RelPermalink }}">
     {{ .Title }}
     {{ if .Draft }} :: Draft {{ end }}

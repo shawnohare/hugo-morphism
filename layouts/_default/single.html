@@ -1,10 +1,10 @@
 {{ partial "header.html" . }}
 
 <body>
-<div id="layout" class="pure-g">
-<div class="pure-u-1">
+<div id="layout">
 {{ partial "brand.html" . }}
 <article>
+<h1 class="content-type">{{ .Type }}</h1>
 {{ partial "content.header.html" . }}
 {{ partial "toc.html" . }}
 <section>{{ .Content }}</section>
@@ -13,7 +13,6 @@
   {{ partial "disqus.html" . }}
   {{ partial "footer.html" . }}
 </section>
-</div>
 </div>
 </body>
 </html>

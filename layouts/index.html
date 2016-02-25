@@ -1,8 +1,9 @@
 {{ partial "header.html" . }}
 <body>
-<div id="layout" class="pure-g">
-<article class="pure-u-1">
+<div id="layout">
 {{ partial "brand.html" . }}
+<article>
+<h1 class="content-type">Recent</h1>
 {{ range first 5 .Site.Pages }}
   {{ partial "content.header.html" . }}
 <section class="post-summary">{{ .Summary }}
@@ -12,6 +13,7 @@
   </div>
   {{ end  }}
 </section>
+</article>
 {{ end  }}
 {{ partial "footer.html" . }}
 </div>
