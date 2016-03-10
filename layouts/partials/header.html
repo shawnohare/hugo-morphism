@@ -1,7 +1,31 @@
-{{ partial "doctype.html" . }}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
 <head>
+
 <title>{{ .Site.Title }} - {{ .Title  }}</title>
   {{ partial "meta.html" . }}
   {{ partial "opengraph.html" }}
-  {{ partial "header.includes.html" . }}
+  {{ partial "head.includes.html" . }}
 </head>
+
+<body>
+<div id="layout">
+
+{{ partial "nav.html" . }}
+{{ partial "brand.html" . }}
+
+<article>
+
+<!-- Content type specific header data -->
+<section>
+{{ if .IsHome }}
+  <h1 class="content-type">Recent</h1>
+{{ else if .IsNode }}
+  <h1 class="content-type">{{ .Title }}</h1>
+{{ else if .IsPage }}
+  <h1 class="content-type">{{ .Type }}</h1>
+  {{ partial "content.header.html" . }}
+  {{ partial "toc.html" . }}
+{{ end }}
+</section>

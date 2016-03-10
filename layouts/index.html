@@ -1,22 +1,12 @@
 {{ partial "header.html" . }}
-<body>
-<div id="layout">
-{{ partial "brand.html" . }}
-<article>
-<h1 class="content-type">Recent</h1>
 {{ range first 5 .Site.Pages }}
   {{ partial "content.header.html" . }}
-<section class="post-summary">{{ .Summary }}
-  {{ if .Truncated }}
-  <div class="read-more">
-    <a href="{{ .RelPermalink  }}">Read More &rarr;</a>
-  </div>
-  {{ end  }}
-</section>
-</article>
+    <section class="post-summary">{{ .Summary }}
+    {{ if .Truncated }}
+    <span class="read-more">
+      <a href="{{ .RelPermalink  }}">Read More &hellip;</a>
+    </span>
+    {{ end  }}
+    </section>
 {{ end  }}
 {{ partial "footer.html" . }}
-</div>
-</div>
-</body>
-</html>

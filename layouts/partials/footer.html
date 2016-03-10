@@ -1,6 +1,12 @@
-<footer class="page-footer">
+</article>
+
+<footer id="comments">
+{{ partial "disqus.html" . }}
+<footer>
+
+<footer id="site-footer">
 		<hr>
-		<ul class="page-footer-menu">
+		<ul>
 		{{ range .Site.Menus.footer }}
       <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
 		{{ end }}
@@ -13,7 +19,7 @@
     </p>
   {{ end }}
 
-	<div class="copyright">
+	<section id="copyright">
 	<p>
     {{ with .Site.Params.copyright }}
       {{ . | safeHTML }}
@@ -23,6 +29,11 @@
     All rights reserved.
     {{end}}
   </p>
-</div>
+  </section>
 </footer>
+
 {{ partial "body.includes.html" . }}
+
+</div>
+</body>
+</html>

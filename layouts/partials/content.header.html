@@ -1,39 +1,32 @@
-<section>
-{{ if .IsNode }}
-  <h1 class="content-type">{{ .Title }}</h1>
-{{ else }}
   <h1 class="content-title"><a href="{{ .RelPermalink }}">
     {{ .Title }}
     {{ if .Draft }} :: Draft {{ end }}
   </a></h1>
-{{ end }}
 
-{{ if .IsPage }}
-{{ if .Params.subtitle }}<p class=subtitle>{{ .Params.subtitle }}</p>{{ end }}
-{{ if or (eq .Type "post") (.Params.meta)  }}
-<section class="content-meta">
-<p>
-  {{ if not .Params.hidedate }}
-    {{ .Date.Format "Jan 2, 2006" }}
-  {{end }}
+  {{ if .Params.subtitle }}<p class=subtitle>{{ .Params.subtitle }}</p>{{ end }}
 
-  <!-- {{ if not .Params.hidereadtime }} -->
-  <!--     {{ .ReadingTime }} min read -->
-  <!-- {{ end }} -->
+  {{ if or (eq .Type "post") (.Params.meta)  }}
+  <section class="content-meta">
+  <p>
+    {{ if not .Params.hidedate }}
+      {{ .Date.Format "Jan 2, 2006" }}
+    {{end }}
 
-  {{ if .Params.author }}
-    by <span class="author">{{ .Params.author }}</span>
+    <!-- {{ if not .Params.hidereadtime }} -->
+    <!--     {{ .ReadingTime }} min read -->
+    <!-- {{ end }} -->
+
+    {{ if .Params.author }}
+      by <span class="author">{{ .Params.author }}</span>
+    {{ end }}
+
+    {{ if .Params.categories }}
+        in
+        {{ range .Params.categories }}
+          <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+    {{ end }}
+    </ul>
+  </p>
+  </section>
   {{ end }}
-
-  {{ if .Params.categories }}
-      in
-      {{ range .Params.categories }}
-        <a  href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>
-      {{ end }}
-  {{ end }}
-  </ul>
-</p>
-</section>
-{{ end }}
-{{ end }}
-</section>

@@ -1,34 +1,28 @@
 {{ partial "header.html" . }}
 
-<body>
-<div id="layout">
-{{ partial "brand.html" . }}
-  {{ partial "content.header.html" . }}
-  <section class="list-page">
-  {{ range .Data.Pages.GroupByDate "2006" }}
-    <details open>
-      <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-      {{ range .Pages.GroupByDate "January" }}
-        <ul>
-          <li>
-            <details open>
-              <summary>{{ .Key }} ({{ len .Pages }})</summary>
-                {{ range .Pages }}
-                  <ul>
-                    <li>
-                      <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
-                      <a href="{{ .RelPermalink }}">{{.Title}}</a>
-                    </li>
-                  </ul>
-                {{ end }}
-            </details>
-          </li>
-        </ul>
-      {{ end }}
-    </details>
+<section class="list-page">
+{{ range .Data.Pages.GroupByDate "2006" }}
+  <details open>
+    <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
+    {{ range .Pages.GroupByDate "January" }}
+      <ul>
+        <li>
+          <details open>
+            <summary>{{ .Key }} ({{ len .Pages }})</summary>
+              {{ range .Pages }}
+                <ul>
+                  <li>
+                    <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                    <a href="{{ .RelPermalink }}">{{.Title}}</a>
+                  </li>
+                </ul>
+              {{ end }}
+          </details>
+        </li>
+      </ul>
     {{ end }}
-  </section>
+  </details>
+  {{ end }}
+</section>
+
 {{ partial "footer.html" . }}
-</div>
-</body>
-</html>
