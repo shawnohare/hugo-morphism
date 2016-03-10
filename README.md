@@ -1,18 +1,15 @@
 # Morphism Hugo Theme
 
-Morphism is a minimalist blog theme for the 
+Morphism is a minimalist, clean blog theme for the 
 [static site generator Hugo](https://gohugo.io) that supports mathematical
 typesetting. By utilizing copious partial templates the theme is 
 largely customizable.
 
-## Tools
+## Math
 
-Pure.css powers the layout and MathJax the mathematical typesetting.  
-
-## Background 
-
-Morphism began as an attempt to heavily customize the excellent 
-[Redlounge theme](https://github.com/tmaiaroto/hugo-redlounge).
+MathJax powers mathematical typesetting.  The TeX delimeters `$`
+and `$$` can be used for inline / display math, respectively, or the escaped
+LaTeX symbols `\\( ... \\)` and `\\[ ... \\]`.
 
 ## Site Parameters
 

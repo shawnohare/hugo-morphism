@@ -20,8 +20,6 @@ html {
 }
 
 body {
-    font-size: 1rem;
-    font-weight: 300;
     font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto", "Fira Sans", sans-serif;
 }
 
@@ -84,7 +82,8 @@ nav.site li a:hover,
 nav.site li a:active, 
 nav.site li a:focus { 
      background: inherit; 
-     color: darkgray; 
+     /* color: darkgray; */ 
+     text-decoration: underline;
  } 
 
 
@@ -99,7 +98,8 @@ a:visited {
   color: #821515;
 }
 a:hover {
-  color: #FF5000;
+  /* color: #FF5000; */
+  text-decoration: underline;
 }
 
 p {
@@ -110,7 +110,7 @@ section {
 }
 
 section.post-summary {
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
 }
 
 .read-more {
@@ -144,7 +144,7 @@ h1.content-type {
 
 h1.content-title {
     /*max-width: 50rem;*/
-    font-size: 2rem;
+    font-size: 2.5rem;
     /* font-weight: 600; */
     /* margin-top: 1rem; */
     /* margin-bottom: 0; */
@@ -159,7 +159,8 @@ h1.content-title a:visited {
 }
 h1.content-title a:hover,
 h1.content-title a:focus {
-    color: darkgray;
+    /* color: darkgray; */
+    text-decoration: underline;
 }
 
 
@@ -263,6 +264,10 @@ blockquote {
     background: transparent;
 }
 
+#site-footer a:hover {
+    text-decoration: underline;
+}
+
 #site-footer hr {
     text-align: left;
     margin-left: 0;
@@ -306,7 +311,7 @@ details summary {
 }
 
 details summary.year {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 
 details[open] summary {
@@ -325,40 +330,19 @@ pre, code, kbd, samp, tt {
   font-size: 1rem;
 }
 
-/* Inline code */
+/* ------------------------------------------------------------------------ */
+/* Code */
+/* ------------------------------------------------------------------------ */
 code {
-    /* background-color: #f9f2f4; */
-    /* background-color: rgba(0, 0, 0, 0.04); */
-    /* background-color: inherit; */ 
-    /* color: #c7254e; */
-    /* color: DarkGreen; */
-    /* font-size: 1.2rem; */
-
     padding: 0.1em 0.175em 0.1em 0.175em;
+    /* font-size: 1.1rem; */
     font-size: 110%;
     border-radius: 4px;
-    line-height: normal;
     overflow: auto;
     border: 1px solid #E3EDF3;
     background: #F7FAFB;
 }
 
-/* Block code snippets */
-pre code {
-    /* background-color: rgba(247, 247, 247, 1); */
-    /* background-color: inherit; */ 
-    /* padding: 0.4em 0.4em; */
-    /* border-radius: 4px; */
-    /* color: inherit; */
-    /* color: #c7254e; */
-
-    /* font-size: 1rem; */
-    /* color: DarkGreen; */
-    /* line-height: normal; */
-    /* display: block; */
-    /* overflow-x: auto; */
-    /* overflow-y: auto; */
-}
 
 pre code {
     -moz-box-sizing: border-box;
@@ -369,6 +353,7 @@ pre code {
     padding: 10px;
     overflow: auto;
     border-radius: 4px;
+    font-size: 1rem;
 }
 
 
@@ -396,10 +381,6 @@ pre code {
     overflow-x: auto;
     overflow-y: auto;
 }
-
-/* .MathJax a { */
-/*   color: green ! important; */
-/* } */
 
 
 /* ------------------------------------------------------------------------ */
