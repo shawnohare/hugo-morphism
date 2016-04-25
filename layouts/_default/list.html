@@ -1,7 +1,10 @@
 {{ partial "header.html" . }}
 
 <section class="list-page">
-{{ range (.Paginate (.Data.Pages.GroupByDate "2006") 1000).PageGroups }}
+{{ $.Scratch.Set "limit" 100000 }}
+{{ with .Site.Params.listPaginatorLimit }}{{ $.Scratch.Set "limit" . }}{{ end }}
+{{ $lim := $.Scratch.Get "limit" }}
+{{ range (.Paginate (.Data.Pages.GroupByDate "2006") $lim).PageGroups }}
   <details open>
     <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
     {{ range .Pages.GroupByDate "Jan" }}

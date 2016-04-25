@@ -12,7 +12,8 @@
     {{ if not .Params.hidedate }}
       on
     <span class="content-meta-date">
-      {{ .Date.Format "2006-1-2 15:04" }}
+      <!-- {{ .Date.Format "2006-1-2 15:04" }} -->
+      {{ .Date.Format "Jan. 2, 2006 (15:04)" }}
     </span>
     {{end }}
 
@@ -24,8 +25,10 @@
       by <span class="content-meta-author">{{ .Params.author }}</span>
     {{ end }}
 
-    {{ if .Params.categories }}{{ partial "categories.html" . }}{{ end }}
-    {{ if .Params.tags}}{{ partial "tags.html" . }}{{ end }}
+    {{ partial "categories.html" . }}
+    {{ partial "tags.html" . }}
+
+
     </ul>
   </p>
   </section>

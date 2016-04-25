@@ -17,30 +17,37 @@ title = "Hugo Morphism Theme Example"
   subtitle = "A Cool Subtitle"
   copyrightHolder = "Copyright Holder"
   showPoweredBy = true
+  listPaginatorLimit = 3337 
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu 
 # -----------------------------------------------------------------------
 [[menu.nav]]
-  name = "Home"
+  name = "home"
   pre = ""
   weight = -110 
   identifier = "home"
   url = "/"
 [[menu.nav]]
-  name = "Posts"
+  name = "posts"
   pre = ""
   weight = -100 
   identifier = "posts"
   url = "/post"
 [[menu.nav]]
-  name = "Categories"
+  name = "categories"
   pre = ""
   weight = -90 
   identifier = "categories"
   url = "/categories"
 [[menu.nav]]
-  name = "Me"
+  name = "tags"
+  pre = ""
+  weight = -89 
+  identifier = "tags"
+  url = "/tags"
+[[menu.nav]]
+  name = "me"
   pre = ""
   weight = -80
   identifier = "me"
@@ -50,7 +57,7 @@ title = "Hugo Morphism Theme Example"
 # Morphism theme footer menu 
 # -----------------------------------------------------------------------
 [[menu.footer]]
-  name = "Github"
+  name = "GitHub"
   pre = ""
   weight = -100 
   identifier = "github"
@@ -58,12 +65,18 @@ title = "Hugo Morphism Theme Example"
 [[menu.footer]]
   name = "Twitter"
   pre = ""
-  weight = -99 
+  weight = -90 
   identifier = "twitter"
   url = "https://twitter.com"
 [[menu.footer]]
+  name = "LinkedIn"
+  pre = ""
+  weight = -80 
+  identifier = "linkedin"
+  url = "https://www.linkedin.com"
+[[menu.footer]]
   name = "Mail"
   pre = ""
-  weight = -98 
+  weight = -70 
   identifier = "mail"
-  url = "mailto:someone@somewhere.com"
+  url = "mailto:"

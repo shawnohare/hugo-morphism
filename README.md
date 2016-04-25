@@ -22,6 +22,11 @@ The site specific parameters that this theme recognizes are:
 
 ## Page Parameters
 
+- `listPaginatorLimit` integer (defaults to 10,000): Set the number of pages
+   to include in each page of content rendered with the `list` template, such
+   as the post archive.  For example, if the entire blog has 100 posts and
+   the value of `listPaginatorLimit` is set to 50, then there will be 2 pages
+   in the post archive.
 - `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
   true, `hideDate` takes greater precedence.
 - `hideReadTime` boolean: if true, do not display the page's reading time
