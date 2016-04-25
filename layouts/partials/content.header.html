@@ -8,8 +8,12 @@
   {{ if or (eq .Type "post") (.Params.meta)  }}
   <section class="content-meta">
   <p>
+    Published
     {{ if not .Params.hidedate }}
-      {{ .Date.Format "2006-1-2" }}
+      on
+    <span class="content-meta-date">
+      {{ .Date.Format "2006-1-2 15:04" }}
+    </span>
     {{end }}
 
     <!-- {{ if not .Params.hidereadtime }} -->
@@ -17,7 +21,7 @@
     <!-- {{ end }} -->
 
     {{ if .Params.author }}
-      by <span class="author">{{ .Params.author }}</span>
+      by <span class="content-meta-author">{{ .Params.author }}</span>
     {{ end }}
 
     {{ if .Params.categories }}{{ partial "categories.html" . }}{{ end }}

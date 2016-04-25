@@ -1,3 +1,4 @@
+{{ if .Params.tags }}
 <span class="tags">
 with tags
 {{ $last := add (len .Params.tags) -1  }}
@@ -7,3 +8,4 @@ with tags
   </a>
 {{ end }}
 </span>
+{{ end }}

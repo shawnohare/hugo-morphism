@@ -1,10 +1,10 @@
 {{ partial "header.html" . }}
 
 <section class="list-page">
-{{ range .Data.Pages.GroupByDate "2006" }}
+{{ range (.Paginate (.Data.Pages.GroupByDate "2006") 1000).PageGroups }}
   <details open>
     <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-    {{ range .Pages.GroupByDate "January" }}
+    {{ range .Pages.GroupByDate "Jan" }}
       <ul>
         <li>
           <details open>
@@ -12,7 +12,7 @@
               {{ range .Pages }}
                 <ul>
                   <li>
-                    <span class="list-date">{{ .Date.Format "Jan 2" }} &middot;</span>
+                    <span class="list-date">{{ .Date.Format "2006-01-02" }} &middot;</span>
                     <a href="{{ .RelPermalink }}">{{.Title}}</a>
                   </li>
                 </ul>
@@ -23,6 +23,7 @@
     {{ end }}
   </details>
   {{ end }}
+{{ template "_internal/pagination.html" . }}
 </section>
 
 {{ partial "footer.html" . }}
