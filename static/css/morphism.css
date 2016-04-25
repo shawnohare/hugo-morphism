@@ -1,6 +1,6 @@
-/*------------------------------------------------------------------------ 
+/*------------------------------------------------------------------------
  Styling for the Morphism Hugo Theme.
- Created by Shawn O'Hare 
+ Created by Shawn O'Hare
  https://github.com/shawnohare/hugo-morphism
 ------------------------------------------------------------------------ */
 
@@ -67,27 +67,27 @@ nav.site ul {
     padding: 0;
 }
 
-nav.site li { 
- 	display: inline-block; 
- 	margin-right: 1rem; 
- } 
+nav.site li {
+ 	display: inline-block;
+ 	margin-right: 1rem;
+ }
 
-nav.site li a { 
-     text-decoration: none; 
-     background: transparent; 
-     color: rgba(65, 70, 75, 1); 
- } 
+nav.site li a {
+     text-decoration: none;
+     background: transparent;
+     color: rgba(65, 70, 75, 1);
+ }
 
-nav.site li a:hover, 
-nav.site li a:active, 
-nav.site li a:focus { 
-     background: inherit; 
-     /* color: darkgray; */ 
+nav.site li a:hover,
+nav.site li a:active,
+nav.site li a:focus {
+     background: inherit;
+     /* color: darkgray; */
      text-decoration: underline;
- } 
+ }
 
 
-/* Anchors */ 
+/* Anchors */
 a:link {
   text-decoration: none;
   color: rgba(45, 100, 170, 1);
@@ -118,18 +118,18 @@ section.post-summary {
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: circle;
     margin: 0.5em;
 }
 
 li {
-    margin-bottom: 0.75em;
+    /* margin-bottom: 0.75em; */
     line-height: 1.6em;
 }
 
 
 /* ------------------------------------------------------------------------ */
-/* Titles   
+/* Titles
 /* ------------------------------------------------------------------------ */
 h1.content-type {
     text-transform: uppercase;
@@ -175,6 +175,7 @@ section.content-meta p {
 }
 
 section.content-meta .author {
+    font-weight: bold;
 }
 
 .post-avatar {
@@ -201,10 +202,25 @@ blockquote {
 }
 .list-date {
   display: inline;
-  font-size: 0.75em;
   /* padding-right: 2em; */
   /* margin-right: 2em; */
 }
+
+/* ------------------------------------------------------------------------ */
+/* pagination */
+/* ------------------------------------------------------------------------ */
+
+ul.pagination {
+    list-style: none;
+    text-align: center;
+    margin: 1rem 0 0 0;
+}
+
+.pagination li {
+    display: inline-block;
+}
+
+
 
 /* ------------------------------------------------------------------------ */
 /* Table of Contents */
@@ -315,6 +331,17 @@ details summary.year {
 }
 
 details[open] summary {
+}
+
+
+/* categories: add additional styling here. */
+.categories a:link {
+
+}
+
+/* tags: add additional styling here. */
+.tags a:link {
+
 }
 
 
