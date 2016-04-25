@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <section class="list-page">
-{{ $.Scratch.Set "limit" 100000 }}
+{{ $.Scratch.Set "limit" 1000000000 }}
 {{ with .Site.Params.listPaginatorLimit }}{{ $.Scratch.Set "limit" . }}{{ end }}
 {{ $lim := $.Scratch.Get "limit" }}
 {{ range (.Paginate (.Data.Pages.GroupByDate "2006") $lim).PageGroups }}

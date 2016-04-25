@@ -22,7 +22,7 @@ The site specific parameters that this theme recognizes are:
 
 ## Page Parameters
 
-- `listPaginatorLimit` integer (defaults to 10,000): Set the number of pages
+- `listPaginatorLimit` integer (defaults to 1 billion): Set the number of pages
    to include in each page of content rendered with the `list` template, such
    as the post archive.  For example, if the entire blog has 100 posts and
    the value of `listPaginatorLimit` is set to 50, then there will be 2 pages
