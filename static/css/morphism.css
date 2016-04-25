@@ -23,6 +23,15 @@ body {
     font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto", "Fira Sans", sans-serif;
 }
 
+/* This is explicitly defined so the browser does not
+   use the standard nesting logic to convert an h1 to
+   a lower level.  This logic is agreeable, but does not
+   fit well with using simple markdown to publish content.
+ */
+h1 {
+    font-size: 1.7em;
+}
+
 /*------------------------------------------------------------------------ */
 /* Brand details, such as a sidebar or top display. */
 /* ------------------------------------------------------------------------ */
@@ -174,8 +183,12 @@ section.content-meta p {
     /* font-weight: 100; */
 }
 
-section.content-meta .author {
+section.content-meta .content-meta-author {
     font-weight: bold;
+}
+
+section.content-meta .content-meta-date{
+    font-weight: lighter;
 }
 
 .post-avatar {
