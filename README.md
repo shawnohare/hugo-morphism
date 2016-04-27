@@ -19,6 +19,7 @@ The site specific parameters that this theme recognizes are:
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
 - `copyrightHolder` string: Inserts the value in the default copyright notice.
 - `copyright` string: Custom copyright notice.
+- `showPostTimes` bool: Set display dates and times in a post's header.
 
 ## Page Parameters
 
