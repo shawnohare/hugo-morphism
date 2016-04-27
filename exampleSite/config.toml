@@ -18,6 +18,7 @@ title = "Hugo Morphism Theme Example"
   copyrightHolder = "Copyright Holder"
   showPoweredBy = true
   listPaginatorLimit = 3337 
+  showPostTimes = true
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu 
