@@ -4,7 +4,7 @@ publishdir = "public"
 builddrafts = true 
 baseurl = "http://"
 canonifyurls = true
-theme = "morphism"
+theme = "hugo-morphism"
 title = "Hugo Morphism Theme Example"
 
 [taxonomies]
