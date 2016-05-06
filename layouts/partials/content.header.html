@@ -9,14 +9,20 @@
   <section class="content-meta">
   <p>
     {{ if not .Params.hidedate }}
-    <span class="content-meta-date">
-      <!-- {{ .Date.Format "2006-1-2 15:04" }} -->
-      {{ if .Site.Params.showPostTimes }}
-      {{ .Date.Format "Jan. 2, 2006 (15:04)" }}
+      {{ if or .Site.Params.showPostTimes .Params.showposttimes }}
+      {{ $.Scratch.Set "dateFormat" "January 2, 2006 15:04" }}
       {{ else }}
-      {{ .Date.Format "Jan. 2, 2006" }}
+      {{ $.Scratch.Set "dateFormat" "January 2, 2006" }}
+      {{ end }}
+      {{ $df := $.Scratch.Get "dateFormat" }}
+    <span class="content-meta-date">
+      {{ .Date.Format $df }}
+      {{ with .Params.updated }}
+      (updated {{ dateFormat $df . }})
       {{ end }}
     </span>
+    &nbsp;&nbsp;
+    <br>
     {{end }}
 
     <!-- {{ if not .Params.hidereadtime }} -->
