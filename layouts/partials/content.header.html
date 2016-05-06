@@ -8,9 +8,7 @@
   {{ if or (eq .Type "post") (.Params.meta)  }}
   <section class="content-meta">
   <p>
-    Published
     {{ if not .Params.hidedate }}
-      on
     <span class="content-meta-date">
       <!-- {{ .Date.Format "2006-1-2 15:04" }} -->
       {{ if .Site.Params.showPostTimes }}

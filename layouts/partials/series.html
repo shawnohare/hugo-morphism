@@ -1,9 +1,9 @@
 {{ if .Params.series}}
 <span class="series">
 in <a href="/series/">series</a>
-{{ $last := add (len .Params.tags) -1  }}
-{{ range $i, $c := .Params.tags}}
-<a  href="{{ "/categories/" | absURL }}{{ $c | urlize }}">
+{{ $last := add (len .Params.series) -1  }}
+{{ range $i, $c := .Params.series }}
+<a  href="{{ "/series/" | absURL }}{{ $c | urlize }}">
   {{ $c }}{{ if lt $i $last }},{{ end }}
   </a>
 {{ end }}
