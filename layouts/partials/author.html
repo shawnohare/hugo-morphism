@@ -1,0 +1,33 @@
+{{ with .Site.Author }}
+  {{ if isset . "name" }}
+    {{ $.Scratch.Set "name" .name }}
+  {{ end }}
+  {{ if isset . "uri" }}
+    {{ $.Scratch.Set "uri" .uri }}
+  {{ end}}
+{{ end }}
+
+{{ with .Params.author }}
+  {{ $.Scratch.Set "name" nil }}
+  {{ $.Scratch.Set "uri" nil }}
+  {{ if isset . "name"  }}
+    {{ $.Scratch.Set "name" .name }}
+  {{ end }}
+  {{ if isset . "uri" }}
+    {{ $.Scratch.Set "uri" .uri }}
+  {{ end}}
+  {{ if eq ($.Scratch.Get "name") nil }}
+    {{ $.Scratch.Set "name" . }}
+  {{ end }}
+{{ end }}
+
+{{ if ne ($.Scratch.Get "name") nil }}
+  by
+  {{ if ne ($.Scratch.Get "uri") nil }}
+    <a href="{{ $.Scratch.Get "uri"}}">
+  {{ end }}
+  <span class="content-meta-author">{{ $.Scratch.Get "name"}}</span>
+  {{ if ne ($.Scratch.Get "uri") nil }}
+    </a>
+  {{ end }}
+{{ end }}

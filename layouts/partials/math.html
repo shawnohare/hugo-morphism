@@ -1,3 +1,4 @@
+{{ if or (not .Params.nomath) .IsHome }}
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {
@@ -9,7 +10,7 @@ MathJax.Hub.Config({
     menuSettings: { zoom: "Double-Click" },
     skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
   },
-TeX: { 
+TeX: {
     equationNumbers: { autoNumber: "AMS" },
     extensions: ["AMSmath.js", "AMSsymbols.js"],
   },
@@ -19,3 +20,4 @@ TeX: {
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <!-- <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_SVG"></script> -->
 
+{{ end }}

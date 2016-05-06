@@ -1,6 +1,3 @@
-{{ if or .Params.math .IsHome }}
-  {{ partial "math.html" . }}
-{{ end }}
-
+{{ partial "math.html" . }}
 <link rel="stylesheet" href="{{ "/css/morphism.css" | absURL }}">
 <link rel="stylesheet" href="{{ "/css/override.css" | absURL }}">

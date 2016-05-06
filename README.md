@@ -1,6 +1,6 @@
 # Morphism Hugo Theme
 
-Morphism is a minimalist, clean blog theme for the 
+Morphism is a aesthetically minimal blog theme for the 
 [static site generator Hugo](https://gohugo.io) that supports mathematical
 typesetting. By utilizing copious partial templates the theme is 
 largely customizable.
@@ -11,32 +11,55 @@ MathJax powers mathematical typesetting.  The TeX delimeters `$`
 and `$$` can be used for inline / display math, respectively, or the escaped
 LaTeX symbols `\\( ... \\)` and `\\[ ... \\]`.
 
+## Site Variables
+
+This theme recognizes and attempts to use several Site variables, as follows:
+
+- `author` map:  The theme uses the `name` and `uri` keys of the site author
+   map for pages that do not explicitly set author data.  The `name`
+   value is wrapped in the uri, if the later is set.  See the example site
+   config to see how this is set.
+
+- `copyright` html string.  If the Site variable Copyright is set, the notice
+  will be displayed in the footer.
+
 ## Site Parameters
 
-The site specific parameters that this theme recognizes are:
+The site wide user defined parameters that this theme recognizes are:
 
 - `subtitle` string: This is displayed under the main title. 
+
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
-- `copyrightHolder` string: Inserts the value in the default copyright notice.
-- `copyright` string: Custom copyright notice.
+
 - `showPostTimes` bool: Set display dates and times in a post's header.
 
+
 ## Page Parameters
+
+- `author` map:  This param should be structured identically to the site
+   author map (see above).  If provided, the page will display the data in the
+   `name` and `uri` keys.  Otherwise, the site author map is used.  
 
 - `listPaginatorLimit` integer (defaults to 1 billion): Set the number of pages
    to include in each page of content rendered with the `list` template, such
    as the post archive.  For example, if the entire blog has 100 posts and
    the value of `listPaginatorLimit` is set to 50, then there will be 2 pages
    in the post archive.
+   
 - `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
   true, `hideDate` takes greater precedence.
+
 - `hideReadTime` boolean: if true, do not display the page's reading time
   estimate.  When `meta` is set to true, `hideReadTime` takes greater precedence.
-- `math` boolean: if true, try to render the page's LaTeX code using MatheJax. The
-  theme follows the conventions in [Hugo's MathJax tutorial].
+
+- `nomath` boolean: if true, Math will not be rendered for the page.  This can
+   speed up some page loads.  As the theme assumes a math-centric blog, math
+   is rendered by default.
+
 - `meta` boolean: if true, display page meta-data author, date, categories provided
   these page parameters exist and are not overridden.  Content in the `/post` directory,
   (i.e., pages of type "post") ignore this parameter.
-- `toc` boolean: if true, display the table of contents for the page.
+
+- `notoc` boolean: if true, do not display a page's table of contents.
 
 
