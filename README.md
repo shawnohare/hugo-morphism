@@ -33,6 +33,12 @@ The site wide user defined parameters that this theme recognizes are:
 
 - `showPostTimes` bool: Set display dates and times in a post's header.
 
+- `listPaginatorLimit` integer (defaults to 1 billion): Set the number of pages
+   to include in each page of content rendered with the `list` template, such
+   as the post archive.  For example, if the entire blog has 100 posts and
+   the value of `listPaginatorLimit` is set to 50, then there will be 2 pages
+   in the post archive.
+
 
 ## Page Parameters
 
@@ -40,11 +46,6 @@ The site wide user defined parameters that this theme recognizes are:
    author map (see above).  If provided, the page will display the data in the
    `name` and `uri` keys.  Otherwise, the site author map is used.  
 
-- `listPaginatorLimit` integer (defaults to 1 billion): Set the number of pages
-   to include in each page of content rendered with the `list` template, such
-   as the post archive.  For example, if the entire blog has 100 posts and
-   the value of `listPaginatorLimit` is set to 50, then there will be 2 pages
-   in the post archive.
    
 - `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
   true, `hideDate` takes greater precedence.
@@ -56,9 +57,9 @@ The site wide user defined parameters that this theme recognizes are:
    speed up some page loads.  As the theme assumes a math-centric blog, math
    is rendered by default.
 
-- `meta` boolean: if true, display page meta-data author, date, categories provided
-  these page parameters exist and are not overridden.  Content in the `/post` directory,
-  (i.e., pages of type "post") ignore this parameter.
+- `nometa` boolean: if true, do not display page metadata such as 
+   author, date, categories provided
+   these page parameters exist and are not overridden.
 
 - `notoc` boolean: if true, do not display a page's table of contents.
 

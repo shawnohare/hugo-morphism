@@ -5,7 +5,7 @@
 
   {{ if .Params.subtitle }}<p class=subtitle>{{ .Params.subtitle }}</p>{{ end }}
 
-  {{ if or (eq .Type "post") (not .Params.nometa)  }}
+  {{ if (not .Params.nometa)  }}
   <section class="content-meta">
   <p>
     {{ if not .Params.hidedate }}
