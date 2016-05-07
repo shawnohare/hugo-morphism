@@ -5,7 +5,14 @@ builddrafts = true
 baseurl = "http://"
 canonifyurls = true
 theme = "hugo-morphism"
-title = "Hugo Morphism Theme Example"
+theme = "hugo-morphism"
+title = "Shawn O'Hare"
+copyright = "© 2013-2016 The Author.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+verbose = false 
+
+[author]
+  name = "The Author"
+  uri = "www.theauthorswebsite.com"
 
 [taxonomies]
   category = "categories" 
@@ -13,13 +20,14 @@ title = "Hugo Morphism Theme Example"
   series = "series"
   tag = "tags"
 
-[params]
-  subtitle = "A Cool Subtitle"
-  copyrightHolder = "Copyright Holder"
-  showPoweredBy = true
-  listPaginatorLimit = 3337 
-  showPostTimes = true
+[permalinks]
+    post = "/:year/:month/:filename/"
 
+[params]
+  subtitle = "This is a Subtitle"
+  showPoweredBy = true
+  listPaginatorLimit = 10000 
+  # greeting = "Hello!  Welcome to my site."
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu 
 # -----------------------------------------------------------------------
