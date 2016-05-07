@@ -20,7 +20,11 @@
 <!-- Content type specific header data -->
 <section>
 {{ if .IsHome }}
-  <h1 class="content-type">Recent</h1>
+  {{ if ne .Site.Params.greeting nil }}
+  <h1 class="content-type"></h1>
+  {{ .Site.Params.greeting }}
+  {{ end }}
+  <h1 class="content-type">Recent Activity</h1>
 {{ else if .IsNode }}
   <h1 class="content-type">{{ .Title }}</h1>
 {{ else if .IsPage }}

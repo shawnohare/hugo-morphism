@@ -1,3 +1,4 @@
+{{ if not .Params.noauthor }}
 {{ with .Site.Author }}
   {{ if isset . "name" }}
     {{ $.Scratch.Set "name" .name }}
@@ -30,4 +31,5 @@
   {{ if ne ($.Scratch.Get "uri") nil }}
     </a>
   {{ end }}
+{{ end }}
 {{ end }}
