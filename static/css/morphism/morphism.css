@@ -196,6 +196,7 @@ h1.content-subtitle {
 /* Content meta-data such as author, publication date, etc. */
 section.content-meta {
     font-size: 1rem;
+
 }
 
 section.content-meta p {
@@ -205,12 +206,13 @@ section.content-meta p {
 }
 
 section.content-meta .content-meta-author {
-    /*font-weight: bold;*/
+    font-weight: bold;
 }
 
 section.content-meta .content-meta-date{
     /*font-weight: lighter;*/
-    font-size: 1.2rem;
+    /*font-size: 1.2rem;*/
+    font-weight: bold;
 }
 
 .post-avatar {

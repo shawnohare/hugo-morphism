@@ -9,19 +9,15 @@
   <section class="content-meta">
   <p>
     {{ if not .Params.hidedate }}
+      on
       {{ if or .Site.Params.showPostTimes .Params.showposttimes }}
       {{ $.Scratch.Set "dateFormat" "January 2, 2006 15:04" }}
       {{ else }}
       {{ $.Scratch.Set "dateFormat" "January 2, 2006" }}
       {{ end }}
-      {{ $df := $.Scratch.Get "dateFormat" }}
     <span class="content-meta-date">
-      {{ .Date.Format $df }}
-      {{ with .Params.updated }}
-      (updated {{ dateFormat $df . }})
-      {{ end }}
+      {{ .Date.Format ($.Scratch.Get "dateFormat") }}
     </span>
-    <br>
     {{end }}
 
     <!-- {{ if not .Params.hidereadtime }} -->
@@ -33,9 +29,10 @@
     {{ partial "groups.html" . }}
     {{ partial "tags.html" . }}
     {{ partial "series.html" . }}
-
-
-    </ul>
+    <br>
+    {{ with .Params.updated }}
+    (updated {{ dateFormat ($.Scratch.Get "dateFormat")  . }})
+    {{ end }}
   </p>
   </section>
   {{ end }}
