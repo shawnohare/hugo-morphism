@@ -1,21 +1,20 @@
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-builddrafts = true 
+builddrafts = true
 baseurl = "http://"
 canonifyurls = true
 theme = "hugo-morphism"
-theme = "hugo-morphism"
-title = "Shawn O'Hare"
+title = "Hugo Morphism Theme"
 copyright = "© 2013-2016 The Author.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
-verbose = false 
+verbose = false
 
 [author]
   name = "The Author"
   uri = "www.theauthorswebsite.com"
 
 [taxonomies]
-  category = "categories" 
+  category = "categories"
   group = "groups"
   series = "series"
   tag = "tags"
@@ -24,35 +23,37 @@ verbose = false
     post = "/:year/:month/:filename/"
 
 [params]
-  subtitle = "This is a Subtitle"
+  subtitle = "A Minimalist Theme"
   showPoweredBy = true
-  listPaginatorLimit = 10000 
+  listPaginatorLimit = 10000
   # greeting = "Hello!  Welcome to my site."
+  # colortheme = "default"
+
 # -----------------------------------------------------------------------
-# Morphism theme navigation menu 
+# Morphism theme navigation menu
 # -----------------------------------------------------------------------
 [[menu.nav]]
   name = "home"
   pre = ""
-  weight = -110 
+  weight = -110
   identifier = "home"
   url = "/"
 [[menu.nav]]
   name = "posts"
   pre = ""
-  weight = -100 
+  weight = -100
   identifier = "posts"
   url = "/post"
 [[menu.nav]]
   name = "categories"
   pre = ""
-  weight = -90 
+  weight = -90
   identifier = "categories"
   url = "/categories"
 [[menu.nav]]
   name = "tags"
   pre = ""
-  weight = -89 
+  weight = -89
   identifier = "tags"
   url = "/tags"
 [[menu.nav]]
@@ -63,29 +64,29 @@ verbose = false
   url = "/page/about/"
 
 # -----------------------------------------------------------------------
-# Morphism theme footer menu 
+# Morphism theme footer menu
 # -----------------------------------------------------------------------
 [[menu.footer]]
   name = "GitHub"
   pre = ""
-  weight = -100 
+  weight = -100
   identifier = "github"
   url = "https://github.com"
 [[menu.footer]]
   name = "Twitter"
   pre = ""
-  weight = -90 
+  weight = -90
   identifier = "twitter"
   url = "https://twitter.com"
 [[menu.footer]]
   name = "LinkedIn"
   pre = ""
-  weight = -80 
+  weight = -80
   identifier = "linkedin"
   url = "https://www.linkedin.com"
 [[menu.footer]]
   name = "Mail"
   pre = ""
-  weight = -70 
+  weight = -70
   identifier = "mail"
   url = "mailto:"

@@ -32,83 +32,22 @@ h1 {
     font-size: 1.7em;
 }
 
-/*------------------------------------------------------------------------ */
-/* Brand details, such as a sidebar or top display. */
-/* ------------------------------------------------------------------------ */
-
-header.brand{
-   *margin-top: 1rem;
-    margin-bottom: 3rem;
-    /*display: block;*/
-    text-align: center;
-}
-
-/* Main brand title */
-header.brand h1 {
-    margin: 0;
-    /* margin-bottom: 1rem; */
-    font-weight: 900;
-    font-size: 3rem;
-    /* font-size: 25px; */
-    /* font-size: 10vw; */
-    color: rgba(65, 70, 75, 1);
-    overflow-x: auto;
-}
-
-/* Brand subtitle */
-header.brand h2 {
-    margin: 0;
-    /* padding-top: 0rem; */
-    /*font-style: normal;*/
-    font-weight: 200;
-    /* font-size: 4vmin; */
-    color: #64696e;
-}
-
-nav.site {
-    /* font-size: 90%; */
-    text-align: center;
-}
-
-nav.site ul {
-    list-style: none;
-    /*margin-top: 0.75rem;*/
-    padding: 0;
-}
-
-nav.site li {
- 	display: inline-block;
- 	margin-right: 1rem;
- }
-
-nav.site li a {
-     text-decoration: none;
-     background: transparent;
-     color: rgba(65, 70, 75, 1);
- }
-
-nav.site li a:hover,
-nav.site li a:active,
-nav.site li a:focus {
-     background: inherit;
-     /* color: darkgray; */
-     text-decoration: underline;
- }
-
-
 /* Anchors */
 a:link {
-  text-decoration: none;
-  color: rgba(45, 100, 170, 1);
-  background: inherit;
+    text-decoration: none;
+    color: rgba(45, 100, 170, 1);
+    background: inherit;
 }
 
 a:visited {
-  color: #821515;
+    color: #821515;
 }
-a:hover {
-  /* color: #FF5000; */
-  text-decoration: underline;
+
+a:hover,
+a:active,
+a:focus {
+    /*color: #FF5000;*/
+    text-decoration: underline;
 }
 
 p {
@@ -136,6 +75,79 @@ li {
     line-height: 1.6em;
 }
 
+/*------------------------------------------------------------------------ */
+/* Brand details, such as a sidebar or top display. */
+/* ------------------------------------------------------------------------ */
+
+header.brand{
+   *margin-top: 1rem;
+    margin-bottom: 3rem;
+    /*display: block;*/
+    text-align: center;
+}
+
+/* Main brand title */
+header.brand h1 {
+    margin: 0;
+    /* margin-bottom: 1rem; */
+    font-weight: 900;
+    font-size: 3rem;
+    /* font-size: 25px; */
+    /* font-size: 10vw; */
+    color: rgba(65, 70, 75, 1);
+    /*color: black;*/
+    /*color: #FF5000;*/
+    overflow-x: auto;
+}
+
+/* Brand subtitle */
+header.brand h2 {
+    margin: 0;
+    /* padding-top: 0rem; */
+    /*font-style: normal;*/
+    font-weight: 200;
+    /* font-size: 4vmin; */
+    color: #64696e;
+}
+
+a.brand:link {
+    text-decoration: none;
+}
+
+
+nav.site {
+    /* font-size: 90%; */
+    text-align: center;
+}
+
+nav.site ul {
+    list-style: none;
+    /*margin-top: 0.75rem;*/
+    padding: 0;
+}
+
+nav.site li {
+    display: inline-block;
+    margin-right: 1rem;
+ }
+
+nav.site li a {
+    text-decoration: none;
+    background: transparent;
+    color: rgba(65, 70, 75, 1);
+ }
+
+nav.site li a:hover,
+nav.site li a:active,
+nav.site li a:focus {
+    background: inherit;
+    /* color: darkgray; */
+    text-decoration: underline;
+ }
+
+
+
+
 
 /* ------------------------------------------------------------------------ */
 /* Titles
@@ -158,6 +170,7 @@ h1.content-title {
     /* margin-top: 1rem; */
     /* margin-bottom: 0; */
     margin: 0 auto;
+    /*text-align: center;*/
 }
 
 h1.content-title a:link,
@@ -166,10 +179,17 @@ h1.content-title a:visited {
     text-decoration: none;
     color: #41464b;
 }
+
 h1.content-title a:hover,
 h1.content-title a:focus {
-    /* color: darkgray; */
+    /*color: darkgray;*/
     text-decoration: underline;
+}
+
+h1.content-subtitle {
+    color: rgba(65, 70, 75, 1);
+    font-size: 1.6rem;
+    /*text-align: center;*/
 }
 
 

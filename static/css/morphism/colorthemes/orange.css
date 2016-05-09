@@ -1,0 +1,9 @@
+/*Elements to be styled by the  color theme.*/
+
+header.brand h1,
+header.brand h2,
+h1.content-title a:link,
+h1.content-title a:visited,
+h1.content-subtitle {
+    color: #FF5000;
+}

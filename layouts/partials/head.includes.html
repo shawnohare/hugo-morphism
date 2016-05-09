@@ -1,3 +1,11 @@
 {{ partial "math.html" . }}
-<link rel="stylesheet" href="{{ "/css/morphism.css" | absURL }}">
-<link rel="stylesheet" href="{{ "/css/override.css" | absURL }}">
+<link rel="stylesheet" href="{{ "/css/morphism/morphism.css" | absURL }}">
+
+{{ $default := "/css/morphism/colorthemes/default.css" }}
+<link rel="stylesheet" href="{{ $default | absURL }}">
+{{ with .Site.Params.colortheme }}
+  {{ $colortheme := replace $default "default" . }}
+  <link rel="stylesheet" href="{{ $colortheme | absURL }}">
+{{ end}}
+
+<link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">

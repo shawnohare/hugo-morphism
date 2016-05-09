@@ -11,6 +11,40 @@ MathJax powers mathematical typesetting.  The TeX delimeters `$`
 and `$$` can be used for inline / display math, respectively, or the escaped
 LaTeX symbols `\\( ... \\)` and `\\[ ... \\]`.
 
+## Color themes
+
+Morphism provides a few built-in color themes, while also allowing for
+user defined themes.  To use a color theme, set the site parameter
+`morphismColorTheme` to the base color theme name.  
+The list of built-in themes is: `midnight-blue`, `dark-midnight-blue`,
+`default`, `black`, `orange`. 
+For example, to use  the built-in `midnight-blue` color theme, 
+your `config.toml` should include the snippet:
+
+```toml
+[params]
+  colortheme = "midnight-blue"
+```
+
+This will tell Morphism to load the `css/morphism/colorthemes/midnight-blue.css`
+file. Since Hugo gives preference to assets defined by the main site first,
+and the theme second, Morphism's `midnight-blue` color theme can be 
+overridden by simply copying the file into your site's 
+`css/morphism/colorthemes/` directory and
+manipulating the various color values to your tastes.
+
+### User defined color themes
+
+Similarly, you can set the value of `morphismColorTheme` 
+to whatever you choose and create the corresponding css color theme file.  
+For example
+```toml
+[params]
+  colortheme = "mytheme"
+```
+will load `css/morphism/colorthemes/mytheme.css`
+
+
 ## Site Variables
 
 This theme recognizes and attempts to use several Site variables, as follows:
