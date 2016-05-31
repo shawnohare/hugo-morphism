@@ -21,6 +21,7 @@ html {
 
 body {
     font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto", "Fira Sans", sans-serif;
+    font-size: 1.2rem;
 }
 
 /* This is explicitly defined so the browser does not
@@ -51,7 +52,8 @@ a:focus {
 }
 
 p {
-    line-height: 1.5rem;
+    font-weight: lighter;
+    line-height: 1.8rem;
 }
 
 section {
