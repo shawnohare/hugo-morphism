@@ -20,8 +20,8 @@ html {
 }
 
 body {
-    font-family:  system, -apple-system, BlinkMacSystemFont, "San Francisco", "Roboto", "Fira Sans", sans-serif;
-    font-size: 1.1rem;
+    font-family: system, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.125rem;
 }
 
 /* This is explicitly defined so the browser does not
