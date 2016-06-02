@@ -1,13 +1,21 @@
 {{ partial "header.html" . }}
-{{ range (.Paginate (first 50 .Site.Pages) 10).Pages }}
-  {{ partial "content.header.html" . }}
-    <section class="post-summary">{{ .Summary }}
+{{ $.Scratch.Set "pageSize" 10 }}
+{{ with .Site.Params.indexPaginatorPageSize }}{{ $.Scratch.Set "pageSize" . }}{{ end }}
+{{ $lim := $.Scratch.Get "pageSize" }}
+{{ $paginator := .Paginate (first 50 .Site.Pages) $lim }}
+{{ $last := add $paginator.NumberOfElements -1  }}
+{{ range $i, $page := $paginator.Pages }}
+  <section class="index-post">
+  {{ partial "content-header.html" . }}
+    <section class="content">{{ .Summary }}
     {{ if .Truncated }}
     <span class="read-more">
       <a href="{{ .RelPermalink  }}">Read More &hellip;</a>
     </span>
     {{ end  }}
     </section>
+  </section>
+    {{ if lt $i $last }}<hr class="index-post">{{ end }}
 {{ end  }}
 {{ template "_internal/pagination.html" . }}
 {{ partial "footer.html" . }}

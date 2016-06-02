@@ -25,7 +25,8 @@ verbose = false
 [params]
   subtitle = "A Minimalist Theme"
   showPoweredBy = true
-  listPaginatorLimit = 10000
+  indexPaginatorPageLength= 10
+  listPaginatorPageLength= 10000
   # greeting = "Hello!  Welcome to my site."
   # colortheme = "default"
 

@@ -1,6 +1,6 @@
 {{ if .Params.groups}}
 <span class="groups">
-within <a href="/groups/">groups<a>:
+<a href="/groups/">groups<a>:
 {{ $last := add (len .Params.groups) -1  }}
 {{ range $i, $c := .Params.groups}}
 <a  href="{{ "/groups/" | absURL }}{{ $c | urlize }}">

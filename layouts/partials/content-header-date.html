@@ -1,0 +1,18 @@
+{{ if (not .Params.nometa)  }}
+<section class="content-meta">
+  {{ if not .Params.hidedate }}
+    {{ if or .Site.Params.showPostTimes .Params.showposttimes }}
+    {{ $.Scratch.Set "dateFormat" "January 2, 2006 15:04" }}
+    {{ else }}
+    {{ $.Scratch.Set "dateFormat" "January 2, 2006" }}
+    {{ end }}
+  <span class="content-meta-date">
+    {{ .Date.Format ($.Scratch.Get "dateFormat") }}
+  {{ with .Params.updated }}
+  (revised {{ dateFormat ($.Scratch.Get "dateFormat")  . }})
+  {{ end }}
+  </span>
+  <br>
+  {{end }}
+</section>
+{{ end }}

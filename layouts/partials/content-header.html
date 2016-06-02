@@ -1,0 +1,22 @@
+{{ partial "content-header-date.html" . }}
+<h1 class="content-title"><a href="{{ .RelPermalink }}">
+  {{ .Title }}
+  {{ if .Draft }} :: Draft {{ end }}
+</a></h1>
+
+{{ with .Params.subtitle }}<h1 class="content-subtitle">{{ . }}</h1>{{ end }}
+
+{{ if (not .Params.nometa)  }}
+<section class="content-meta" id="content-meta-below">
+  <!-- {{ if not .Params.hidereadtime }} -->
+  <!--     {{ .ReadingTime }} min read -->
+  <!-- {{ end }} -->
+
+  {{ partial "content-header-author.html" . }}
+  {{ partial "content-header-categories.html" . }}
+  {{ partial "content-header-groups.html" . }}
+  {{ partial "content-header-tags.html" . }}
+  {{ partial "content-header-series.html" . }}
+  <br>
+</section>
+{{ end }}

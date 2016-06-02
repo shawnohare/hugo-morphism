@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 
 <head>
-
 <title>{{ .Site.Title }} - {{ .Title  }}</title>
   {{ partial "meta.html" . }}
   {{ partial "opengraph.html" }}
-  {{ partial "head.includes.html" . }}
+  {{ partial "head-includes.html" . }}
 </head>
 
 <body>
@@ -20,15 +19,14 @@
 <section>
 {{ if .IsHome }}
   {{ if ne .Site.Params.greeting nil }}
-  <h1 class="content-type"></h1>
   {{ .Site.Params.greeting }}
   {{ end }}
-  <h1 class="content-type">Recent Activity</h1>
+  <header id="content-type">Recent Activity</header>
 {{ else if .IsNode }}
-  <h1 class="content-type">{{ .Title }}</h1>
+  <header id="content-type">{{ .Title }}</header>
 {{ else if .IsPage }}
-  <h1 class="content-type">{{ .Type }}</h1>
-  {{ partial "content.header.html" . }}
+  <header id="content-type">{{ .Type }}</header>
+  {{ partial "content-header.html" . }}
   {{ partial "toc.html" . }}
 {{ end }}
 </section>
