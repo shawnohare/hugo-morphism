@@ -1,7 +1,7 @@
 
 {{ if .Params.categories }}
 <span class="categories">
-<br><a href="/categories/">categories<a>:
+<a href="/categories/">categories<a>:
   {{ $last := add (len .Params.categories) -1  }}
 {{ range $i, $c := .Params.categories}}
 <a  href="{{ "/categories/" | absURL }}{{ $c | urlize }}">
@@ -9,4 +9,5 @@
   </a>
 {{ end }}
 </span>
+<br>
 {{ end }}

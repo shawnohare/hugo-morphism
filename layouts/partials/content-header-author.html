@@ -1,11 +1,13 @@
 {{ if not .Params.noauthor }}
-{{ with .Site.Author }}
-  {{ if isset . "name" }}
-    {{ $.Scratch.Set "name" .name }}
+{{ if .Site.displayDefaultAuthor }}
+  {{ with .Site.Author }}
+    {{ if isset . "name" }}
+      {{ $.Scratch.Set "name" .name }}
+    {{ end }}
+    {{ if isset . "uri" }}
+      {{ $.Scratch.Set "uri" .uri }}
+    {{ end}}
   {{ end }}
-  {{ if isset . "uri" }}
-    {{ $.Scratch.Set "uri" .uri }}
-  {{ end}}
 {{ end }}
 
 {{ with .Params.author }}
@@ -31,5 +33,6 @@
   {{ if ne ($.Scratch.Get "uri") nil }}
     </a>
   {{ end }}
+  <br>
 {{ end }}
 {{ end }}

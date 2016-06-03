@@ -65,6 +65,10 @@ The site wide user defined parameters that this theme recognizes are:
 - `displayArchiveDates` bool: If true, post titles in the archive 
   (post list pages) will display a date.
 
+- `displayDefaultAuthor` bool: If true and the `author` site variable is set,
+  posts will display the site author.  The `author` page parameter will
+  override this setting.  
+
 - `indexPostLimit` integer (defaults to 50): Limits the number of posts
    that will be displayed (and paginated) on the index page.
 

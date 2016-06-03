@@ -183,7 +183,7 @@ h1.content-title a:focus {
 }
 
 #content-meta-below{
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 .content-meta-author {
@@ -208,7 +208,7 @@ blockquote {
 
 /* section container for each post displayed on the index page */
 section.index-post {
- margin: 3rem auto;
+ margin: 2.25rem auto;
 }
 
 section.index-post .read-more {

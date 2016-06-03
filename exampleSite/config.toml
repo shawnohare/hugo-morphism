@@ -22,7 +22,13 @@ verbose = false
 [permalinks]
     post = "/:year/:month/:filename/"
 
+
+# -----------------------------------------------------------------------
+# Morphism site params 
+# -----------------------------------------------------------------------
 [params]
+  displayArchiveDates = false
+  displayDefaultAuthor = false
   subtitle = "A Minimalist Theme"
   showPoweredBy = true
   indexPostLimit = 50
@@ -63,7 +69,7 @@ verbose = false
   pre = ""
   weight = -80
   identifier = "me"
-  url = "/page/about/"
+  url = "/info/about/"
 
 # -----------------------------------------------------------------------
 # Morphism theme footer menu
