@@ -6,7 +6,7 @@ baseurl = "http://"
 canonifyurls = true
 theme = "hugo-morphism"
 title = "Hugo Morphism Theme"
-copyright = "© 2013-2016 The Author.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
+copyright = "© The Author.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
 verbose = false
 
 [author]
@@ -25,10 +25,11 @@ verbose = false
 [params]
   subtitle = "A Minimalist Theme"
   showPoweredBy = true
-  indexPaginatorPageLength= 10
-  listPaginatorPageLength= 10000
-  # greeting = "Hello!  Welcome to my site."
-  # colortheme = "default"
+  indexPostLimit = 50
+  indexPaginatorPageSize = 10
+  listPaginatorPageSize = 10000
+  greeting = "Hello!  Welcome to my site."
+  colortheme = "default"
 
 # -----------------------------------------------------------------------
 # Morphism theme navigation menu

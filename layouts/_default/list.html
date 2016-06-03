@@ -15,7 +15,9 @@
               {{ range .Pages }}
                 <ul>
                   <li>
-                    <span class="list-date">({{ .Date.Format "2006-01-02" }}) </span>
+                    {{ if .Site.Params.displayArchiveDates }}
+                      <span class="list-date">({{ .Date.Format "2006-01-02" }}) </span>
+                    {{ end }}
                     <span class="list-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
                   </li>
                 </ul>

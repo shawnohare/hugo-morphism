@@ -228,12 +228,13 @@ hr.index-post {
 /* ------------------------------------------------------------------------ */
 .list-page ul {
     list-style-type: none;
-    /*margin: -0.25em;*/
+    margin-left: 0;
+    padding-left: 0.75rem;
 }
 .list-page li {
-    /*margin: 0;*/
     /*padding: 0.2rem;*/
     /*font-size: 95%;*/
+    margin-left: 0;
 }
 
 .list-date {
@@ -244,6 +245,27 @@ hr.index-post {
 
 .list-title {
   display: inline;
+}
+
+/* ------------------------------------------------------------------------ */
+/* Post Archive. */
+/* ------------------------------------------------------------------------ */
+/* We utilize the html5 summary tags in order to create a post archive */
+/* with built-in folding. */
+.list-page details {
+    /* border-radius: 3px; */
+    /*border: 1px solid;*/
+}
+
+.list-page details summary {
+    vertical-align: top;
+    outline: none;
+}
+
+.list-page details summary.year {
+}
+
+.list-page details[open] summary {
 }
 
 /* ------------------------------------------------------------------------ */
@@ -346,30 +368,6 @@ ul.pagination {
     font-size: 90%;
 }
 
-/* ------------------------------------------------------------------------ */
-/* Post Archive. */
-/* ------------------------------------------------------------------------ */
-/* We utilize the html5 summary tags in order to create a post archive */
-/* with built-in folding. */
-details {
-    border-radius: 3px;
-    /*border: 1px solid;*/
-}
-
-details summary {
-    vertical-align: top;
-    /*padding: .3em .3em;*/
-    outline: none;
-    /*color: rgba(65, 70, 75, 1);*/
-}
-
-details summary.year {
-    /* font-size: 1.5rem; */
-    /*font-weight: bold;*/
-}
-
-details[open] summary {
-}
 
 
 /* categories: add additional styling here. */

@@ -1,8 +1,11 @@
 {{ partial "header.html" . }}
 {{ $.Scratch.Set "pageSize" 10 }}
 {{ with .Site.Params.indexPaginatorPageSize }}{{ $.Scratch.Set "pageSize" . }}{{ end }}
-{{ $lim := $.Scratch.Get "pageSize" }}
-{{ $paginator := .Paginate (first 50 .Site.Pages) $lim }}
+{{ $.Scratch.Set "postLimit" 50 }}
+{{ with .Site.Params.indexPostLimit }}{{ $.Scratch.Set "postLimit" . }}{{ end }}
+{{ $postlim := $.Scratch.Get "postLimit" }}
+{{ $pagelim := $.Scratch.Get "pageSize" }}
+{{ $paginator := .Paginate (first $postlim .Site.Pages) $pagelim }}
 {{ $last := add $paginator.NumberOfElements -1  }}
 {{ range $i, $page := $paginator.Pages }}
   <section class="index-post">
