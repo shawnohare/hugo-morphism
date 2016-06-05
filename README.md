@@ -37,6 +37,7 @@ manipulating the various color values to your tastes.
 
 Similarly, you can set the value of `morphismColorTheme` 
 to whatever you choose and create the corresponding css color theme file.  
+
 For example
 ```toml
 [params]
