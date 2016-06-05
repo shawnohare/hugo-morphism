@@ -43,7 +43,7 @@ For example
 [params]
   colortheme = "mytheme"
 ```
-will load `css/morphism/colorthemes/mytheme.css`
+will tell Morphism to load `css/morphism/colorthemes/mytheme.css`
 
 
 ## Site Variables
