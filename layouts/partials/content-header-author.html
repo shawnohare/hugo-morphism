@@ -1,38 +1,7 @@
 {{ if not .Params.noauthor }}
-{{ if .Site.Params.displayDefaultAuthor }}
-  {{ with .Site.Author }}
-    {{ if isset . "name" }}
-      {{ $.Scratch.Set "name" .name }}
-    {{ end }}
-    {{ if isset . "uri" }}
-      {{ $.Scratch.Set "uri" .uri }}
-    {{ end}}
-  {{ end }}
+{{ $author := .Params.author.name | default .Site.Author.name  }}
+{{ $uri := .Params.author.uri | default .Site.Author.uri }}
+By <a href="{{ $uri | absURL }}">{{ $author }}</a><br>
 {{ end }}
 
-{{ with .Params.author }}
-  {{ $.Scratch.Set "name" nil }}
-  {{ $.Scratch.Set "uri" nil }}
-  {{ if isset . "name"  }}
-    {{ $.Scratch.Set "name" .name }}
-  {{ end }}
-  {{ if isset . "uri" }}
-    {{ $.Scratch.Set "uri" .uri }}
-  {{ end}}
-  {{ if eq ($.Scratch.Get "name") nil }}
-    {{ $.Scratch.Set "name" . }}
-  {{ end }}
-{{ end }}
 
-{{ if ne ($.Scratch.Get "name") nil }}
-  By
-  {{ if ne ($.Scratch.Get "uri") nil }}
-    <a href="{{ $.Scratch.Get "uri"}}">
-  {{ end }}
-  <span class="content-meta-author">{{ $.Scratch.Get "name"}}</span>
-  {{ if ne ($.Scratch.Get "uri") nil }}
-    </a>
-  {{ end }}
-  <br>
-{{ end }}
-{{ end }}

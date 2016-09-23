@@ -1,11 +1,21 @@
 {{ partial "header.html" . }}
-{{ $.Scratch.Set "pageSize" 10 }}
-{{ with .Site.Params.indexPaginatorPageSize }}{{ $.Scratch.Set "pageSize" . }}{{ end }}
-{{ $.Scratch.Set "postLimit" 50 }}
-{{ with .Site.Params.indexPostLimit }}{{ $.Scratch.Set "postLimit" . }}{{ end }}
-{{ $postlim := $.Scratch.Get "postLimit" }}
-{{ $pagelim := $.Scratch.Get "pageSize" }}
-{{ $paginator := .Paginate (first $postlim .Site.Pages) $pagelim }}
+
+{{ $pageSize := .Site.Params.indexPaginatorPageSize | default 2  }}
+{{ $postLimit := .Site.Params.indexPostLimit | default 50  }}
+{{ $paginator := .Paginate (first $postLimit (where .Site.Pages "Section" "!=" "index")) $pageSize }}
+
+
+<!-- Biography Section -->
+{{ range where .Site.Pages "Section" "index" }}
+{{ if eq .Title "about" }}
+<section id="about" class="index-section">
+    <div class="container">
+        {{ partial "index/about.html" . }}
+    </div>
+</section>
+{{ end }}
+{{ end }}
+
 {{ $last := add $paginator.NumberOfElements -1  }}
 {{ range $i, $page := $paginator.Pages }}
   <section class="index-post">

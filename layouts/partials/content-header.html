@@ -10,7 +10,7 @@
 {{ with .Params.subtitle }}<h1 class="content-subtitle">{{ . }}</h1>{{ end }}
 
 {{ if (not .Params.nometa)  }}
-<section class="content-meta" id="content-meta-below">
+<section class="content-meta ui" id="content-meta-below">
   {{ partial "content-header-author.html" . }}
   {{ partial "content-header-categories.html" . }}
   {{ partial "content-header-groups.html" . }}
