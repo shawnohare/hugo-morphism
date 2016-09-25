@@ -1,5 +1,7 @@
-{{ partial "header.html" . }}
+{{ define "header" }}{{ .Title }}{{ end }}
 
+{{ define "main" }}
+<section class="terms container">
 {{ $data := .Data }}
   <h2>By Frequency</h2>
   <section>
@@ -46,7 +48,5 @@
   </tbody>
   </table>
   </section>
-{{ partial "footer.html" . }}
-</div>
-</body>
-</html>
+</section>
+{{ end }}

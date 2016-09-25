@@ -1,11 +1,4 @@
-</article>
-
-<footer id="comments">
-{{ partial "disqus.html" . }}
-<footer>
-
-<footer class="ui" id="site-footer">
-		<hr>
+<footer class="ui" id="site">
 		<ul>
 		{{ range .Site.Menus.footer }}
       <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
@@ -20,16 +13,6 @@
   {{ end }}
 
   {{ with .Site.Copyright }}
-	<section id="copyright">
-	<p>
-      {{ . | safeHTML }}
-  </p>
-  </section>
+	<section id="copyright"><p>{{ . | safeHTML }}</p></section>
   {{end}}
 </footer>
-
-{{ partial "body-includes.html" . }}
-
-</div>
-</body>
-</html>

@@ -1,19 +1,18 @@
-{{ partial "header.html" . }}
+{{ define "header" }}{{ .Title }}{{ end }}
 
-<section class="list-page">
-{{ $.Scratch.Set "pageSize" 1000000000 }}
-{{ with .Site.Params.listPaginatorPageSize }}{{ $.Scratch.Set "pageSize" . }}{{ end }}
-{{ $lim := $.Scratch.Get "pageSize" }}
+{{ define "main" }}
+<section class="list-page container">
+{{ $lim := .Site.Params.listPaginatorPageSize | default 100000000 }}
 {{ range (.Paginate (.Data.Pages.GroupByDate "2006") $lim).PageGroups }}
   <details open>
     <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
     {{ range .Pages.GroupByDate "Jan" }}
-      <ul>
+      <ul class='list-page-year'>
         <li>
           <details open>
             <summary>{{ .Key }} ({{ len .Pages }})</summary>
               {{ range .Pages }}
-                <ul>
+                <ul class='list-page-month'>
                   <li>
                     {{ if .Site.Params.displayArchiveDates }}
                       <span class="list-date">({{ .Date.Format "2006-01-02" }}) </span>
@@ -30,5 +29,4 @@
   {{ end }}
 {{ template "_internal/pagination.html" . }}
 </section>
-
-{{ partial "footer.html" . }}
+{{ end }}

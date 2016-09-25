@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ .Site.Title }} - {{ .Title  }}</title>
+    {{ partial "head/meta.html" . }}
+    {{ partial "head/includes.html" . }}
+  </head>
+
+  <body>
+    <!-- Global container -->
+    <div id="wrapper">
+      {{ partial "body/nav.html" . }}
+      {{ partial "body/brand.html" . }}
+      <header id="content-type">{{ block "header" . }}{{ end }}</header>
+      <main>{{ block "main" . }}Main{{ end }}</main>
+      {{ partial "body/footer.html" . }}
+      {{ partial "body/includes.html" . }}
+    </div>
+  </body>
+
+</html>

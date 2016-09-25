@@ -1,7 +1,9 @@
 {{ if not .Params.noauthor }}
 {{ $author := .Params.author.name | default .Site.Author.name  }}
 {{ $uri := .Params.author.uri | default .Site.Author.uri }}
-By <a href="{{ $uri | absURL }}">{{ $author }}</a><br>
+<span class="content-meta-author">
+<a href="{{ $uri | absURL }}">{{ $author }}</a>
+</span>
 {{ end }}
 
 

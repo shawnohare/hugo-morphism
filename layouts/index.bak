@@ -1,24 +1,25 @@
-{{ define "header" }}Home{{ end }}
-{{ define "main" }}
+{{ partial "header.html" . }}
 
 {{ $pageSize := .Site.Params.indexPaginatorPageSize | default 2  }}
 {{ $postLimit := .Site.Params.indexPostLimit | default 50  }}
-{{ $paginator := .Paginate (last $postLimit (where .Site.Pages "Section" "!=" "index")) $pageSize }}
+{{ $paginator := .Paginate (first $postLimit (where .Site.Pages "Section" "!=" "index")) $pageSize }}
+
 
 <!-- Biography Section -->
 {{ range where .Site.Pages "Section" "index" }}
 {{ if eq .Title "about" }}
-<section id="about" class="index-section container">
-    {{ partial "home/about.html" . }}
+<section id="about" class="index-section">
+    <div class="container">
+        {{ partial "index/about.html" . }}
+    </div>
 </section>
 {{ end }}
 {{ end }}
 
-<header id="content-type">Recent Activity</header>
 {{ $last := add $paginator.NumberOfElements -1  }}
 {{ range $i, $page := $paginator.Pages }}
-<section class="index-post container">
-  {{ partial "content/meta.html" . }}
+  <section class="index-post">
+  {{ partial "content-header.html" . }}
     <section class="content">{{ .Summary }}
     {{ if .Truncated }}
     <span class="read-more">
@@ -30,4 +31,4 @@
     {{ if lt $i $last }}<hr class="index-post">{{ end }}
 {{ end  }}
 {{ template "_internal/pagination.html" . }}
-{{ end }}
+{{ partial "footer.html" . }}

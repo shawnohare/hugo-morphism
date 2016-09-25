@@ -1,9 +1,15 @@
 # Morphism Hugo Theme
 
-Morphism is a aesthetically minimal blog theme for the
+`hugo-morphism` is a aesthetically minimalist, content first blog theme for the
 [static site generator Hugo](https://gohugo.io) that supports mathematical
-typesetting. By utilizing copious partial templates the theme is
-largely customizable.
+typesetting. By utilizing partial templates and Go template blocks, the theme is
+largely customizable while remaining relatively simple.
+
+Hugo supports several features that this theme eschews by default such as
+Disqus comments and Google analytics.  This is done in an effort to limit
+dependencies and respect visitor privacy. However, these features can
+be easily activated by overriding partial templates such as
+`partials/content/comments.html`.
 
 ## Math
 
@@ -11,44 +17,10 @@ MathJax powers mathematical typesetting.  The TeX delimeters `$`
 and `$$` can be used for inline / display math, respectively, or the escaped
 LaTeX symbols `\\( ... \\)` and `\\[ ... \\]`.
 
-## Color themes
-
-Morphism provides a few built-in color themes, while also allowing for
-user defined themes.  To use a color theme, set the site parameter
-`morphismColorTheme` to the base color theme name.
-The list of built-in themes is: `midnight-blue`, `dark-midnight-blue`,
-`default`, `black`, `orange`.
-For example, to use  the built-in `midnight-blue` color theme,
-your `config.toml` should include the snippet:
-
-```toml
-[params]
-  colortheme = "midnight-blue"
-```
-
-This will tell Morphism to load the `css/morphism/colorthemes/midnight-blue.css`
-file. Since Hugo gives preference to assets defined by the main site first,
-and the theme second, Morphism's `midnight-blue` color theme can be
-overridden by simply copying the file into your site's
-`css/morphism/colorthemes/` directory and
-manipulating the various color values to your tastes.
-
-### User defined color themes
-
-Similarly, you can set the value of `morphismColorTheme`
-to whatever you choose and create the corresponding css color theme file.
-
-For example
-```toml
-[params]
-  colortheme = "mytheme"
-```
-will tell Morphism to load `css/morphism/colorthemes/mytheme.css`
-
-
 ## Site Variables
 
-This theme recognizes and attempts to use several Site variables, as follows:
+This theme recognizes and attempts to use several Site variables that
+Hugo provides, as follows:
 
 - `author` map:  The theme uses the `name` and `uri` keys of the site author
    map for pages that do not explicitly set author data.  The `name`
@@ -68,6 +40,13 @@ This theme recognizes and attempts to use several Site variables, as follows:
 
 The site wide user defined parameters that this theme recognizes are:
 
+- `brandLogo` (TODO)
+
+- `datetimeLayout` string:
+   A [datetime layout](https://golang.org/pkg/time/#Time.Format)
+   Defaults to "January 2, 2006 15:04".  Note that the time part is optional.
+   If no time is referenced in the layout, times will be omitted.
+
 - `displayArchiveDates` bool: If true, post titles in the archive
   (post list pages) will display a date.
 
@@ -83,11 +62,11 @@ The site wide user defined parameters that this theme recognizes are:
    as the post archive.  For example, if the entire blog has 100 posts and
    the value of `listPaginatorPageSize` is set to 50, then there will be 2 pages
    in the post archive.
+
 - `subtitle` string: This is displayed under the main title.
 
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
 
-- `showPostTimes` bool: Set display dates and times in a post's header.
 
 ## Page Parameters
 
@@ -95,12 +74,8 @@ The site wide user defined parameters that this theme recognizes are:
    author map (see above).  If provided, the page will display the data in the
    `name` and `uri` keys.  Otherwise, the site author map is used.
 
-
 - `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
   true, `hideDate` takes greater precedence.
-
-- `hideReadTime` boolean: if true, do not display the page's reading time
-  estimate.  When `meta` is set to true, `hideReadTime` takes greater precedence.
 
 - `nomath` boolean: if true, Math will not be rendered for the page.  This can
    speed up some page loads.  As the theme assumes a math-centric blog, math

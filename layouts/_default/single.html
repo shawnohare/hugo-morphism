@@ -1,3 +1,12 @@
-{{ partial "header.html" . }}
-<section class="content">{{ .Content }}</section>
-{{ partial "footer.html" . }}
+{{ define "header" }}{{ .Type }}{{ end }}
+
+{{ define "main" }}
+  <div class="container">
+  <section id="content-meta">
+  {{ partial "content/meta.html" . }}
+  {{ partial "content/toc.html" . }}
+  </section>
+  <section id="content-main">{{ .Content }}</section>
+  </div>
+  {{ partial "content/comments.html" . }}
+{{ end }}
