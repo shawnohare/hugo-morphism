@@ -1,11 +1,12 @@
 {{ define "header" }}Home{{ end }}
 {{ define "main" }}
 
-{{ $pageSize := .Site.Params.indexPaginatorPageSize | default 2  }}
-{{ $postLimit := .Site.Params.indexPostLimit | default 50  }}
+{{ $pageSize := .Site.Params.indexPaginatorPageSize | default 5  }}
+{{ $postLimit := .Site.Params.indexPostLimit | default 15  }}
 {{ $paginator := .Paginate (last $postLimit (where .Site.Pages "Section" "!=" "index")) $pageSize }}
 
 <!-- Biography Section -->
+<div class='index-about'>
 {{ range where .Site.Pages "Section" "index" }}
 {{ if eq .Title "about" }}
 <section id="about" class="index-section container">
@@ -13,8 +14,10 @@
 </section>
 {{ end }}
 {{ end }}
+</div>
 
-<header id="content-type">Recent Activity</header>
+<!-- <header id="content-type">Recent Activity</header> -->
+<hr class='index-post'>
 {{ $last := add $paginator.NumberOfElements -1  }}
 {{ range $i, $page := $paginator.Pages }}
 <section class="index-post container">
