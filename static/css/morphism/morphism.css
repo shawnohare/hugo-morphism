@@ -99,17 +99,17 @@ header#brand {
 
 /* Main site brand */
 header#brand h1 {
-    margin: 0;
+    margin: 0 auto;
     font-weight: 900;
-    font-size: 3rem;
+    /* font-size: 3rem; */
     color: #41464b;
     overflow-x: auto;
 }
 
 
 header#brand h2 {
-    margin: 0;
-    margin-bottom: 1rem;
+    /* margin: 0 auto; */
+    /* margin-bottom: 1rem; */
     font-weight: 200;
     color: #64696e;
 }
