@@ -94,7 +94,7 @@ header#brand {
     border: 1px solid #e3edf3;
     border-left: 0;
     border-right: 0;
-    border-bottom: 0;
+    border-top: 0;
 }
 
 /* Main site brand */
@@ -122,10 +122,14 @@ header#brand a:link {
 nav#site {
     /* background-color: #f8f8f8; */
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.01rem 0;
     margin: 0 auto;
     font-size: 1rem;
     text-align: center;
+    border-bottom: 1px solid #e3edf3;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
 }
 
 nav#site ul {
@@ -204,14 +208,10 @@ li {
 header#content-type {
     text-align: center;
     text-transform: uppercase;
-    color: gray;
+    color: #aaaaaa;
     width: 100%;
-    margin: 0rem;
-    padding: 1rem 0;
+    padding: 1rem 0 0 0;
     font-weight: normal;
-    border: 1px solid #e3edf3;
-    border-left: 0;
-    border-right: 0;
 }
 
 
