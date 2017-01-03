@@ -3,54 +3,44 @@
 
   <head>
     <title>{{ .Site.Title }} - {{ .Title  }}</title>
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ .Description }}">
     <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
     <meta name="author" content="{{ .Site.Title }}">
     {{ .Hugo.Generator }}
 
-    <!-- Includes -->
-    {{ partial "head/math.html" . }}
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="{{ "/css/morphism/morphism.css" | absURL }}">
     <link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">
 
-    <!-- <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif" rel="stylesheet" type="text/css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"> -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet"> -->
-
-    <!-- Default analytics template consists of comments only. -->
-    {{ partial "head/analytics.html" . }}
+    {{ partial "head/math.html" . }}
   </head>
 
   <body>
-    <!-- Global container -->
     <div id="wrapper">
 
-      <!-- Brand, such as site title and logo -->
-      <header id="brand">
-      <a href="{{ .Site.BaseURL }}">
-          <h1>{{ .Site.Title}}</h1>
-          <h2>{{ .Site.Params.subtitle }}</h2>
-      </a>
-      </header>
+        <div id="nav-brand">
+            <header id="brand">
+            <a href="{{ .Site.BaseURL }}">
+                <h1>{{ .Site.Title}}</h1>
+                <h2>{{ .Site.Params.subtitle }}</h2>
+            </a>
+            </header>
 
-      <!-- Site navigation -->
-      <nav id="site" class="ui ">
-        <ul>
-        {{ range .Site.Menus.nav  }}
-            <!-- <button type="button"><li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li></button> -->
-            <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
-        {{ end }}
-        </ul>
-      </nav>
+            <nav id="site" class="ui ">
+                <ul>
+                {{ range .Site.Menus.nav  }}
+                    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+                {{ end }}
+                </ul>
+            </nav>
+        </div>
 
 
       <header id="content-type">{{ block "header" . }}{{ end }}</header>
-      <main>{{ block "main" . }}Main{{ end }}</main>
 
+      <main>{{ block "main" . }}Main{{ end }}</main>
 
       <footer class="ui" id="site">
           <ul>
@@ -60,18 +50,16 @@
           </ul>
 
         {{ if .Site.Params.showPoweredBy}}
-          <p>
             Powered by <a href="https://gohugo.io">Hugo</a> and the
             <a href="https://github.com/shawnohare/hugo-morphism">Morphism</a> theme.
-          </p>
+            <br>
         {{ end }}
 
         {{ with .Site.Copyright }}
-        <section id="copyright"><p>{{ . | safeHTML }}</p></section>
+        <span id="copyright">{{ . | safeHTML }}</section>
         {{end}}
       </footer>
 
-      {{ partial "body/includes.html" . }}
     </div>
   </body>
 
