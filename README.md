@@ -50,18 +50,8 @@ The site wide user defined parameters that this theme recognizes are:
 - `displayArchiveDates` bool: If true, post titles in the archive
   (post list pages) will display a date.
 
-- `indexPostLimit` integer (defaults to 50): Limits the number of posts
-   that will be displayed (and paginated) on the index page.
-
-- `indexPaginatorPageSize` integer (defaults to 10): The number of posts each
-   paginated page of the index contains.  Set equal to `indexPostLimit`
-   to force no pagination.
-
-- `listPaginatorPageSize` integer (defaults to a very large value): Set the number of pages
-   to include in each page of content rendered with the `list` template, such
-   as the post archive.  For example, if the entire blog has 100 posts and
-   the value of `listPaginatorPageSize` is set to 50, then there will be 2 pages
-   in the post archive.
+- `indexItemLimit` integer (defaults to 15): Limits the number of page items
+   that will display on the homepage as recent activity.
 
 - `subtitle` string: This is displayed under the main title.
 

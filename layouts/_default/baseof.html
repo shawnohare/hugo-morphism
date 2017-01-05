@@ -21,6 +21,14 @@
     <div id="wrapper">
 
         <div id="nav-brand">
+            <nav id="site" class="ui ">
+                <ul>
+                {{ range .Site.Menus.nav }}
+                    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+                {{ end }}
+                </ul>
+            </nav>
+
             <header id="brand">
             <a href="{{ .Site.BaseURL }}">
                 <h1>{{ .Site.Title}}</h1>
@@ -28,13 +36,6 @@
             </a>
             </header>
 
-            <nav id="site" class="ui ">
-                <ul>
-                {{ range .Site.Menus.nav  }}
-                    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
-                {{ end }}
-                </ul>
-            </nav>
         </div>
 
 

@@ -55,9 +55,9 @@ a:link {
     background: inherit;
 }
 
-/* a:visited { */
-/*     color: #821515; */
-/* } */
+a:visited {
+    color: #821515;
+}
 
 a:hover,
 a:active,
@@ -67,7 +67,7 @@ a:focus {
 }
 
 blockquote {
-    /* font-style: italic; */
+    font-style: italic;
     margin-left: 1.25rem;
 }
 
@@ -86,19 +86,27 @@ hr {
 
 /* Flexbox container for the brand & nav banner */
 div#nav-brand {
+    background: #F7FAFB;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
     border-bottom: 1px solid #e3edf3;
+
+    /* Row based approach */
+    /* flex-direction: row; */
+    /* align-items: baseline; */
+    justify-content: space-around;
+
+    /* Column based */
+    flex-direction: column;
+    align-items: center;
+
 }
 
 header#brand h1 {
     font-size: 1.5rem;
     font-weight: 900;
     color: #41464b;
-   /* font-family: sans-serif; */
+    /* font-family: sans-serif; */
     /* background-color: #f8f8f8; */
 }
 
@@ -115,6 +123,8 @@ header#brand a:link {
 
 
 nav#site {
+  align-self: flex-start;
+  margin: 1%;
 }
 
 nav#site ul {
@@ -130,7 +140,6 @@ nav#site li a {
     text-decoration: none;
     background: transparent;
     color: rgba(65, 70, 75, 1);
-
  }
 
 nav#site li a:hover,
@@ -393,7 +402,8 @@ footer#site{
     line-height: 1.4;
     margin: 1rem 0 0 0;
     padding: 1rem 0;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background: #F7FAFB;
     border: 1px solid #e3edf3;
     border-bottom: 0;
     border-left: 0;

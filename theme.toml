@@ -5,7 +5,7 @@ description = "A minimalist blog theme with mathematical typesetting support."
 homepage = "http://github.com/shawnohare/hugo-morphism"
 tags = ["blog", "morphism", "minimal", "math"]
 features = ["mathjax"]
-min_version = 0.15
+min_version = 0.18
 
 [author]
   name = "Shawn O'Hare"

@@ -1,0 +1,27 @@
+{{ define "header" }}Home{{ end }}
+{{ define "main" }}
+  {{ $postLimit := .Site.Params.indexPostLimit | default 15  }}
+
+  <!-- Biography Section -->
+  <div class='index-about'>
+  <section id="about" class="index-section container">
+      {{ .Content }}
+  </section>
+  </div>
+
+  <header id="content-type">Recent Activity</header>
+  <hr class='index-post'>
+  {{ range last $postLimit .Site.Pages  }}
+  <section class="index-post container">
+    {{ partial "content/meta.html" . }}
+    <section class="content">{{ .Summary }}
+      {{ if .Truncated }}
+      <span class="read-more">
+        <a href="{{ .RelPermalink  }}">Read More &hellip;</a>
+      </span>
+      {{ end }}
+    </section>
+  </section>
+
+  {{ end }} <!-- Range end -->
+{{ end }} <!-- Block end -- >
