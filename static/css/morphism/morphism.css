@@ -192,7 +192,8 @@ li {
 header#content-type {
     text-transform: uppercase;
     color: #aaaaaa;
-    margin: 1.25rem auto;
+    /* margin: 1.25rem auto; */
+    margin-top: 1.25rem;
 
     width: 100%;
     padding: 1rem 0 0 0;
