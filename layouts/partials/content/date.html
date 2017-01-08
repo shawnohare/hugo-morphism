@@ -1,7 +1,7 @@
 {{ if (not .Params.nometa)  }}
   {{ if not .Params.hidedate }}
     <br>
-    {{ $format :=  .Site.Params.datetimeFormat | default "Monday January 2, 2006 at 03:04" }}
+    {{ $format :=  .Site.Params.datetimeFormat | default "January 2, 2006. 03:04" }}
   <span class="content-meta-date">
     {{ .Date.Format $format }}
   {{ with .Params.updated }}

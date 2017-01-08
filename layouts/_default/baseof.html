@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="{{ "/css/morphism/morphism.css" | absURL }}">
     <link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     {{ partial "head/math.html" . }}
   </head>
@@ -20,23 +21,21 @@
   <body>
     <div id="wrapper">
 
-        <div id="nav-brand">
-            <nav id="site" class="ui ">
-                <ul>
-                {{ range .Site.Menus.nav }}
-                    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
-                {{ end }}
-                </ul>
-            </nav>
+        <nav id="site" class="ui ">
+            <ul>
+            {{ range .Site.Menus.nav }}
+                <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+            {{ end }}
+            </ul>
+        </nav>
 
-            <header id="brand">
-            <a href="{{ .Site.BaseURL }}">
-                <h1>{{ .Site.Title}}</h1>
-                <h2>{{ .Site.Params.subtitle }}</h2>
-            </a>
-            </header>
+        <header id="brand">
+        <a href="{{ .Site.BaseURL }}">
+            <h1>{{ .Site.Title}}</h1>
+            <h2>{{ .Site.Params.subtitle }}</h2>
+        </a>
+        </header>
 
-        </div>
 
 
       <header id="content-type">{{ block "header" . }}{{ end }}</header>

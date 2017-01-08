@@ -81,39 +81,28 @@ hr {
 }
 
 /*------------------------------------------------------------------------ */
-/* Brand details, such as a sidebar or top display. */
+/* Brand details */
 /* ------------------------------------------------------------------------ */
 
-/* Flexbox container for the brand & nav banner */
-div#nav-brand {
-    background: #F7FAFB;
-    display: flex;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #e3edf3;
-
-    /* Row based approach */
-    /* flex-direction: row; */
-    /* align-items: baseline; */
-    justify-content: space-around;
-
-    /* Column based */
-    flex-direction: column;
-    align-items: center;
-
-}
 
 header#brand h1 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 900;
     color: #41464b;
+    text-align: center;
+    /* margin-top: 0; */
     /* font-family: sans-serif; */
     /* background-color: #f8f8f8; */
+    margin-bottom: 0;
 }
 
 header#brand h2 {
     font-size: 1.25rem;
     font-weight: 200;
     color: #64696e;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -123,8 +112,11 @@ header#brand a:link {
 
 
 nav#site {
-  align-self: flex-start;
-  margin: 1%;
+    background: #F7FAFB;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e3edf3;
+    justify-content: space-around;
 }
 
 nav#site ul {
@@ -155,7 +147,7 @@ nav#site li a:focus {
  .container {
     padding: 2.5%;
     margin: 0 auto;
-    max-width: 50rem;
+    /* max-width: 50rem; */
  }
 
 
@@ -165,7 +157,7 @@ nav#site li a:focus {
 
 /* Content unique to the page */
 main{
-    font-size: 1.22rem;
+    font-size: 1.25rem;
 }
 
 
@@ -200,7 +192,7 @@ li {
 header#content-type {
     text-transform: uppercase;
     color: #aaaaaa;
-    margin: 0 auto;
+    margin: 1.25rem auto;
 
     width: 100%;
     padding: 1rem 0 0 0;
@@ -396,7 +388,7 @@ ul.pagination {
 /* ---------------------------------------------------------------------- */
 
 footer#site{
-    font-size: 0.9rem;
+    font-size: 90%; 
     color: #aaa;
     text-align: center;
     line-height: 1.4;
@@ -458,40 +450,29 @@ section#copyright p {
 /* Fix for browsers rescaling monospace fonts to smaller size assuming that
  * the root font size is not set using pixels */
 /* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
-pre, code, kbd, samp, tt {
-  font-family: monospace;
-  font-size: 1rem;
-}
+/* NOTE: Uncomment if not using Normalize.css */
+/* pre, code, kbd, samp, tt { */
+/*   font-family: monospace; */
+/*   font-size: 1rem; */
+/* } */
 
 code {
-    font-size: 100%;
     overflow: auto;
-    /* font-weight: bold; */
+    padding: 0.1em 0.175em 0.1em 0.175em;
+    border-radius: 4px;
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
 
-    /* padding: 0.1em 0.175em 0.1em 0.175em; */
-    /* font-size: 1rem; */
-    /* border-radius: 4px; */
-    /* border: 1px solid #E3EDF3; */
-    /* background: #F7FAFB; */
-    /* color: dimg; */
-
+    /* NOTE: Uncomment if not using Normalize.css */
+    /* font-size: 100%; */
 }
 
 pre code {
-    margin-left: 1.25rem;
     display: block;
     overflow: auto;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: normal;
 
-    /* width: 100%; */
-    /* padding: 10px; */
-    /* padding: 0.5rem 0 0.5rem 0; */
-    /* border-top: 2px solid #E3EDF3; */
-    /* border-bottom: 2px solid #E3EDF3; */
-    /* border-left: 4px solid #E3EDF3; */
-    /* background: #F7FAFB; */
+    /* NOTE: Uncomment if not using Normalize.css */
+    /* font-size: 1.1rem; */
 }
 
 

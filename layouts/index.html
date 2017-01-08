@@ -9,7 +9,7 @@
 
   {{ $lim := .Site.Params.indexItemLimit | default 15  }}
   <header id="content-type">Recent Activity</header>
-  <hr class='index-post'>
+  <!-- <hr class='index-post'> -->
   {{ range last $lim .Site.RegularPages }}
     <section class="index-post container">
       {{ partial "content/meta.html" . }}
