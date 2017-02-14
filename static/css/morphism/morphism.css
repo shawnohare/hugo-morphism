@@ -67,7 +67,7 @@ a:focus {
 }
 
 blockquote {
-    font-style: italic;
+    /* font-style: italic; */
     margin-left: 1.25rem;
 }
 
@@ -147,8 +147,8 @@ nav#site li a:focus {
  .container {
     padding: 2.5%;
     margin: 0 auto;
-    /* max-width: 50rem; */
- }
+    max-width: 60rem;
+}
 
 
 /* --------------------------------------------------------------------- */
@@ -297,7 +297,7 @@ hr.index-post {
     font-size: 1.2rem;
 }
 .list-page li {
-    margin-left: 0;
+    margin-left: -1rem;
 }
 
 
@@ -321,7 +321,6 @@ hr.index-post {
 }
 
 .list-page details summary {
-    font-size: 1rem;
     vertical-align: top;
     outline: none;
 }
