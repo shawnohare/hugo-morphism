@@ -13,13 +13,13 @@
 
     <link rel="stylesheet" href="{{ "/css/morphism/morphism.css" | absURL }}">
     <link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     {{ partial "head/math.html" . }}
   </head>
 
   <body>
     <div id="wrapper">
+
 
         <nav id="site" class="ui ">
             <ul>
@@ -35,8 +35,6 @@
             <h2>{{ .Site.Params.subtitle }}</h2>
         </a>
         </header>
-
-
 
       <header id="content-type">{{ block "header" . }}{{ end }}</header>
 

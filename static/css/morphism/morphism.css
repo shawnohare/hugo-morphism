@@ -84,15 +84,16 @@ hr {
 /* Brand details */
 /* ------------------------------------------------------------------------ */
 
+header#brand{
+}
 
 header#brand h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
     font-weight: 900;
     color: #41464b;
     text-align: center;
+    font-family:  monospace;
     /* margin-top: 0; */
-    /* font-family: sans-serif; */
-    /* background-color: #f8f8f8; */
     margin-bottom: 0;
 }
 
@@ -113,6 +114,7 @@ header#brand a:link {
 
 nav#site {
     background: #F7FAFB;
+    /* background: #f8f8f8; */
     display: flex;
     flex-wrap: wrap;
     border-bottom: 1px solid #e3edf3;
@@ -157,7 +159,7 @@ nav#site li a:focus {
 
 /* Content unique to the page */
 main{
-    font-size: 1.25rem;
+    font-size: 1.2rem;
 }
 
 
@@ -203,11 +205,10 @@ header#content-type {
 
 
 h1#content-title {
-    /* font-family: sans-serif; */
-    font-weight: 500;
-    font-size: 2rem;
-    margin: 0 auto;
-    font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-weight: 500;
+  font-size: 2rem;
+  margin: 0 auto;
 }
 
 h1#content-subtitle {
@@ -275,6 +276,8 @@ section.index-post {
 }
 
 section.index-post .read-more {
+  font-size: 100%;
+  float: right;
 }
 
 /* separator between index page posts */
@@ -450,29 +453,37 @@ section#copyright p {
 /* Fix for browsers rescaling monospace fonts to smaller size assuming that
  * the root font size is not set using pixels */
 /* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
-/* NOTE: Uncomment if not using Normalize.css */
-/* pre, code, kbd, samp, tt { */
-/*   font-family: monospace; */
-/*   font-size: 1rem; */
-/* } */
+pre, code, kbd, samp, tt {
+  font-family: monospace, monospace;
+  font-size: 1rem;
+}
 
 code {
-    overflow: auto;
-    padding: 0.1em 0.175em 0.1em 0.175em;
-    border-radius: 4px;
-    border: 1px solid #E3EDF3;
-    background: #F7FAFB;
+  overflow: auto;
+  border-radius: 6px;
+  border: 1px solid #cecece;
+  /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
+  /* padding: 0 0.1rem; */
+  /* background: #F7FAFB; */
+  /* background: #f7f7f7; */
+  /* font-weight: bold; */
 
-    /* NOTE: Uncomment if not using Normalize.css */
-    /* font-size: 100%; */
+  /* Normalize  */
+  /* font-size: 120%; */
 }
 
 pre code {
-    display: block;
-    overflow: auto;
+  display: block;
+  overflow: auto;
+  /* padding: 0.2rem 0 0.2rem 0; */
+  /* background: none; */
+  /* border-radius: 0; */
+  /* border-style: solid; */
+  /* border-color: #cccccc; */
+  /* border-width: 1px 0 1px 0; */
 
-    /* NOTE: Uncomment if not using Normalize.css */
-    /* font-size: 1.1rem; */
+  /* Normalize  */
+  /* font-size: 1rem; */
 }
 
 
