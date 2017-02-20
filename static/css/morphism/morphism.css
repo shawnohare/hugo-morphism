@@ -117,7 +117,7 @@ nav#site {
     /* background: #f8f8f8; */
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid #e3edf3;
+    border: 1px solid #e3edf3;
     justify-content: space-around;
 }
 
@@ -460,11 +460,13 @@ pre, code, kbd, samp, tt {
 
 code {
   overflow: auto;
-  border-radius: 6px;
-  border: 1px solid #cecece;
+  /* border-radius: 6px; */
+  /* border: 1px solid #cecece; */
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
   /* padding: 0 0.1rem; */
-  /* background: #F7FAFB; */
+  background: #f4f4F4;
+  /* background: #FAFAFB; */
+  /* background: #3edf3; */
   /* background: #f7f7f7; */
   /* font-weight: bold; */
 
