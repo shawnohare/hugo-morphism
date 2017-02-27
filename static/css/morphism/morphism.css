@@ -472,9 +472,9 @@ pre, code, kbd, samp, tt {
 
 code {
   overflow: auto;
-  border-radius: 4px;
-  background: #F7FAFB;
-  line-height: 1.1rem;
+  border-radius: 6px;
+  /* background: #F7FAFB; */
+  background: #eff0f1;
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
   /* padding: 0 0.1rem; */
   /* background: #F7FAFB; */
@@ -488,6 +488,7 @@ code {
 pre code {
   display: block;
   overflow: auto;
+  line-height: 1.2rem;
   /* padding: 0.2rem 0 0.2rem 0; */
   /* background: none; */
   /* border-radius: 0; */
