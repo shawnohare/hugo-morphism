@@ -70,11 +70,11 @@ blockquote {
   /* font-style: italic; */
   /* margin-left: 1.25rem; */
   padding-left: 1rem;
-  border-width: 0 6px 0 6px;
+  border-width: 0 4px 0 4px;
   border-style: solid;
-  border-color: #e3edf3;
+  /* border-color: #e3edf3; */
   border-color: #eeeeee;
-  border-radius: 20px;
+  border-radius: 4px;
   /* border: 1px solid #e3edf3; */
 }
 
@@ -472,11 +472,11 @@ pre, code, kbd, samp, tt {
 
 code {
   overflow: auto;
-  /* border-radius: 6px; */
-  /* border: 1px solid #cecece; */
+  border-radius: 2px;
+  border: 1px solid #cecece;
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
   /* padding: 0 0.1rem; */
-  background: #f4f4F4;
+  /* background: #f4f4F4; */
   /* background: #eff0f1; */
   /* background: #FAFAFB; */
   /* background: #3edf3; */
