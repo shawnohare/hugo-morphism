@@ -67,9 +67,17 @@ a:focus {
 }
 
 blockquote {
-    /* font-style: italic; */
-    margin-left: 1.25rem;
+  /* font-style: italic; */
+  /* margin-left: 1.25rem; */
+  padding-left: 1rem;
+  border-width: 0 6px 0 6px;
+  border-style: solid;
+  border-color: #e3edf3;
+  border-color: #eeeeee;
+  border-radius: 20px;
+  /* border: 1px solid #e3edf3; */
 }
+
 
 hr {
   border: 1px solid #e3edf3;
@@ -83,6 +91,9 @@ hr {
 /*------------------------------------------------------------------------ */
 /* Brand details */
 /* ------------------------------------------------------------------------ */
+
+#brand {
+}
 
 header#brand{
 }
@@ -160,6 +171,7 @@ nav#site li a:focus {
 /* Content unique to the page */
 main{
     font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 
@@ -167,11 +179,11 @@ main{
 /* main page content styling, such as post content or list elements */
 section#content-main {
   /* font-size: 1.25rem; */
+  /* line-height: 1.5rem; */
 }
 
 
 section#content-main p {
-    /* line-height: 1.7rem; */
 }
 
 
@@ -182,7 +194,7 @@ ul {
 }
 
 li {
-    line-height: 1.6;
+    /* line-height: 1.6; */
 }
 
 
@@ -208,7 +220,7 @@ h1#content-title {
   /* font-family: sans-serif; */
   font-weight: 500;
   font-size: 2rem;
-  margin: 0 auto;
+  margin: 0.5rem auto;
 }
 
 h1#content-subtitle {
@@ -391,18 +403,18 @@ ul.pagination {
 /* ---------------------------------------------------------------------- */
 
 footer#site{
-    font-size: 90%; 
-    color: #aaa;
-    text-align: center;
-    line-height: 1.4;
-    margin: 1rem 0 0 0;
-    padding: 1rem 0;
-    /* background-color: #f8f8f8; */
-    background: #F7FAFB;
-    border: 1px solid #e3edf3;
-    border-bottom: 0;
-    border-left: 0;
-    border-right: 0;
+  font-size: 90%; 
+  color: #aaa;
+  text-align: center;
+  line-height: 1.4;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0;
+  /* background-color: #f8f8f8; */
+  background: #F7FAFB;
+  border: 1px solid #e3edf3;
+  /* border-bottom: 0; */
+  /* border-left: 0; */
+  /* border-right: 0; */
 
 }
 
@@ -465,6 +477,7 @@ code {
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
   /* padding: 0 0.1rem; */
   background: #f4f4F4;
+  /* background: #eff0f1; */
   /* background: #FAFAFB; */
   /* background: #3edf3; */
   /* background: #f7f7f7; */
@@ -477,6 +490,7 @@ code {
 pre code {
   display: block;
   overflow: auto;
+  line-height: 1.2rem;
   /* padding: 0.2rem 0 0.2rem 0; */
   /* background: none; */
   /* border-radius: 0; */
