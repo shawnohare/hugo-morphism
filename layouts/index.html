@@ -14,7 +14,7 @@
   {{ range last $lim (where .Site.RegularPages "Section" "post") }}
     <section class="index-post container">
       {{ partial "content/meta.html" . }}
-      <section class="content">{{ .Summary }}
+      <section class="content-main">{{ .Summary }}
         {{ if .Truncated }}
         <span class="read-more">
           <a href="{{ .RelPermalink  }}">Read More &rarr;</a>

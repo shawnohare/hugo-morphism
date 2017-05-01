@@ -27,7 +27,8 @@ body {
     /* font-family: Georgia; */
 
     font-size: 100%;
-    font-family: serif;
+    font-family: Georgia;
+    font-family: Times, serif;
     margin: 0;
     padding: 0;
 }
@@ -169,17 +170,16 @@ nav#site li a:focus {
 /* --------------------------------------------------------------------- */
 
 /* Content unique to the page */
+/* This includes post metadata */
 main{
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1.3rem;
 }
 
 
 
 /* main page content styling, such as post content or list elements */
-section#content-main {
-  /* font-size: 1.25rem; */
-  /* line-height: 1.5rem; */
+section.content-main {
+  line-height: 1.75rem;
 }
 
 
@@ -285,6 +285,9 @@ section.content-meta {
 /* section container for each post displayed on the index page */
 section.index-post {
  margin: 2.25rem auto;
+}
+
+section.index-post .content{
 }
 
 section.index-post .read-more {
