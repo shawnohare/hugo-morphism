@@ -3,10 +3,10 @@
   {{ $format :=  .Site.Params.datetimeFormat | default "January 2, 2006" }}
   Posted on
   <span class="content-meta-date">
-    {{ .Date.Format $format }}
-  {{ with .Params.updated }}
-  (updated {{ dateFormat $format  . }})
-  {{ end }}
+  {{ .Date.Format $format }}
   </span>
+  {{ with .Params.updated }}
+  <span class="content-meta-date-updated">(updated {{ dateFormat $format . }})</span>
+  {{ end }}
   {{end }}
 {{ end }}
