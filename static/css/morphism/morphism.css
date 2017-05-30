@@ -203,7 +203,8 @@ li {
 
 
 header#content-type {
-    text-transform: uppercase;
+    /* text-transform: small-caps; */
+    font-variant: small-caps;
     color: #aaaaaa;
     /* margin: 1.25rem auto; */
     margin-top: 1.25rem;
@@ -216,8 +217,8 @@ header#content-type {
 
 
 h1#content-title {
-  /* font-family: sans-serif; */
-  font-weight: 500;
+  font-family: sans-serif;
+  font-weight: 900;
   font-size: 2rem;
   margin: 0.5rem auto;
 }
@@ -250,7 +251,7 @@ section.content-meta {
 }
 
 .content-meta-date{
-  color: gray;
+  font-weight: bold;
 }
 
 .content-meta-author {
@@ -283,7 +284,7 @@ section.content-meta {
 
 /* section container for each post displayed on the index page */
 section.index-post {
- margin: 2.25rem auto;
+ /* margin: 2.25rem auto; */
 }
 
 section.index-post .content{
@@ -296,9 +297,9 @@ section.index-post .read-more {
 
 /* separator between index page posts */
 hr.index-post {
-  background-color: #e3edf3;
-  height: 1px;
-  border: 0;
+  /* background-color: #e3edf3; */
+  /* height: 1px; */
+  /* border: 0; */
 }
 
  .index-about {
@@ -511,8 +512,9 @@ pre code {
     color: inherit;
     background: inherit;
     border: inherit;
-    overflow-x: auto;
-    overflow-y: auto;
+    /* overflow-x: auto; */
+    /* overflow-y: auto; */
+    overflow: auto;
     margin: auto;
 }
 

@@ -1,0 +1,12 @@
+{{ if .Params.tags }}
+<span class="tags">
+<a href="/tags/">tags</a>:
+{{ $last := add (len .Params.tags) -1  }}
+{{ range $i, $c := .Params.tags}}
+<a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">
+  {{ $c }}{{ if lt $i $last }},{{ end }}
+  </a>
+{{ end }}
+</span>
+<br>
+{{ end }}
