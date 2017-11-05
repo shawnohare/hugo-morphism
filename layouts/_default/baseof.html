@@ -40,6 +40,7 @@
 
       <main>{{ block "main" . }}Main{{ end }}</main>
 
+      {{ if not .Site.Params.ignoreFooter }}
       <footer class="ui" id="site">
           <ul>
           {{ range .Site.Menus.footer }}
@@ -57,6 +58,7 @@
         <span id="copyright">{{ . | safeHTML }}</section>
         {{end}}
       </footer>
+      {{ end }}
 
     </div>
   </body>

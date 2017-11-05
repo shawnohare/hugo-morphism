@@ -69,12 +69,12 @@ a:focus {
 blockquote {
   /* font-style: italic; */
   /* margin-left: 1.25rem; */
-  padding-left: 1rem;
-  border-width: 0 6px 0 6px;
-  border-style: solid;
-  border-color: #e3edf3;
-  border-color: #eeeeee;
-  border-radius: 20px;
+  /* padding-left: 1rem; */
+  /* border-width: 0 6px 0 6px; */
+  /* border-style: solid; */
+  /* border-color: #e3edf3; */
+  /* border-color: #eeeeee; */
+  /* border-radius: 20px; */
   /* border: 1px solid #e3edf3; */
 }
 
@@ -377,8 +377,11 @@ ul.pagination {
 /* ---------------------------------------------------------------------- */
 
 #toc {
-  font-size: 1rem;
-
+  /* font-size: 1.1rem; */
+  background: #eff0f1;
+  border-radius: 6px;
+  padding: 0.2rem;
+  margin: 1rem 0 1rem 0;
 }
 
 #toc summary {
@@ -392,7 +395,7 @@ ul.pagination {
   list-style: none;
   display: block;
   padding: 0;
-    width: 87.5%;
+  width: 87.5%;
 }
 
 #toc li {
@@ -457,7 +460,7 @@ section#copyright p {
 
 /* tags: add additional styling here. */
 .tags a:link {
-
+  /* text-decoration: underline; */
 }
 
 
@@ -508,26 +511,25 @@ pre code {
 /*  MathJax styling
 /* ------------------------------------------------------------------------ */
 .MathJax {
-    font: inherit;
-    color: inherit;
-    background: inherit;
-    border: inherit;
-    /* overflow-x: auto; */
-    /* overflow-y: auto; */
-    overflow: auto;
-    margin: auto;
+  /* font: inherit; */
+  /* color: inherit; */
+  /* background: inherit; */
+  /* border: inherit; */
+  /* overflow-x: auto; */
+  /* overflow-y: auto; */
+  /* overflow: auto; */
+  /* margin: auto; */
 }
 
 .MathJax_Display {
-    margin: 0 auto;
-    font: inherit;
-    color: inherit;
-    background: inherit;
-    border: inherit;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    overflow-x: auto;
-    overflow-y: auto;
+  display: block;
+  /* font: inherit; */
+  /* color: inherit; */
+  /* background: inherit; */
+  /* border: inherit; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: auto;
 }
 
 img {
