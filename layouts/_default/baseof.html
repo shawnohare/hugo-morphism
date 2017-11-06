@@ -14,7 +14,30 @@
     <link rel="stylesheet" href="{{ "/css/morphism/morphism.css" | absURL }}">
     <link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">
 
-    {{ partial "head/math.html" . }}
+    {{ if or .Params.math .IsHome }}
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        processRefs: true,
+        menuSettings: { zoom: "Double-Click" },
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        extensions: ["AMSmath.js", "AMSsymbols.js"],
+      },
+    });
+    </script>
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML-full">
+    </script>
+    {{ end }}
+
   </head>
 
   <body>
@@ -24,7 +47,7 @@
         <nav id="site" class="ui ">
             <ul>
             {{ range .Site.Menus.nav }}
-                <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
             {{ end }}
             </ul>
         </nav>
@@ -40,7 +63,7 @@
 
       <main>{{ block "main" . }}Main{{ end }}</main>
 
-      {{ if not .Site.Params.ignoreFooter }}
+      {{ if .Site.Params.showFooter }}
       <footer class="ui" id="site">
           <ul>
           {{ range .Site.Menus.footer }}

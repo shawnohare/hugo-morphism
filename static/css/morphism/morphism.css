@@ -250,15 +250,18 @@ section.content-meta {
     color: rgba(65, 70, 75, 1);
 }
 
-.content-meta-date {
+.content-meta #date {
   font-weight: bold;
 }
 
-.content-meta-author {
+.content-meta #edited {
+}
+
+.content-meta .author {
   font-weight: bold;
 }
 
-.content-meta-author a:visited{
+.content-meta .author a:visited{
     color: rgba(45, 100, 170, 1);
 }
 

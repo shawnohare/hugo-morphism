@@ -7,9 +7,10 @@
 
 {{ if (not .Params.nometa)  }}
 <section class="content-meta ui" id="content-meta-below">
+
   {{ partial "content/date.html" . }}
   {{ partial "content/author.html" . }}
-  {{ partial "content/categories.html" . }}
+  <!-- {{ partial "content/categories.html" . }} -->
   <!-- {{ partial "content/groups.html" . }} -->
   {{ partial "content/tags.html" . }}
   {{ partial "content/series.html" . }}
