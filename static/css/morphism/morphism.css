@@ -126,9 +126,11 @@ header#brand a:link {
 nav#site {
     background: #F7FAFB;
     /* background: #f8f8f8; */
+    /* background: black; */
+    /* background: #1d212b; */
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid #e3edf3;
+    /* border: 1px solid #e3edf3; */
     justify-content: space-around;
 }
 
@@ -145,6 +147,7 @@ nav#site li a {
     text-decoration: none;
     background: transparent;
     color: rgba(65, 70, 75, 1);
+    /* color: white; */
  }
 
 nav#site li a:hover,
