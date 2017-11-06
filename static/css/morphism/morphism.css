@@ -174,7 +174,7 @@ nav#site li a:focus {
 /* Content unique to the page */
 /* This includes post metadata */
 main{
-  font-size: 1.3rem;
+  font-size: 1.275rem;
 }
 
 
@@ -254,7 +254,9 @@ section.content-meta {
 }
 
 .content-meta #date {
-  font-weight: bold;
+  /* font-weight: bold; */
+  /* font-style: italic; */
+  color: gray;
 }
 
 .content-meta #edited {
