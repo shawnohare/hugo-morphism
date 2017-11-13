@@ -418,7 +418,7 @@ pre, code, kbd, samp, tt {
 code {
   overflow: auto;
   border-radius: 6px;
-  background: #eff0f1;
+  /* background: #eff0f1; */
   /* background: #F7FAFB; */
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
   /* padding: 0 0.1rem; */
@@ -434,7 +434,6 @@ pre code {
   display: block;
   overflow: auto;
   line-height: 1.2rem;
-  /* padding: 0.2rem 0 0.2rem 0; */
   /* background: none; */
   /* border-radius: 0; */
   /* border-style: solid; */
