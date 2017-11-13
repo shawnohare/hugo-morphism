@@ -1,17 +1,14 @@
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-builddrafts = true
-baseurl = "http://"
-canonifyurls = true
+builddrafts = false
+baseurl = "http://www.site.com"
 theme = "hugo-morphism"
-title = "Hugo Morphism Theme"
-copyright = "© The Author.  <a href=\"http://creativecommons.org/licenses/by/4.0/\">Some rights reserved</a>."
-verbose = false
+title = "Site Title"
 
 [author]
-  name = "The Author"
-  uri = "www.theauthorswebsite.com"
+  name = "Author Name"
+	uri = "www.authorspage.com"
 
 [taxonomies]
   category = "categories"
@@ -20,60 +17,44 @@ verbose = false
   tag = "tags"
 
 [permalinks]
-    post = "/:year/:month/:filename/"
+  post = "/:section/:year/:month/:filename/"
 
-
-# -----------------------------------------------------------------------
-# Morphism site params 
-# -----------------------------------------------------------------------
 [params]
-  displayArchiveDates = false
-  displayDefaultAuthor = false
-  subtitle = "A Minimalist Theme"
-  showPoweredBy = true
-  indexPostLimit = 50
-  indexPaginatorPageSize = 10
-  listPaginatorPageSize = 10000
-  greeting = "Hello!  Welcome to my site."
-  colortheme = "default"
+  subtitle = "Morphism Example Site Subtitle"
+  showFooter = false
+  showPoweredBy = false
+  # listPaginatorLimit = 1000000
 
-# -----------------------------------------------------------------------
-# Morphism theme navigation menu
-# -----------------------------------------------------------------------
 [[menu.nav]]
+  # name = "&#x1F3E0;"
   name = "home"
   pre = ""
   weight = -110
   identifier = "home"
   url = "/"
 [[menu.nav]]
+  # name = "&#x1f4dc;"
   name = "posts"
   pre = ""
   weight = -100
   identifier = "posts"
   url = "/post"
-[[menu.nav]]
-  name = "categories"
+
+[[menu.index]]
+  # name = "&#x1f4dc;"
+  name = "Posts"
   pre = ""
-  weight = -90
-  identifier = "categories"
-  url = "/categories"
-[[menu.nav]]
-  name = "tags"
-  pre = ""
-  weight = -89
-  identifier = "tags"
-  url = "/tags"
-[[menu.nav]]
-  name = "me"
+  weight = -100
+  identifier = "posts"
+  url = "/post"
+[[menu.index]]
+  # name = "&#x1f471;"
+  name = "About"
   pre = ""
   weight = -80
   identifier = "me"
-  url = "/info/about/"
+  url = "/page/me"
 
-# -----------------------------------------------------------------------
-# Morphism theme footer menu
-# -----------------------------------------------------------------------
 [[menu.footer]]
   name = "GitHub"
   pre = ""
@@ -97,4 +78,4 @@ verbose = false
   pre = ""
   weight = -70
   identifier = "mail"
-  url = "mailto:"
+  url = "mailto:mail@gmail.com"

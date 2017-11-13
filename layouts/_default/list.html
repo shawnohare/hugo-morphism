@@ -1,32 +1,22 @@
 {{ define "header" }}{{ .Title }}{{ end }}
 
 {{ define "main" }}
+
 <section class="list-page container">
+
+<ul>
 {{ $lim := .Site.Params.listPaginatorPageSize | default 100000000 }}
-{{ range (.Paginate (.Data.Pages.GroupByDate "2006") $lim).PageGroups }}
-  <details open>
-    <summary class="year">{{ .Key }} ({{ len .Pages }})</summary>
-    {{ range .Pages.GroupByDate "Jan" }}
-      <ul class='list-page-year'>
-        <li>
-          <details open>
-            <summary>{{ .Key }} ({{ len .Pages }})</summary>
-              {{ range .Pages }}
-                <ul class='list-page-month'>
-                  <li>
-                    {{ if .Site.Params.displayArchiveDates }}
-                      <span class="list-date">({{ .Date.Format "2006-01-02" }}) </span>
-                    {{ end }}
-                    <span class="list-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
-                  </li>
-                </ul>
-              {{ end }}
-          </details>
-        </li>
-      </ul>
-    {{ end }}
-  </details>
-  {{ end }}
-{{ template "_internal/pagination.html" . }}
-</section>
+{{ range (.Paginator $lim).Pages }}
+<li>
+  <span class="date ui">{{ .Date.Format "02 January, 2006" }} </span><br>
+  <span class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
+</li>
 {{ end }}
+</ul>
+
+</section>
+
+<nav class="pagination">{{ template "_internal/pagination.html" . }}</nav>
+{{ end }}
+
+

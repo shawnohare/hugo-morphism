@@ -1,0 +1,8 @@
+<nav id="site" class="ui">
+    <ul>
+    {{ range .Site.Menus.nav }}
+    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
+    {{ end }}
+    </ul>
+</nav>
+

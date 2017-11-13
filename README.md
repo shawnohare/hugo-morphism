@@ -5,11 +5,13 @@
 typesetting. By utilizing partial templates and Go template blocks, the theme is
 largely customizable while remaining relatively simple.
 
-Hugo supports several features that this theme eschews by default such as
-Disqus comments and Google analytics.  This is done in an effort to limit
-dependencies and respect visitor privacy. However, these features can
-be easily activated by overriding partial templates such as
-`partials/content/comments.html`.
+Except for what is required for mathematical typesetting, this theme utilizes
+no external dependencies of Javascript. This is done partly to respect visitor
+privacy.
+
+# Use
+
+Note that this is primarily a personal theme, so expect high volatility.
 
 ## Math
 
@@ -40,22 +42,21 @@ Hugo provides, as follows:
 
 The site wide user defined parameters that this theme recognizes are:
 
-- `brandLogo` (TODO)
-
-- `datetimeLayout` string:
-   A [datetime layout](https://golang.org/pkg/time/#Time.Format)
-   Defaults to "January 2, 2006 15:04".  Note that the time part is optional.
-   If no time is referenced in the layout, times will be omitted.
-
-- `displayArchiveDates` bool: If true, post titles in the archive
-  (post list pages) will display a date.
-
-- `indexItemLimit` integer (defaults to 15): Limits the number of page items
-   that will display on the homepage as recent activity.
+- `listPaginatorLimit` int: The maximum number of items to appear on each list
+  page.
 
 - `subtitle` string: This is displayed under the main title.
 
+- `showFooter` boolean: if true, display footer content on each page.
+
 - `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
+
+- `[[menu.footer]]` Footer navigation menu.
+
+- `[[menu.index]]` Menu displayed only on the index page.
+
+- `[[menu.nav]]` Site navigation menu.
+
 
 
 ## Page Parameters
@@ -64,17 +65,11 @@ The site wide user defined parameters that this theme recognizes are:
    author map (see above).  If provided, the page will display the data in the
    `name` and `uri` keys.  Otherwise, the site author map is used.
 
-- `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
-  true, `hideDate` takes greater precedence.
+- `math` boolean indicating if mathematics is present. If false, Mathjax
+  Javascript will not be loaded.
 
-- `nomath` boolean: if true, Math will not be rendered for the page.  This can
-   speed up some page loads.  As the theme assumes a math-centric blog, math
-   is rendered by default.
+- `ignoreMeta` boolean: if true, do not display page metadata such as
+   author, date, categories provided these page parameters exist and are not
+   overridden.
 
-- `nometa` boolean: if true, do not display page metadata such as
-   author, date, categories provided
-   these page parameters exist and are not overridden.
-
-- `notoc` boolean: if true, do not display a page's table of contents.
-
-
+- `toc` boolean: if true, display a page's table of contents.

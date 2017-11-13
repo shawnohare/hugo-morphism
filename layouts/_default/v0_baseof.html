@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>{{ .Site.Title }} - {{ .Title  }}</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ .Description }}">
+    <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
+    <meta name="author" content="{{ .Site.Title }}">
+    {{ .Hugo.Generator }}
+
+    <link rel="stylesheet" href="{{ "/css/morphism/main.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "/css/morphism/override.css" | absURL }}">
+
+    {{ if or .Params.math .IsHome }}
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']],
+        processEscapes: true,
+        processEnvironments: true,
+        processRefs: true,
+        menuSettings: { zoom: "Double-Click" },
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+      },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        extensions: ["AMSmath.js", "AMSsymbols.js"],
+      },
+    });
+    </script>
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML-full">
+    </script>
+    {{ end }}
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+        <nav id="site" class="ui">
+            <ul>
+            {{ range .Site.Menus.nav }}
+                <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
+            {{ end }}
+            </ul>
+        </nav>
+
+        <header id="brand">
+        <a href="{{ .Site.BaseURL }}">
+            <h1>{{ .Site.Title}}</h1>
+            <h2>{{ .Site.Params.subtitle }}</h2>
+        </a>
+        </header>
+
+      <header id="content-type">{{ block "header" . }}{{ end }}</header>
+
+      <main>{{ block "main" . }}Main{{ end }}</main>
+
+      {{ if .Site.Params.showFooter }}
+      <footer class="ui" id="site">
+          <ul>
+          {{ range .Site.Menus.footer }}
+            <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
+          {{ end }}
+          </ul>
+
+        {{ if .Site.Params.showPoweredBy}}
+            Powered by <a href="https://gohugo.io">Hugo</a> and the
+            <a href="https://github.com/shawnohare/hugo-morphism">Morphism</a> theme.
+            <br>
+        {{ end }}
+
+        {{ with .Site.Copyright }}
+        <span id="copyright">{{ . | safeHTML }}</section>
+        {{end}}
+      </footer>
+      {{ end }}
+
+    </div>
+  </body>
+
+</html>
