@@ -1,53 +1,22 @@
-{{ define "header" }}{{ .Title }}{{ end }}
+{{ define "header" }}
+{{ partial "content/title.html" . }}
+{{ end }}
 
 {{ define "main" }}
-<section class="terms container">
-{{ $data := .Data }}
-  <h2>Frequency</h2>
-
-  <section>
-  <table class="terms-table">
+<table class="terms alphabetical">
   <thead>
-    <tr>
-      <th>Term</th>
-      <th>Count</th>
-    </tr>
+  <tr>
+    <th>Term</th>
+    <th>Count</th>
+  </tr>
   </thead>
   </tbody>
-  {{ range $key, $value := .Data.Terms.ByCount }}
-    <tr>
-      <td>
-      <a href="{{ $value.Name| urlize }}">
-      {{ $value.Name}}
-      </a>
-      </td>
-      <td>{{  $value.Count }}</td>
-    </tr>
+  {{ range $k, $v := .Data.Terms.Alphabetical }}
+  <tr>
+    <td><a href="{{ $v.Name | urlize }}">{{ $v.Name}}</a></td>
+    <td>{{  $v.Count }}</td>
+  </tr>
   {{ end }}
   </tbody>
-  </table>
-</section>
-
-  <h2>Alphabetically</h2>
-  <section>
-  <table class="terms-table">
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Count</th>
-    </tr>
-  </thead>
-  </tbody>
-  {{ range $key, $value := .Data.Terms.Alphabetical}}
-    <tr>
-      <td><a href="{{ $value.Name| urlize }}">
-        {{ $value.Name}}
-      </a></td>
-      <td>{{  $value.Count }}</td>
-    </tr>
-  {{ end }}
-  </tbody>
-  </table>
-  </section>
-</section>
+</table>
 {{ end }}

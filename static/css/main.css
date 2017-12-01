@@ -8,8 +8,8 @@
 body {
     font-size: 100%;
     font-family: Times, serif;
-    margin: 0;
-    padding: 0;
+    padding: 2.5%;
+    margin: 0 auto;
 }
 
 
@@ -34,7 +34,7 @@ h1 {
 
 a:link {
     text-decoration: none;
-    /* color: rgba(45, 100, 170, 1); */
+    color: rgba(45, 100, 170, 1);
     background: inherit;
 }
 
@@ -143,15 +143,6 @@ nav#index li {
     display: inline;
  }
 
- /* Container for generic objects such as post contents, */
- /* index page post summaries, list indices, etc. */
- .container {
-    padding: 2.5%;
-    margin: 0 auto;
-    /* max-width: 60rem; */
-}
-
-
 /* main page content styling, such as post content or list elements */
 section.content-main {
   line-height: 1.75rem;
@@ -165,16 +156,16 @@ section.content-main {
 /* ------------------------------------------------------------------------ */
 
 
-header#content-type {
-    text-transform: capitalize;
-    font-variant: small-caps;
-    color: #aaaaaa;
+header#content {
+    /* text-transform: capitalize; */
+    /* font-variant: small-caps; */
+    /* color: #aaaaaa; */
     /* margin: 1.25rem auto; */
-    margin-top: 1.25rem;
+    /* margin-top: 1.25rem; */
 
-    width: 100%;
-    padding: 1rem 0 0 0;
-    text-align: center;
+    /* width: 100%; */
+    /* padding: 1rem 0 0 0; */
+    /* text-align: center; */
     /* font-weight: normal; */
 }
 
@@ -198,7 +189,7 @@ h1#content-title a:link,
 h1#content-title a:visited {
     background: transparent;
     text-decoration: none;
-    color: #41464b;
+    /* color: #41464b; */
 }
 
 h1#content-title a:hover,
@@ -409,43 +400,27 @@ section#copyright p {
 /* Fix for browsers rescaling monospace fonts to smaller size assuming that
  * the root font size is not set using pixels */
 /* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
+/* NOTE: Not styling code also produces acceptable results.
 pre, code, kbd, samp, tt {
   /* font-family: monospace, monospace; */
   /* font-size: 1.1rem; */
 }
 
-h1 code, h2 code, h3 code, h4 code, h5 code {
-  /* font-size: 100% */
-}
 
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.line-block{white-space: pre-line;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+/* pandoc auto generates: */
+/* span.smallcaps{font-variant: small-caps;} */
+/* div.line-block{white-space: pre-line;} */
+/* div.column{display: inline-block; vertical-align: top; width: 50%;} */
 
 code {
   white-space: pre-wrap;
   overflow: auto;
-  /* border-radius: 6px; */
-  /* background: #eff0f1; */
-  /* background: #F7FAFB; */
-  /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
-  /* padding: 0 0.1rem; */
-  /* background: #F7FAFB; */
-  /* background: #f3f3f3; */
-  /* border: 1px solid #e3edf3; */
 }
 
 pre code {
   display: block;
   overflow: auto;
   line-height: 1.5rem;
-  /* font-size: 1rem; */
-  /* background: none; */
-  /* border-radius: 0; */
-  /* border-style: solid; */
-  /* border-color: #cccccc; */
-  /* border-width: 1px 0 1px 0; */
 }
 
 
@@ -495,7 +470,7 @@ td:last-child {
   padding-right: 0;
 }
 
-.terms-table {
+table.terms {
     overflow-x: auto;
     margin: auto;
 }
