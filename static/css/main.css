@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
     /* font-family: sans-serif; */
 }
 
+
 /* h1 is explicitly defined so the browser does not
    use the standard nesting logic to convert an h1 to
    a lower level.  This logic is agreeable, but does not
@@ -33,12 +34,12 @@ h1 {
 
 a:link {
     text-decoration: none;
-    color: rgba(45, 100, 170, 1);
+    /* color: rgba(45, 100, 170, 1); */
     background: inherit;
 }
 
 a:visited {
-    color: #821515;
+    /* color: #821515; */
 }
 
 a:hover,
@@ -120,7 +121,7 @@ nav#site li {
  }
 
  nav#site a:visited {
-    color: rgba(45, 100, 170, 1);
+    /* color: rgba(45, 100, 170, 1); */
  }
 
  nav#site a:hover, a:active, a:focus {
@@ -214,7 +215,6 @@ section.content-meta {
 }
 
 .content-meta #date {
-  /* font-family: monospace, monospace; */
   color: gray;
 }
 
@@ -270,7 +270,6 @@ section.index-post .read-more {
 
 .list-page span.date {
   color: gray;
-  /* font-family: monospace, monospace; */
   font-size: 1rem;
 }
 
@@ -411,13 +410,23 @@ section#copyright p {
  * the root font size is not set using pixels */
 /* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
 pre, code, kbd, samp, tt {
-  font-family: monospace, monospace;
-  font-size: 1rem;
+  /* font-family: monospace, monospace; */
+  /* font-size: 1.1rem; */
 }
 
+h1 code, h2 code, h3 code, h4 code, h5 code {
+  /* font-size: 100% */
+}
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.line-block{white-space: pre-line;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+
 code {
+  white-space: pre-wrap;
   overflow: auto;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   /* background: #eff0f1; */
   /* background: #F7FAFB; */
   /* padding: 0.05rem 0.1rem 0.05rem 0.1em; */
@@ -425,29 +434,32 @@ code {
   /* background: #F7FAFB; */
   /* background: #f3f3f3; */
   /* border: 1px solid #e3edf3; */
-
-  /* Normalize  */
-  /* font-size: 120%; */
 }
 
 pre code {
   display: block;
   overflow: auto;
-  line-height: 1.2rem;
+  line-height: 1.5rem;
+  /* font-size: 1rem; */
   /* background: none; */
   /* border-radius: 0; */
   /* border-style: solid; */
   /* border-color: #cccccc; */
   /* border-width: 1px 0 1px 0; */
-
-  /* Normalize  */
-  /* font-size: 1rem; */
 }
 
 
 /* ------------------------------------------------------------------------ */
 /*  MathJax styling
 /* ------------------------------------------------------------------------ */
+
+pre.math {
+  display: block;
+  overflow: auto;
+  line-height: 1.2rem;
+  /* font-size: 1.25rem; */
+}
+
 .MathJax {
 }
 
