@@ -431,6 +431,8 @@ pre code {
 pre.math {
   display: block;
   overflow: auto;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
   line-height: 1.2rem;
   /* font-size: 1.25rem; */
 }
@@ -440,8 +442,6 @@ pre.math {
 
 .MathJax_Display {
   display: block;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   overflow: auto;
 }
 
