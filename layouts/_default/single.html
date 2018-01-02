@@ -1,4 +1,11 @@
+{{ define "header" }}
+{{ partial "title.html" . }}
+{{ end }}
+
 {{ define "main" }}
-  {{ partial "content/title.html" . }}
+  <section id="content-meta">
+  {{ partial "meta.html" . }}
+  {{ partial "toc.html" . }}
+  </section>
   <section class="content-main">{{ .Content }}</section>
 {{ end }}

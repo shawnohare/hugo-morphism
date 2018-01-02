@@ -1,9 +1,0 @@
-{{ if not .Params.hidedate }}
-{{ $format :=  .Site.Params.datetimeFormat | default "02 Jan, 2006" }}
-<!-- <span id="date">&#x1f4c5; {{ .Date.Format $format }}</span> -->
-<span id="date">{{ .Date.Format $format }}</span>
-<!-- {{ with .Params.updated }} -->
-<!-- <span id="edited">(edited {{ dateFormat $format . }})</span> -->
-<!-- {{ end }} -->
-&emsp;
-{{ end }}
