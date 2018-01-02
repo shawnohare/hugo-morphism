@@ -1,7 +1,11 @@
-{{ define "header" }}{{ .Type }}{{ end }}
+{{ define "header" }}
+{{ partial "title.html" . }}
+{{ end }}
+
 {{ define "main" }}
-  <div class="container">
-  {{ partial "content/title.html" . }}
+  <section id="content-meta">
+  {{ partial "meta.html" . }}
+  {{ partial "toc.html" . }}
+  </section>
   <section class="content-main">{{ .Content }}</section>
-  </div>
 {{ end }}

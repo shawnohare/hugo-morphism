@@ -1,16 +1,15 @@
 ---
 title: "sample title"
 description: "sample desc"
-date: "2006-01-02"
 date: {{ dateFormat "2006-01-02T03:04:05Z" .Date }}
 draft: true
 math: true
 toc:  true
-categories:  ["x", "y"]
-groups:  ["x", "y"]
-tags:  ["x", "y"]
-series: ["x"]
-markup: "pandoc"
+categories:  [c1, c2]
+groups:  [g1, g2]
+tags:  [t1, t2]
+series: [s1, s2]
+markup: mmark
 
 ---
 

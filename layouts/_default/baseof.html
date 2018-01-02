@@ -37,10 +37,10 @@ MathJax.Hub.Config({
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
 </script>
 {{ end }}
+
 </head>
 
 <body>
-
 <nav id="site" class="ui">
   <ul>
     {{ range .Site.Menus.nav }}
@@ -49,10 +49,9 @@ MathJax.Hub.Config({
   </ul>
 </nav>
 
-<header id="content-type">{{ block "header" . }}{{ end }}</header>
+<header>{{ block "header" . }}Header{{ end }}</header>
 <main>{{ block "main" . }}Main{{ end }}</main>
 
-{{ if .Site.Params.showFooter }}
 <footer class="ui" id="site">
   <ul>
     {{ range .Site.Menus.footer }}
@@ -60,15 +59,8 @@ MathJax.Hub.Config({
     {{ end }}
   </ul>
 
-  {{ if .Site.Params.showPoweredBy}}
-  Powered by <a href="https://gohugo.io">Hugo</a> and the
-  <a href="https://github.com/shawnohare/hugo-morphism">Morphism</a> theme.
-  <br>
-  {{ end }}
-
-  {{ with .Site.Copyright }}<span id="copyright">{{ . | safeHTML }}</section>{{end}}
+  {{ with .Site.Params.footerMessage }}<section id="footer-messsage">{{ . | safeHTML }}</section>{{end}}
+  {{ with .Site.Copyright }}<section id="copyright">{{ . | safeHTML }}</section>{{end}}
 </footer>
-{{ end }}
-
 </body>
 </html>

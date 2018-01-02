@@ -1,0 +1,10 @@
+{{ if not .Params.ignoreMeta  }}
+<section class="content-meta ui">
+{{ partial "date.html" . }}
+{{ partial "author.html" . }}
+<!-- {{ partial "categories.html" . }} -->
+<!-- {{ partial "groups.html" . }} -->
+{{ partial "tags.html" . }}
+{{ partial "series.html" . }}
+</section>
+{{ end }}

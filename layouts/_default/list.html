@@ -1,21 +1,19 @@
-{{ define "header" }}{{ .Title }}{{ end }}
+{{ define "header" }}
+{{ partial "title.html" . }}
+{{ end }}
 
 {{ define "main" }}
-
-<section class="list-page container">
-
+<section class="list-page">
 <ul>
-{{ $lim := .Site.Params.listPaginatorPageSize | default 100000000 }}
-{{ range (.Paginator $lim).Pages }}
-<li>
-  <span class="date ui">{{ .Date.Format "02 January, 2006" }} </span><br>
-  <span class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
-</li>
-{{ end }}
+  {{ $lim := .Site.Params.listPaginatorPageSize | default 100000000 }}
+  {{ range (.Paginator $lim).Pages }}
+  <li>
+    <span class="date ui">{{ .Date.Format "02 January, 2006" }} </span><br>
+    <span class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
+  </li>
+  {{ end }}
 </ul>
-
 </section>
-
 <nav class="pagination">{{ template "_internal/pagination.html" . }}</nav>
 {{ end }}
 

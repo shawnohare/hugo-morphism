@@ -1,16 +1,12 @@
-{{ define "header" }}Home{{ end }}
+{{ define "header" }}
+<section class="index title">
+<h1>{{ .Site.Title}}</h1>
+<h2>{{ .Site.Params.subtitle }}</h2>
+</section>
+{{ end }}
+
 {{ define "main" }}
-<div class="index container">
-
-<section id="user-content">{{ .Content }}</section>
-
-<header id="brand">
-<a href="{{ .Site.BaseURL }}">
-    <h1>{{ .Site.Title}}</h1>
-    <h2>{{ .Site.Params.subtitle }}</h2>
-</a>
-</header>
-
+<div class="container">
 
 <nav id="index" class="ui">
     <ul>
@@ -20,5 +16,7 @@
     </ul>
 </nav>
 </div>
+
+<section id="user-content">{{ .Content }}</section>
 
 {{ end }}
