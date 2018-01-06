@@ -1,0 +1,12 @@
+name: morphism
+license: MIT
+licenselink: "https://github.com/shawnohare/hugo-morphism/blob/master/LICENSE.md"
+description: "A minimalist blog theme with mathematical typesetting support."
+homepage: "http://github.com/shawnohare/hugo-morphism"
+tags: ["blog", "morphism", "minimal", "math"]
+features: ["mathjax"]
+min_version: 0.32
+
+author:
+  name: "Shawn O'Hare"
+  homepage: "https://www.shawnohare.com"
