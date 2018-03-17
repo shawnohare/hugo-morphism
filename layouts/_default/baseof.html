@@ -14,25 +14,7 @@
 <link rel="stylesheet" href="{{ "/css/override.css" | absURL }}">
 
 {{ if or .Params.math .IsHome }}
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {
-    inlineMath: [['$','$'], ['\\(','\\)']],
-    displayMath: [['$$','$$'], ['\\[','\\]']],
-    processEscapes: true,
-    processEnvironments: true,
-    processRefs: true,
-    menuSettings: { zoom: "Double-Click" },
-    processClass: "math",
-    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-  },
-  TeX: {
-    equationNumbers: { autoNumber: "AMS" },
-    extensions: ["AMSmath.js", "AMSsymbols.js"],
-  },
-});
-</script>
-
+<script type="text/javascript" src="{{ "/js/mathjax.js" | absURL }}"></script>
 <script type="text/javascript" async
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
 </script>
@@ -49,8 +31,8 @@ MathJax.Hub.Config({
   </ul>
 </nav>
 
-<header>{{ block "header" . }}Header{{ end }}</header>
-<main>{{ block "main" . }}Main{{ end }}</main>
+<header>{{ block "header" . }}{{ end }}</header>
+<main>{{ block "main" . }}{{ end }}</main>
 
 <footer class="ui" id="site">
   <ul>
