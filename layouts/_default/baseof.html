@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>{{ with .Title }} {{ . }} | {{ end }}{{ .Site.Title }}</title>
+  <head>
+  <title>{{ with .Title }} {{ . }} | {{ end }}{{ .Site.Title }}</title>
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="{{ .Description }}">
-<meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
-<meta name="author" content="{{ .Site.Author.name }}">
-{{ .Hugo.Generator }}
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="{{ .Description }}">
+  <meta name="keywords" content="{{ range .Keywords }}{{ . }},{{ end }}">
+  <meta name="author" content="{{ .Site.Author.name }}">
+  {{ .Hugo.Generator }}
 
-<link rel="stylesheet" href="{{ "/css/main.css" | absURL }}">
-<link rel="stylesheet" href="{{ "/css/override.css" | absURL }}">
+  {{ $style := resources.Get "sass/main.scss" | toCSS | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  <link rel="stylesheet" href="{{ "/css/override.css" | absURL }}">
 
-{{ if or .Params.math .IsHome }}
-<script type="text/javascript" src="{{ "/js/mathjax.js" | absURL }}"></script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
-</script>
-{{ end }}
+  {{ if or .Params.math .IsHome }}
+  <script type="text/javascript" src="{{ "/js/mathjax.js" | absURL }}"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full">
+  </script>
+  {{ end }}
 
-</head>
+  </head>
 
-<body>
-<nav id="site" class="ui">
-  <ul>
-    {{ range .Site.Menus.nav }}
-    <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
-    {{ end }}
-  </ul>
-</nav>
+  <body>
+    <div class="flex-container">
+    <nav id="site-nav" class="menu">
+      <ul>
+        {{ range .Site.Menus.nav }}
+        <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    </div>
 
-<header>{{ block "header" . }}{{ end }}</header>
-<main>{{ block "main" . }}{{ end }}</main>
+    <header>{{ block "header" . }}{{ end }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
 
-<footer class="ui" id="site">
-  <ul>
-    {{ range .Site.Menus.footer }}
-    <li><a href="{{.URL}}">{{.Pre }}{{ .Name }}</a></li>
-    {{ end }}
-  </ul>
+    <div class="flex-container">
+    <footer id="site-footer">
+      <nav class="menu">
+      <ul>
+        {{ range .Site.Menus.footer }}
+        <li><a href="{{.URL}}">{{ .Pre }}{{ .Name | safeHTML }}</a></li>
+        {{ end }}
+      </ul>
+      </nav>
 
-  {{ with .Site.Params.footerMessage }}<section id="footer-messsage">{{ . | safeHTML }}</section>{{end}}
-  {{ with .Site.Copyright }}<section id="copyright">{{ . | safeHTML }}</section>{{end}}
-</footer>
-</body>
+      {{ with .Site.Params.footerMessage }}<section id="site-messsage">{{ . | safeHTML }}</section>{{end}}
+      {{ with .Site.Copyright }}<section id="site-copyright">{{ . | safeHTML }}</section>{{end}}
+    </footer>
+    </div>
+  </body>
 </html>

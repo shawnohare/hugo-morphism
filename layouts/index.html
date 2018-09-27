@@ -1,22 +1,18 @@
 {{ define "header" }}
-<section class="index title">
-<h1>{{ .Site.Title}}</h1>
-<h2>{{ .Site.Params.subtitle }}</h2>
-</section>
+<h1 id="index-title">{{ .Site.Title}}</h1>
+{{ with .Site.Params.subtitle }}<h2 id="index-subtitle">{{ . }}</h2>{{ end }}
 {{ end }}
 
 {{ define "main" }}
-<div class="container">
-
-<nav id="index" class="ui">
-    <ul>
-    {{ range .Site.Menus.index }}
-        <li class="index"><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
-    {{ end }}
-    </ul>
+<div class="flex-container">
+<nav id="index-nav" class="menu">
+  <ul>
+  {{ range .Site.Menus.index }}
+      <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name | safeHTML}}</a></li>
+  {{ end }}
+  </ul>
 </nav>
 </div>
 
 <section id="user-content">{{ .Content }}</section>
-
 {{ end }}

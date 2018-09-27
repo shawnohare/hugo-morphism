@@ -4,15 +4,17 @@
 
 {{ define "main" }}
 <section class="list-page">
-<ul>
-  {{ $lim := .Site.Params.listPaginatorPageSize | default 100000000 }}
-  {{ range (.Paginator $lim).Pages }}
-  <li>
-    <span class="date ui">{{ .Date.Format "02 January, 2006" }} </span><br>
-    <span class="title"><a href="{{ .RelPermalink }}">{{.Title}}</a></span>
-  </li>
+
+  {{ $lim := .Site.Params.listPaginatorPageSize | default 250 }}
+  {{ range (.Paginator $lim).Pages.GroupByDate "2006" }}
+  <details open>
+  <summary>{{ .Key }}</summary>
+  <ul>
+    {{ range .Pages }}{{ .Render "li" }}{{ end }}
+  </ul>
+  </details>
   {{ end }}
-</ul>
+
 </section>
 <nav class="pagination">{{ template "_internal/pagination.html" . }}</nav>
 {{ end }}
