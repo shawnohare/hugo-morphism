@@ -21,10 +21,10 @@ main {
   font-size: 1.2rem;
 }
 
-// h1 is explicitly defined so the browser does not
-// use the standard nesting logic to convert an h1 to
-// a lower level.  This logic is agreeable, but does not
-// fit well with using simple markdown to publish content.
+// h1 is explicitly defined so the browser does not use the standard nesting
+// logic to convert an h1 to a lower level.  This logic is agreeable, but does
+// not fit well with using simple markdown to publish content.
+
 h1 {
   font-size: 2.1rem;
 }
@@ -84,10 +84,6 @@ header h2 {
 
 }
 
-
-.title {
-
-}
 
 #index-title {
   color: #41464b;
@@ -220,23 +216,14 @@ nav#toc {
   /* font-size: 90%; */
 }
 
-.categories a:link {
-}
-
-.tags {
-}
-
-.tags a:link {
-}
-
-/* Fix for browsers rescaling monospace fonts to smaller size assuming that
- * the root font size is not set using pixels */
-/* http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/ */
-/* NOTE: Not styling code also produces acceptable results.
-pre, code, kbd, samp, tt {
-  /* font-family: monospace, monospace; */
-/* font-size: 1.1rem; */
-/* } */
+// Fix for browsers rescaling monospace fonts to smaller size assuming that
+// the root font size is not set using pixels
+// http://code.stephenmorley.org/html-and-css/fixing-browsers-broken-monospace-font-handling/
+// NOTE: Not styling code also produces acceptable results.
+// pre, code, kbd, samp, tt {
+//   font-family: monospace, monospace;
+// font-size: 1.1rem;
+// }
 
 /* pandoc auto generates: */
 /* span.smallcaps{font-variant: small-caps;} */

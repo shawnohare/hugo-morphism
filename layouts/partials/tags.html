@@ -1,9 +1,0 @@
-{{ if .Params.tags }}
-<section class="tags">
-<!-- <a href="/tags/">&#x1f4dc;</a> -->
-<a href="/tags/">Tags</a>:
-{{ range $i, $c := .Params.tags}}
-<a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">{{ $c }}&nbsp;</a>
-{{ end }}
-</section>
-{{ end }}

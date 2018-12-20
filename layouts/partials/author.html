@@ -1,5 +1,0 @@
-{{ $author := .Params.author.name | default .Site.Author.name  }}
-{{ $uri := .Params.author.uri | default .Site.Author.uri }}
-<section class="author">By <a href="{{ $uri | absURL }}">{{ $author }}</a></section>
-
-

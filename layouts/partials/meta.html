@@ -1,10 +1,40 @@
 {{ if not .Params.ignoreMeta  }}
 <section class="content-meta ui">
-{{ partial "date.html" . }}
-{{ partial "author.html" . }}
-<!-- {{ partial "categories.html" . }} -->
-<!-- {{ partial "groups.html" . }} -->
-{{ partial "tags.html" . }}
-{{ partial "series.html" . }}
+
+<section class="date">
+    {{ $datefmt := .Site.Params.datetimeFormat | default "2006-01-02" }}
+    {{ .Date.Format $datefmt }}
+</section>
+
+<section class="author">
+    {{ $author := .Params.author.name | default .Site.Author.name  }}
+    {{ $uri := .Params.author.uri | default .Site.Author.uri }}
+    <a href="{{ $uri | absURL }}">{{ $author }}</a>
+</section>
+
+{{ if .Params.categories}}
+<section class="categories">
+    <a href="/categories/">Categories</a>:
+    {{ range $i, $c := .Params.categories}}
+    <a  href="{{ "/categories/" | absURL }}{{ $c | urlize }}">[{{ $c }}]</a>
+    {{ end }}
+</section>
+{{ end }}
+
+{{ if .Params.tags }}
+<section class="tags">
+    <a href="/tags/">Tags</a>:
+    {{ range $i, $c := .Params.tags}}
+    <a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">[{{ $c }}]</a>
+    {{ end }}
+</section>
+{{ end }}
+
+{{ if .Params.series}}
+<section class="series">
+    Part of the series <a  href="{{ "/series/" | absURL }}{{ .Params.series | urlize }}">{{ .Params.series }}</a>
+</section>
+{{ end }}
+
 </section>
 {{ end }}
