@@ -1,40 +1,47 @@
 {{ if not .Params.ignoreMeta  }}
 <section class="content-meta ui">
 
-<section class="date">
-    {{ $datefmt := .Site.Params.datetimeFormat | default "2006-01-02" }}
-    {{ .Date.Format $datefmt }}
-</section>
+    <section class="date">
+        {{ $datefmt := .Site.Params.datetimeFormat | default "2006-01-02" }}
+        {{ .Date.Format $datefmt }}
+    </section>
 
-<section class="author">
-    {{ $author := .Params.author.name | default .Site.Author.name  }}
-    {{ $uri := .Params.author.uri | default .Site.Author.uri }}
-    <a href="{{ $uri | absURL }}">{{ $author }}</a>
-</section>
+    <section class="author">
+        {{ $author := .Params.author.name | default .Site.Author.name  }}
+        {{ $uri := .Params.author.uri | default .Site.Author.uri }}
+        <a href="{{ $uri | absURL }}">{{ $author }}</a>
+    </section>
 
-{{ if .Params.categories}}
-<section class="categories">
-    <a href="/categories/">Categories</a>:
-    {{ range $i, $c := .Params.categories}}
-    <a  href="{{ "/categories/" | absURL }}{{ $c | urlize }}">[{{ $c }}]</a>
+    {{ if .Params.categories}}
+    <section class="categories">
+        <a href="/categories/">Categories</a>:
+        {{ range $i, $c := .Params.categories}}
+        {{ if ge $i 1 }}|{{ end }}
+        <a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">[{{ $c }}]</a>
+        {{ end }}
+    </section>
     {{ end }}
-</section>
-{{ end }}
 
-{{ if .Params.tags }}
-<section class="tags">
-    <a href="/tags/">Tags</a>:
-    {{ range $i, $c := .Params.tags}}
-    <a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">[{{ $c }}]</a>
+    {{ if .Params.tags }}
+    <section class="tags">
+        <a href="/tags/">Tags:</a>
+        {{ range $i, $c := .Params.tags}}
+        {{ if ge $i 1 }}|{{ end }}
+        <a  href="{{ "/tags/" | absURL }}{{ $c | urlize }}">{{ $c }}</a>
+        {{ end }}
+    </section>
     {{ end }}
-</section>
-{{ end }}
 
-{{ if .Params.series}}
-<section class="series">
-    Part of the series <a  href="{{ "/series/" | absURL }}{{ .Params.series | urlize }}">{{ .Params.series }}</a>
-</section>
-{{ end }}
+    {{ if .Params.series}}
+    <section class="series">
+        Part of the series
+        {{ range $i, $c := .Params.series}}
+        {{ if ge $i 1 }}|{{ end }}
+        <a  href="{{ "/series/" | absURL }}{{ $c | urlize }}">{{ $c }}</a>
+        {{ end }}
+    </section>
+    {{ end }}
+
 
 </section>
 {{ end }}
